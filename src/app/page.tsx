@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Zap, Leaf, Shield, Star, Users, Globe, Lightbulb, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Clock, Target } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Zap, Shield, Users, Globe, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       id: 1,
       title: "Regulatory Compliance Technology",
       subtitle: "Transforming Compliance into Strategic Advantage",
-      description: "Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria's Oil & Gas, Power and Finance sectors.",
+      description: "Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.",
       bgColor: "from-brand-primary to-orange-700",
       cta: "Explore Our Solutions"
     },
@@ -245,7 +245,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              A leading provider of regulatory compliance technology, risk management and procurement services for Nigeria's Oil & Gas, Power and Finance sectors.
+              A leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </motion.p>
           </div>
 
@@ -256,9 +256,9 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-semibold text-brand-secondary mb-4">Who We Are</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                HAYLAR Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil & Gas, power and finance sectors. Adopting an interdisciplinary approach, we provide data-driven, technology-enabled solutions to boost compliance initiatives, ensuring seamless adherence to respective industry standards and regulations.
-              </p>
+                              <p className="text-gray-600 mb-6 leading-relaxed">
+                  HAYLAR Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, power and finance sectors. Adopting an interdisciplinary approach, we provide data-driven, technology-enabled solutions to boost compliance initiatives, ensuring seamless adherence to respective industry standards and regulations.
+                </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-2 h-2 bg-brand-primary rounded-full mt-2"></div>
@@ -283,11 +283,11 @@ export default function Home() {
             >
               <div className="bg-gradient-to-r from-orange-50 to-purple-50 p-6 rounded-lg border border-orange-100">
                 <h4 className="text-lg font-semibold text-brand-secondary mb-2">Vision</h4>
-                <p className="text-gray-600">"To be the leading Regulatory Compliance technology and procurement solutions provider in Nigeria and Africa, setting new industry standards for regulatory oversight, efficiency and business integrity"</p>
+                <p className="text-gray-600">&ldquo;To be the leading Regulatory Compliance technology and procurement solutions provider in Nigeria and Africa, setting new industry standards for regulatory oversight, efficiency and business integrity&rdquo;</p>
               </div>
               <div className="bg-gradient-to-r from-purple-50 to-orange-50 p-6 rounded-lg border border-purple-100">
                 <h4 className="text-lg font-semibold text-brand-secondary mb-2">Mission</h4>
-                <p className="text-gray-600">"To empower organizations with future-forward optimization by continuously pushing the boundaries of efficiency"</p>
+                <p className="text-gray-600">&ldquo;To empower organizations with future-forward optimization by continuously pushing the boundaries of efficiency&rdquo;</p>
               </div>
             </motion.div>
           </div>
@@ -397,7 +397,7 @@ export default function Home() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Compliance?</h2>
             <p className="text-xl text-orange-100 mb-8">
-              Let HAYLAR help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria's Oil & Gas and Finance sectors.
+              Let HAYLAR help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
@@ -418,7 +418,7 @@ export default function Home() {
             <div className="col-span-2">
               <h3 className="text-2xl font-bold text-brand-primary mb-4">HAYLAR Energy Services Ltd</h3>
               <p className="text-gray-300 mb-6 max-w-md">
-                Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria's Oil & Gas, Power and Finance sectors.
+                Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center">

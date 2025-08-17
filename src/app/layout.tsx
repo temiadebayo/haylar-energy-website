@@ -6,12 +6,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "HAYLAR Energy Services Ltd - Regulatory Compliance Technology & Risk Management",
-  description: "Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria's Oil & Gas, Power and Finance sectors. NovaCore platform for real-time compliance management.",
+  description: "Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors. NovaCore platform for real-time compliance management.",
   keywords: "regulatory compliance, risk management, procurement services, oil and gas, power sector, finance sector, NovaCore platform, compliance technology, Nigeria, regulatory technology",
   authors: [{ name: "HAYLAR Energy Services Ltd" }],
   openGraph: {
     title: "HAYLAR Energy Services Ltd - Regulatory Compliance Technology & Risk Management",
-    description: "Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria's Oil & Gas, Power and Finance sectors.",
+    description: "Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.",
     type: "website",
     locale: "en_US",
   },
