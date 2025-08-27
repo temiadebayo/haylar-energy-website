@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Users, Globe, Zap, MessageSquare, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Users, Globe, Zap, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 <Link href="/" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</Link>
                 <Link href="/about" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</Link>
                 <Link href="/services" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</Link>
-                <Link href="/contact" className="text-brand-primary px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+                <Link href="/contact" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</Link>
               </div>
             </div>
           </div>
