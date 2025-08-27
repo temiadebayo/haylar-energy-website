@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Zap, Shield, Users, Globe, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -147,10 +148,10 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a href="#home" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                <a href="#about" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                <a href="#services" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                <Link href="/about" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</Link>
+                <Link href="/services" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</Link>
                 <a href="#why-choose-us" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Why Choose Us</a>
-                <a href="#contact" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                <Link href="/contact" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</Link>
               </div>
             </div>
           </div>
@@ -400,12 +401,12 @@ export default function Home() {
               Let HAYLAR help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Partner With Us
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-brand-secondary font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              </Link>
+              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-brand-secondary font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
                 Learn More
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -449,8 +450,8 @@ export default function Home() {
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-gray-300">
                 <p>Abuja, Nigeria</p>
-                <p>haylarenergysl@gmail.com</p>
-                <p>+234-909 224 9845</p>
+                <Link href="mailto:haylarenergysl@gmail.com" className="hover:text-brand-primary transition-colors">haylarenergysl@gmail.com</Link>
+                <Link href="tel:+234-909-224-9845" className="hover:text-brand-primary transition-colors">+234-909 224 9845</Link>
               </div>
             </div>
           </div>
