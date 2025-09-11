@@ -17,11 +17,11 @@ export default function AboutPage() {
     {
       year: "2022",
       title: "Company Founded",
-      description: "HAYLAR Energy Services Ltd established in Abuja, Nigeria with a vision to transform regulatory compliance in the energy sector."
+      description: "<strong>HAYLAR</strong> Energy Services Ltd established in Abuja, Nigeria with a vision to transform regulatory compliance in the energy sector."
     },
     {
       year: "2023",
-      title: "NovaCore Platform Launch",
+      title: "<strong>NovaCore</strong> Platform Launch",
       description: "Development and launch of our flagship integrated compliance management system."
     },
     {
@@ -66,7 +66,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-[#1a0466] mb-6">
-              About HAYLAR Energy
+              About <strong>HAYLAR</strong> Energy
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
               Leading the transformation of regulatory compliance in Nigeria&apos;s energy sector through innovation, technology, and expertise.
@@ -86,13 +86,13 @@ export default function AboutPage() {
             >
               <h2 className="text-4xl font-bold text-brand-secondary mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded in 2022, HAYLAR Energy Services Ltd was established with a singular mission: transforming compliance from a regulatory necessity into a strategic advantage. Built on a foundation of integrity, innovation, and excellence, we provide cutting-edge compliance solutions that empower businesses to thrive in an evolving energy landscape.
+                Founded in 2022, <strong>HAYLAR</strong> Energy Services Ltd was established with a singular mission: transforming compliance from a regulatory necessity into a strategic advantage. Built on a foundation of integrity, innovation, and excellence, we provide cutting-edge compliance solutions that empower businesses to thrive in an evolving energy landscape.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 We believe that true success stems from trust, responsibility, and foresight. By integrating governance, technology, and strategic insight, we help organizations not only meet regulatory standards but also enhance operational efficiency, attract investment, and achieve sustainable growth.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Beyond compliance, HAYLAR champions a mindset shift—one where businesses view regulation as a catalyst for innovation and long-term value creation. Strong governance fosters resilience, credibility, and competitiveness on a global scale.
+                Beyond compliance, <strong>HAYLAR</strong> champions a mindset shift—one where businesses view regulation as a catalyst for innovation and long-term value creation. Strong governance fosters resilience, credibility, and competitiveness on a global scale.
               </p>
             </motion.div>
 
@@ -125,7 +125,6 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#1a0466] mb-4">A Message from Our CEO</h2>
-            <p className="text-xl text-gray-600">Lara Timi-Ajayi, Founder & CEO</p>
           </motion.div>
 
           <motion.div
@@ -136,20 +135,30 @@ export default function AboutPage() {
           >
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl leading-relaxed mb-6">
-                At HAYLAR Energy, we are driven by a singular mission: transforming compliance from a regulatory necessity into strategic advantage. Built on integrity, innovation and excellence, we develop cutting-edge compliance solutions that empower industries with oversight and foresight to thrive in an evolving energy landscape.
+                At <strong>HAYLAR</strong> Energy, we are driven by a singular mission: transforming compliance from a regulatory necessity into strategic advantage. Built on integrity, innovation and excellence, we develop cutting-edge compliance solutions that empower industries with oversight and foresight to thrive in an evolving energy landscape.
               </p>
               <p className="text-lg md:text-xl leading-relaxed mb-6">
                 Our vision is simple, yet ambitious. By integrating governance technology and strategic insight, we aim to transform compliance into a driver of transparency, accountability and growth across Nigeria&apos;s most vital industries.
               </p>
               <p className="text-lg md:text-xl leading-relaxed mb-6">
-                NovaCore is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth.
+                <strong>NovaCore</strong> is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth.
               </p>
               <p className="text-lg md:text-xl leading-relaxed">
-                Beyond compliance, HAYLAR champion&apos;s a mindset shift, one where businesses view regulation as a catalyst for innovation and long-term value creation on a global scale. At HAYLAR, we are committed to equipping organizations with the tools, expertise, and forward-thinking solutions they need to lead with confidence.
+                Beyond compliance, <strong>HAYLAR</strong> champion&apos;s a mindset shift, one where businesses view regulation as a catalyst for innovation and long-term value creation on a global scale. At <strong>HAYLAR</strong>, we are committed to equipping organizations with the tools, expertise, and forward-thinking solutions they need to lead with confidence.
               </p>
               <p className="text-lg md:text-xl leading-relaxed mt-6 font-semibold">
                 Together, we redefine compliance for a smarter, more efficient and sustainable energy future.
               </p>
+              
+              <div className="mt-8 pt-6 border-t border-gray-200 flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                  <span className="text-gray-500 text-sm font-medium">CEO</span>
+                </div>
+                <div>
+                  <p className="text-lg font-semibold text-[#1a0466]">Lara Timi-Ajayi</p>
+                  <p className="text-base text-gray-600">Founder & CEO, <strong>HAYLAR</strong> Energy Services Ltd</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -268,7 +277,7 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Learn More?</h2>
             <p className="text-xl text-orange-100 mb-8">
-              Discover how HAYLAR Energy can transform your compliance strategy and drive your business forward.
+              Discover how <strong>HAYLAR</strong> Energy can transform your compliance strategy and drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">

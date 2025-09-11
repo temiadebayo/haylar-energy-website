@@ -22,7 +22,7 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "NovaCore Platform",
+      title: "<strong>NovaCore</strong> Platform",
       subtitle: "Insights, Amplified - Real-Time Compliance Technology",
       description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       bgColor: "from-brand-secondary to-purple-800",
@@ -41,7 +41,7 @@ export default function Home() {
   const services = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "NovaCore: Real-Time Compliance Technology",
+      title: "<strong>NovaCore</strong>: Real-Time Compliance Technology",
       description: "Integrated modular compliance ecosystem that unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system."
     },
     {
@@ -212,7 +212,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-4xl font-bold text-brand-secondary mb-4"
             >
-              About HAYLAR Energy Services Ltd
+              About <strong>HAYLAR</strong> Energy Services Ltd
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -233,10 +233,10 @@ export default function Home() {
             >
               <h3 className="text-2xl font-semibold text-brand-secondary mb-4">Who We Are</h3>
                               <p className="text-gray-600 mb-6 leading-relaxed">
-                  Founded in 2022, HAYLAR Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, Power and Financial sectors. We believe compliance should not be a burden but a catalyst for trust, growth and business resilience.
+                  Founded in 2022, <strong>HAYLAR</strong> Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, Power and Financial sectors. We believe compliance should not be a burden but a catalyst for trust, growth and business resilience.
                 </p>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Our flagship platform, NovaCore is more than a reporting tool, it is a reimagined compliance ecosystem. By unifying data, streamlining processes and providing foresight through AI analytics, NovaCore enables regulators, operators and institutions to lead with confidence in a complex regulatory landscape.
+                  Our flagship platform, <strong>NovaCore</strong> is more than a reporting tool, it is a reimagined compliance ecosystem. By unifying data, streamlining processes and providing foresight through AI analytics, <strong>NovaCore</strong> enables regulators, operators and institutions to lead with confidence in a complex regulatory landscape.
                 </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -249,7 +249,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-2 h-2 bg-brand-primary rounded-full mt-2"></div>
-                  <p className="text-gray-600">NovaCore integrated compliance management system</p>
+                  <p className="text-gray-600"><strong>NovaCore</strong> integrated compliance management system</p>
                 </div>
               </div>
             </motion.div>
@@ -344,7 +344,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Why Choose HAYLAR?</h2>
+            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Why Choose <strong>HAYLAR</strong>?</h2>
             <p className="text-xl text-gray-600">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
           </motion.div>
 
@@ -377,7 +377,7 @@ export default function Home() {
           >
             <h2 className="text-4xl font-bold text-[#1a0466] mb-6">Ready to Transform Your Compliance?</h2>
             <p className="text-xl text-gray-600 mb-8">
-              Let HAYLAR help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
+              Let <strong>HAYLAR</strong> help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-brand-primary text-white hover:bg-orange-700 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">

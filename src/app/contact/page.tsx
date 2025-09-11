@@ -47,7 +47,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your compliance strategy? Let&apos;s discuss how HAYLAR Energy can help you achieve your goals.
+              Ready to transform your compliance strategy? Let&apos;s discuss how <strong>HAYLAR</strong> Energy can help you achieve your goals.
             </p>
           </motion.div>
         </div>
@@ -135,7 +135,7 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-gradient-to-br from-brand-primary to-brand-secondary p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Why Choose HAYLAR?</h3>
+                <h3 className="text-2xl font-bold mb-6">Why Choose <strong>HAYLAR</strong>?</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />
-                    <span>Cutting-edge NovaCore technology</span>
+                    <span>Cutting-edge <strong>NovaCore</strong> technology</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />

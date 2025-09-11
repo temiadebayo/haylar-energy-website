@@ -10,7 +10,7 @@ export default function ServicesPage() {
   const mainServices = [
     {
       icon: <BarChart3 className="w-12 h-12" />,
-      title: "NovaCore: Real-Time Compliance Technology",
+      title: "<strong>NovaCore</strong>: Real-Time Compliance Technology",
       subtitle: "For Regulators",
       description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       features: [
@@ -56,7 +56,7 @@ export default function ServicesPage() {
       subtitle: "For Financial Institutions",
       description: "Regulatory technology solutions that simplify compliance, strengthen trust and operational resilience for Nigeria's financial ecosystem.",
       features: [
-        "NovaCore: Unified compliance for finance",
+        "<strong>NovaCore</strong>: Unified compliance for finance",
         "Automated AML & fraud risk monitoring",
         "Regulatory reporting automation",
         "Tiered solutions for every institution",
@@ -170,7 +170,7 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-brand-secondary mb-4">NovaCore Platform</h2>
+              <h2 className="text-4xl font-bold text-brand-secondary mb-4"><strong>NovaCore</strong> Platform</h2>
               <p className="text-xl text-gray-600 mb-8">Our flagship integrated compliance management system</p>
             </motion.div>
           </div>
@@ -183,10 +183,10 @@ export default function ServicesPage() {
             >
               <h3 className="text-3xl font-bold text-brand-secondary mb-6">Revolutionizing Compliance Management</h3>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                NovaCore is our cutting-edge platform that aggregates operator data submissions to provide a real-time, interactive compliance dashboard. It enhances oversight and decision-making through advanced technology and intelligent automation.
+                <strong>NovaCore</strong> is our cutting-edge platform that aggregates operator data submissions to provide a real-time, interactive compliance dashboard. It enhances oversight and decision-making through advanced technology and intelligent automation.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Built specifically for the Nigerian energy sector, NovaCore ensures seamless adherence to regulatory standards while providing strategic insights that drive operational excellence.
+                Built specifically for the Nigerian energy sector, <strong>NovaCore</strong> ensures seamless adherence to regulatory standards while providing strategic insights that drive operational excellence.
               </p>
               <div className="space-y-4">
                 {novacoreFeatures.map((feature) => (
@@ -327,7 +327,7 @@ export default function ServicesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>
             <p className="text-xl text-orange-100 mb-8">
-              Let HAYLAR Energy help you navigate regulatory compliance with confidence and drive operational excellence.
+              Let <strong>HAYLAR</strong> Energy help you navigate regulatory compliance with confidence and drive operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">

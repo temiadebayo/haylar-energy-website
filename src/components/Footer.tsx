@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">HAYLAR Energy Services Ltd</h3>
+            <h3 className="text-2xl font-bold text-white mb-4"><strong>HAYLAR</strong> Energy Services Ltd</h3>
             <p className="text-white mb-6 max-w-md">
               Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </p>
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white/20 mt-12 pt-8 text-center text-white">
-          <p>&copy; 2025 HAYLAR Energy Services Ltd. All rights reserved.</p>
+          <p>&copy; 2025 <strong>HAYLAR</strong> Energy Services Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

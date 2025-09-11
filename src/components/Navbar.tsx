@@ -21,7 +21,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/haylar_logo.png"
-                alt="HAYLAR Energy Logo"
+                alt="<strong>HAYLAR</strong> Energy Logo"
                 width={120}
                 height={40}
                 className="h-10 w-auto"
