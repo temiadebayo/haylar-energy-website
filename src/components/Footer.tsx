@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <h3 className="text-2xl font-bold text-brand-primary mb-4">HAYLAR Energy Services Ltd</h3>
+            <h3 className="text-2xl font-bold text-brand-secondary mb-4">HAYLAR Energy Services Ltd</h3>
             <p className="text-gray-300 mb-6 max-w-md">
               Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </p>
@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-brand-secondary">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="text-gray-300 hover:text-brand-primary transition-colors">Home</Link></li>
               <li><Link href="/about" className="text-gray-300 hover:text-brand-primary transition-colors">About</Link></li>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4 text-brand-secondary">Contact</h4>
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />

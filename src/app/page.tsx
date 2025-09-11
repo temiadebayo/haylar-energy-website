@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Zap, Shield, Users, Globe, Settings, BarChar
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -130,35 +131,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0 flex items-center">
-                <Link href="/" className="flex items-center">
-                  <Image
-                    src="/haylar_logo.png"
-                    alt="HAYLAR Energy Logo"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                    priority
-                  />
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#home" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                <Link href="/about" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</Link>
-                <Link href="/services" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</Link>
-                <a href="#why-choose-us" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Why Choose Us</a>
-                <Link href="/contact" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Carousel */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
@@ -171,12 +144,13 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="absolute inset-0"
           >
-            <div className="absolute inset-0 bg-white">
+            <div className={`absolute inset-0 bg-gradient-to-br ${carouselSlides[currentSlide].bgColor}`}>
+              <div className="absolute inset-0 bg-black/20"></div>
             </div>
           </motion.div>
         </AnimatePresence>
 
-        <div className="relative z-10 text-center text-gray-900 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -185,13 +159,13 @@ export default function Home() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-lg">
                 {carouselSlides[currentSlide].title}
               </h1>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-light mb-6 text-gray-600">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-light mb-6 text-white drop-shadow-md">
                 {carouselSlides[currentSlide].subtitle}
               </p>
-              <p className="text-lg sm:text-xl mb-8 text-gray-500 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl mb-8 text-white drop-shadow-md max-w-2xl mx-auto">
                 {carouselSlides[currentSlide].description}
               </p>
               <button className="bg-brand-primary hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
@@ -204,13 +178,13 @@ export default function Home() {
         {/* Carousel Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all duration-300 z-20"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-20"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all duration-300 z-20"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-20"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -222,7 +196,7 @@ export default function Home() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-brand-primary scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
               }`}
             />
           ))}

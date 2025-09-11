@@ -5,6 +5,7 @@ import { Users, Globe, Zap, Shield, Target, CheckCircle, TrendingUp, Award, Buil
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 export default function AboutPage() {
   const companyStats = [
@@ -55,34 +56,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-orange-50 to-purple-50">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0 flex items-center">
-                <Link href="/" className="flex items-center">
-                  <Image
-                    src="/haylar_logo.png"
-                    alt="HAYLAR Energy Logo"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                    priority
-                  />
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</Link>
-                <Link href="/about" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</Link>
-                <Link href="/services" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</Link>
-                <Link href="/contact" className="text-brand-secondary hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gray-50">
