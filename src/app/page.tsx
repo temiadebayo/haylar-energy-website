@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Zap, Shield, Users, Globe, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -418,54 +419,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="col-span-2">
-              <h3 className="text-2xl font-bold text-brand-primary mb-4">HAYLAR Energy Services Ltd</h3>
-              <p className="text-gray-300 mb-6 max-w-md">
-                Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
-              </p>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center">
-                  <Users className="w-5 h-5" />
-                </div>
-                <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center">
-                  <Globe className="w-5 h-5" />
-                </div>
-                <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center">
-                  <Zap className="w-5 h-5" />
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>Regulatory Compliance</li>
-                <li>Risk Management</li>
-                <li>Project Management</li>
-                <li>Procurement Services</li>
-                <li>Thought Leadership</li>
-                <li>Reg-Tech Solutions</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>Abuja, Nigeria</p>
-                <Link href="mailto:info@haylarenergy.com" className="hover:text-brand-primary transition-colors">info@haylarenergy.com</Link>
-                <Link href="tel:+234-909-224-9845" className="hover:text-brand-primary transition-colors">+234-909 224 9845</Link>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-purple-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 HAYLAR Energy Services Ltd. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

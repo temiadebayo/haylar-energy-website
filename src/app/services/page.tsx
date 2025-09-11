@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { BarChart3, Shield, Settings, FileText, Building2, TrendingUp, Zap, CheckCircle, Award, Users, Globe, Target, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export default function ServicesPage() {
   const mainServices = [
@@ -366,6 +367,9 @@ export default function ServicesPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

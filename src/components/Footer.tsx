@@ -1,0 +1,56 @@
+import Link from 'next/link';
+import { MapPin, Phone, Mail, Globe } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-4 gap-8">
+          <div className="col-span-2">
+            <h3 className="text-2xl font-bold text-brand-primary mb-4">HAYLAR Energy Services Ltd</h3>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
+            </p>
+            <div className="flex space-x-4">
+              <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors cursor-pointer">
+                <Globe className="w-5 h-5" />
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><Link href="/" className="text-gray-300 hover:text-brand-primary transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-brand-primary transition-colors">About</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-brand-primary transition-colors">Services</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-brand-primary transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4" />
+                <span>Abuja, Nigeria</span>
+              </div>
+              <Link href="mailto:info@haylarenergy.com" className="flex items-center space-x-2 hover:text-brand-primary transition-colors">
+                <Mail className="w-4 h-4" />
+                <span>info@haylarenergy.com</span>
+              </Link>
+              <Link href="tel:+234-909-224-9845" className="flex items-center space-x-2 hover:text-brand-primary transition-colors">
+                <Phone className="w-4 h-4" />
+                <span>+234-909 224 9845</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 HAYLAR Energy Services Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

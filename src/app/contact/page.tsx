@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Clock, Users, Globe, Zap, MessageSquare, CheckCirc
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 
 export default function ContactPage() {
 
@@ -226,6 +227,9 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
