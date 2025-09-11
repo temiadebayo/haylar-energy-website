@@ -258,6 +258,31 @@ export default function Home() {
                   <p className="text-gray-600"><strong>NovaCore</strong> integrated compliance management system</p>
                 </div>
               </div>
+              
+              {/* Industry Sectors Infographic */}
+              <div className="mt-8 p-6 bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl">
+                <h4 className="text-lg font-semibold text-[#1a0466] mb-4 text-center">Serving Key Industries</h4>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">O&G</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-700">Oil & Gas</p>
+                  </div>
+                  <div className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">⚡</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-700">Power</p>
+                  </div>
+                  <div className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">💰</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-700">Finance</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
             <motion.div 

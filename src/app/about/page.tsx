@@ -283,27 +283,44 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600">Key milestones in our company&apos;s development</p>
           </motion.div>
 
-          <div className="space-y-8">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}
-              >
-                <div className="flex-1 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                  <div className="text-6xl font-bold text-brand-primary mb-4">{milestone.year}</div>
-                  <h3 className="text-2xl font-semibold text-[#1a0466] mb-4">{milestone.title}</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">{milestone.description}</p>
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center">
-                    <Award className="w-16 h-16 text-white" />
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-primary to-brand-secondary transform -translate-x-1/2"></div>
+            
+            <div className="space-y-16">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                >
+                  <div className="flex-1 bg-white p-8 rounded-xl shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-2xl font-bold text-white">{milestone.year}</span>
+                      </div>
+                      <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-orange-600 rounded-full"></div>
+                    </div>
+                    <h3 className="text-2xl font-semibold text-[#1a0466] mb-4 group-hover:text-brand-primary transition-colors">{milestone.title}</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed">{milestone.description}</p>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                  
+                  {/* Timeline dot */}
+                  <div className="hidden md:flex flex-col items-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-full flex items-center justify-center z-10 border-4 border-white shadow-lg">
+                      <Award className="w-4 h-4 text-white" />
+                    </div>
+                    {index < milestones.length - 1 && (
+                      <div className="w-1 h-16 bg-gradient-to-b from-brand-secondary to-brand-primary mt-4"></div>
+                    )}
+                  </div>
+                  
+                  <div className="flex-1 hidden md:block"></div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

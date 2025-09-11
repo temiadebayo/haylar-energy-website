@@ -109,25 +109,31 @@ export default function ContactPage() {
               <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
                 <h3 className="text-2xl font-semibold text-brand-secondary mb-6">Abuja Office</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-brand-primary mt-1" />
+                  <div className="flex items-start space-x-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
                     <div>
-                      <p className="font-medium text-[#1a0466]">Abuja, Nigeria</p>
+                      <p className="font-medium text-[#1a0466] group-hover:text-brand-primary transition-colors">Abuja, Nigeria</p>
                       <p className="text-gray-600">Strategic location in Nigeria&apos;s capital</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
-                    <Clock className="w-6 h-6 text-brand-primary mt-1" />
+                  <div className="flex items-start space-x-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
                     <div>
-                      <p className="font-medium text-[#1a0466]">Business Hours</p>
-                      <p className="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                      <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p>
+                      <p className="font-medium text-[#1a0466] group-hover:text-brand-secondary transition-colors">Business Hours</p>
+                      <p className="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                      <p className="text-gray-600">No Saturday work</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
-                    <Users className="w-6 h-6 text-brand-primary mt-1" />
+                  <div className="flex items-start space-x-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
                     <div>
-                      <p className="font-medium text-[#1a0466]">Support Available</p>
+                      <p className="font-medium text-[#1a0466] group-hover:text-brand-primary transition-colors">Support Available</p>
                       <p className="text-gray-600">24/7 emergency support for critical compliance issues</p>
                     </div>
                   </div>
@@ -187,3 +193,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

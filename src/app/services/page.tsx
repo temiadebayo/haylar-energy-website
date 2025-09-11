@@ -190,11 +190,15 @@ export default function ServicesPage() {
               </p>
               <div className="space-y-4">
                 {novacoreFeatures.map((feature) => (
-                  <div key={feature.title} className="flex items-start space-x-4">
-                    <div className="text-brand-primary mt-1">{feature.icon}</div>
-                    <div>
-                      <h4 className="font-semibold text-brand-secondary mb-1">{feature.title}</h4>
-                      <p className="text-gray-600">{feature.description}</p>
+                  <div key={feature.title} className="flex items-start space-x-4 group">
+                    <div className="text-brand-primary mt-1 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-orange-600 rounded-lg flex items-center justify-center">
+                        {feature.icon}
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-brand-secondary mb-2 group-hover:text-brand-primary transition-colors">{feature.title}</h4>
+                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 ))}
@@ -230,6 +234,72 @@ export default function ServicesPage() {
                 </ul>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Flow */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Our Process</h2>
+            <p className="text-xl text-gray-600">How we transform your compliance strategy</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Assessment",
+                description: "We analyze your current compliance landscape and identify gaps",
+                icon: <BarChart3 className="w-8 h-8" />
+              },
+              {
+                step: "02", 
+                title: "Strategy",
+                description: "Develop a customized compliance roadmap aligned with regulations",
+                icon: <Settings className="w-8 h-8" />
+              },
+              {
+                step: "03",
+                title: "Implementation", 
+                description: "Deploy NovaCore and integrate with your existing systems",
+                icon: <Shield className="w-8 h-8" />
+              },
+              {
+                step: "04",
+                title: "Optimization",
+                description: "Continuous monitoring and improvement of compliance processes",
+                icon: <TrendingUp className="w-8 h-8" />
+              }
+            ].map((process, index) => (
+              <motion.div
+                key={process.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl font-bold text-white">{process.step}</span>
+                  </div>
+                  {index < 3 && (
+                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-brand-primary to-transparent transform translate-x-4"></div>
+                  )}
+                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {process.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-[#1a0466] mb-3 group-hover:text-brand-primary transition-colors">{process.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{process.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
