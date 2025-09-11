@@ -63,12 +63,32 @@ cd haylar
 npm install
 ```
 
-3. Run the development server:
+3. Set up environment variables (see Environment Variables section below)
+
+4. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+# Resend API Key for contact form emails
+# Get your API key from https://resend.com/api-keys
+RESEND_API_KEY=re_your_api_key_here
+```
+
+### Setting up Resend
+
+1. Go to [resend.com](https://resend.com) and create an account
+2. Navigate to API Keys section
+3. Create a new API key
+4. Copy the API key and add it to your `.env.local` file
+5. The contact form will now send emails to `info@haylarenergy.com`
 
 ### Build for Production
 

@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,20 +25,49 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // For now, we'll just log the form data
-    // In production, you would integrate with an email service
-    console.log('Contact Form Submission:', {
-      name,
-      email,
-      company,
-      phone,
-      subject,
-      message,
-      timestamp: new Date().toISOString()
+    // Check if Resend API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Email service is not configured. Please try again later.' },
+        { status: 500 }
+      );
+    }
+
+    // Send email using Resend
+    const { data, error } = await resend.emails.send({
+      from: 'HAYLAR Energy <onboarding@resend.dev>', // This will be updated once you verify your domain
+      to: ['info@haylarenergy.com'], // Your business email
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #1a0466;">New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Company:</strong> ${company || 'Not provided'}</p>
+          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+          <p><strong>Subject:</strong> ${subject || 'Not provided'}</p>
+          <p><strong>Message:</strong></p>
+          <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
+            ${message.replace(/\n/g, '<br>')}
+          </div>
+          <hr style="margin: 20px 0;">
+          <p style="color: #666; font-size: 12px;">
+            This message was sent from the HAYLAR Energy website contact form.
+          </p>
+        </div>
+      `,
     });
 
-    // TODO: Integrate with email service (Resend, Nodemailer, etc.)
-    // This is where you would send the actual email
+    if (error) {
+      console.error('Resend error:', error);
+      return NextResponse.json(
+        { error: 'Failed to send email. Please try again later.' },
+        { status: 500 }
+      );
+    }
+
+    console.log('Email sent successfully:', data);
 
     return NextResponse.json(
       { 

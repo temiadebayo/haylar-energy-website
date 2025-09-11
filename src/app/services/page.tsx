@@ -10,7 +10,7 @@ export default function ServicesPage() {
   const mainServices = [
     {
       icon: <BarChart3 className="w-12 h-12" />,
-      title: "<strong>NovaCore</strong>: Real-Time Compliance Technology",
+      title: "NovaCore: Real-Time Compliance Technology",
       subtitle: "For Regulators",
       description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       features: [

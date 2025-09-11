@@ -22,7 +22,7 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "<strong>NovaCore</strong> Platform",
+      title: "NovaCore Platform",
       subtitle: "Insights, Amplified - Real-Time Compliance Technology",
       description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       bgColor: "from-brand-secondary to-purple-800",
@@ -32,7 +32,7 @@ export default function Home() {
       id: 3,
       title: "Future-Forward Optimization",
       subtitle: "Empowering Organizations with Strategic Advantage",
-      description: "By integrating governance technology and strategic insight, we transform compliance into a driver of transparency, accountability and growth across Nigeria&apos;s most vital industries.",
+      description: "By integrating governance technology and strategic insight, we transform compliance into a driver of transparency, accountability and growth across Nigeria's most vital industries.",
       bgColor: "from-brand-primary to-orange-800",
       cta: "Get Started"
     }
@@ -41,7 +41,7 @@ export default function Home() {
   const services = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "<strong>NovaCore</strong>: Real-Time Compliance Technology",
+      title: "NovaCore: Real-Time Compliance Technology",
       description: "Integrated modular compliance ecosystem that unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system."
     },
     {
@@ -220,7 +220,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              A leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
+              A leading provider of regulatory compliance technology, risk management and procurement services for Nigeria's Oil &amp; Gas, Power and Finance sectors.
             </motion.p>
           </div>
 
