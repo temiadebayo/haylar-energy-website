@@ -72,7 +72,7 @@ export default function ContactForm() {
           message: result.error || 'Something went wrong. Please try again.'
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: 'error',
         message: 'Network error. Please check your connection and try again.'

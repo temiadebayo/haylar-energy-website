@@ -1,9 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Clock, Users, Globe, Zap, MessageSquare, CheckCircle } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { MapPin, Mail, Clock, CheckCircle } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -31,14 +29,6 @@ export default function ContactPage() {
     }
   ];
 
-  const services = [
-    "Regulatory Compliance Technology",
-    "Risk Management & Advisory",
-    "Project Management Consulting",
-    "Executive Thought Leadership",
-    "Procurement & Supply Chain",
-    "Financial Reg-Tech Solutions"
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-orange-50 to-purple-50">
@@ -182,12 +172,8 @@ export default function ContactPage() {
             <p className="text-xl text-gray-600 mb-8">
               Don&apos;t wait to transform your compliance strategy. Contact us today and let&apos;s discuss how we can help you achieve your goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+234-909-224-9845" className="bg-brand-primary text-white hover:bg-orange-700 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span>Call Us Now</span>
-              </a>
-              <a href="mailto:info@haylarenergy.com" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+            <div className="flex justify-center">
+              <a href="mailto:info@haylarenergy.com" className="bg-brand-primary text-white hover:bg-orange-700 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5" />
                 <span>Send Email</span>
               </a>

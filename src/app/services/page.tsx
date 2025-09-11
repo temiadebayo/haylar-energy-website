@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { BarChart3, Shield, Settings, FileText, Building2, TrendingUp, Zap, CheckCircle, Award, Users, Globe, Target, ArrowRight } from 'lucide-react';
+import { BarChart3, Shield, Settings, FileText, Building2, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                 Built specifically for the Nigerian energy sector, NovaCore ensures seamless adherence to regulatory standards while providing strategic insights that drive operational excellence.
               </p>
               <div className="space-y-4">
-                {novacoreFeatures.map((feature, index) => (
+                {novacoreFeatures.map((feature) => (
                   <div key={feature.title} className="flex items-start space-x-4">
                     <div className="text-brand-primary mt-1">{feature.icon}</div>
                     <div>

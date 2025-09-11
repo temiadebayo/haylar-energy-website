@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, Globe, Zap, Shield, Target, CheckCircle, TrendingUp, Award, Building2, BarChart3 } from 'lucide-react';
+import { Users, Globe, Zap, Award } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
