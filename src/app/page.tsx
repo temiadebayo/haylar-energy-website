@@ -220,7 +220,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              A leading provider of regulatory compliance technology, risk management and procurement services for Nigeria's Oil &amp; Gas, Power and Finance sectors.
+              A leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </motion.p>
           </div>
 
