@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, Globe, Zap, Award, Target, Rocket, BarChart3, Settings, Building2, Eye, TrendingUp, Brain, Handshake } from 'lucide-react';
+import { Users, Globe, Zap, Award, Target, Rocket, BarChart3, Settings, Building2, Eye, Brain, Handshake } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -257,7 +257,7 @@ export default function AboutPage() {
                   
                   <div className="bg-gradient-to-r from-orange-50 to-purple-50 p-6 rounded-xl border-l-4 border-brand-primary">
                     <p className="text-lg leading-relaxed text-gray-700 italic">
-                      "<strong>NovaCore</strong> is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth."
+                      &ldquo;<strong>NovaCore</strong> is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth.&rdquo;
                     </p>
                   </div>
                   
@@ -267,7 +267,7 @@ export default function AboutPage() {
                   
                   <div className="bg-gradient-to-r from-brand-primary to-brand-secondary p-6 rounded-xl text-white">
                     <p className="text-lg font-semibold text-center">
-                      "Together, we redefine compliance for a smarter, more efficient and sustainable energy future."
+                      &ldquo;Together, we redefine compliance for a smarter, more efficient and sustainable energy future.&rdquo;
                     </p>
                   </div>
                 </div>
