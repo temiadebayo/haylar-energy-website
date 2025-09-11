@@ -84,16 +84,84 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-brand-secondary mb-6">Our Story</h2>
+              <h2 className="text-4xl font-bold text-brand-secondary mb-6">Who We Are</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded in 2022, <strong>HAYLAR</strong> Energy Services Ltd was established with a singular mission: transforming compliance from a regulatory necessity into a strategic advantage. Built on a foundation of integrity, innovation, and excellence, we provide cutting-edge compliance solutions that empower businesses to thrive in an evolving energy landscape.
+                <strong>HAYLAR</strong> Energy is a Nigerian compliance technology company dedicated to transforming compliance from a burden into a catalyst for trust, growth and resilience. We bridge the gap between regulation and innovation, equipping regulators and operators in the Oil &amp; Gas, Power and Finance sectors with tools that deliver clarity, accountability and foresight for growth and advancement.
               </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We believe that true success stems from trust, responsibility, and foresight. By integrating governance, technology, and strategic insight, we help organizations not only meet regulatory standards but also enhance operational efficiency, attract investment, and achieve sustainable growth.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Beyond compliance, <strong>HAYLAR</strong> champions a mindset shift—one where businesses view regulation as a catalyst for innovation and long-term value creation. Strong governance fosters resilience, credibility, and competitiveness on a global scale.
-              </p>
+              
+              <div className="bg-gray-50 p-6 rounded-xl mb-6">
+                <h3 className="text-2xl font-bold text-[#1a0466] mb-4">Our Flagship Platform: <strong>NovaCore</strong> - Insights Amplified</h3>
+                <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                  <strong>NovaCore</strong> is a modular compliance ecosystem that integrates diverse compliance modules for regulators, operators, and financial institutions into one unified system. More than software, <strong>NovaCore</strong> is the digital backbone of compliance, aligning all stakeholders through one trusted ecosystem.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-4 mb-4">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-[#1a0466] mb-2">For Regulators</h4>
+                    <p className="text-sm text-gray-600">Real-time, sector-wide insights that simplify oversight, standardize reporting and strengthen enforcement.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-[#1a0466] mb-2">For Operators</h4>
+                    <p className="text-sm text-gray-600">Seamless reporting and monitoring integrated into daily workflows, reducing compliance strain while building cultures of integrity.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-[#1a0466] mb-2">For Financial Institutions</h4>
+                    <p className="text-sm text-gray-600">Standardized reporting and automated risk monitoring that simplify compliance for high-volume, resource-stretched banks, fintechs and MFIs.</p>
+                  </div>
+                </div>
+                
+                <p className="text-sm text-gray-600">
+                  Each stakeholder engages through licensed, role-specific access, ensuring data is secure, aligned and actionable.
+                </p>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-[#1a0466] mb-3">Incubating Innovation</h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  While <strong>NovaCore</strong> is our flagship compliance ecosystem, we also collaborate with regulators and operators to design and incubate custom compliance solutions. This ensures technology adapts to institutional needs while staying aligned with regulatory frameworks.
+                </p>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-[#1a0466] mb-3">Why It Matters</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-brand-primary rounded-full"></div>
+                      <span className="font-semibold text-gray-700">Transparency</span>
+                    </div>
+                    <p className="text-gray-600 ml-4">Clear oversight across sectors.</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-brand-primary rounded-full"></div>
+                      <span className="font-semibold text-gray-700">Efficiency</span>
+                    </div>
+                    <p className="text-gray-600 ml-4">Automation reduces cost and delays.</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-brand-primary rounded-full"></div>
+                      <span className="font-semibold text-gray-700">Foresight</span>
+                    </div>
+                    <p className="text-gray-600 ml-4">Predictive analytics enable proactive governance.</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-brand-primary rounded-full"></div>
+                      <span className="font-semibold text-gray-700">Trust</span>
+                    </div>
+                    <p className="text-gray-600 ml-4">Stronger compliance builds credibility with regulators, investors and the public, further fostering collaboration and investment.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-brand-primary to-brand-secondary p-6 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-3">Our Vision</h3>
+                <p className="text-lg leading-relaxed">
+                  To be the leading compliance technology partner in Nigeria and Africa, delivering future ready compliance solutions that drive economic advancement in sustainable energy and financial transformation.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div
