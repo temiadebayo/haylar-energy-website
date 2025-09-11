@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -271,13 +271,13 @@ export default function Home() {
                   </div>
                   <div className="text-center group">
                     <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">⚡</span>
+                      <Zap className="w-6 h-6 text-white" />
                     </div>
                     <p className="text-sm font-medium text-gray-700">Power</p>
                   </div>
                   <div className="text-center group">
                     <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">💰</span>
+                      <DollarSign className="w-6 h-6 text-white" />
                     </div>
                     <p className="text-sm font-medium text-gray-700">Finance</p>
                   </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, Globe, Zap, Award } from 'lucide-react';
+import { Users, Globe, Zap, Award, Target, Rocket, BarChart3, Settings, Building2, Eye, TrendingUp, Brain, Handshake } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -20,7 +20,7 @@ export default function AboutPage() {
       description: "HAYLAR Energy Services Ltd established in Abuja, Nigeria with a vision to transform regulatory compliance in the energy sector."
     },
     {
-      year: "2023",
+      year: "2025",
       title: "NovaCore Platform Launch",
       description: "Development and launch of our flagship integrated compliance management system."
     },
@@ -99,7 +99,7 @@ export default function AboutPage() {
               className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border border-orange-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl">🎯</span>
+                <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-[#1a0466] mb-4">Our Vision</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -114,7 +114,7 @@ export default function AboutPage() {
               className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl border border-purple-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl">🚀</span>
+                <Rocket className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-[#1a0466] mb-4">Our Mission</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -132,7 +132,7 @@ export default function AboutPage() {
           >
             <div className="text-center mb-8">
               <div className="w-20 h-20 bg-gradient-to-br from-brand-primary to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">⚡</span>
+                <Zap className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[#1a0466] mb-4">Our Flagship Platform: <strong>NovaCore</strong></h3>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -143,21 +143,21 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold">📊</span>
+                  <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-3">For Regulators</h4>
                 <p className="text-gray-600">Real-time, sector-wide insights that simplify oversight, standardize reporting and strengthen enforcement.</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold">⚙️</span>
+                  <Settings className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-3">For Operators</h4>
                 <p className="text-gray-600">Seamless reporting and monitoring integrated into daily workflows, reducing compliance strain while building cultures of integrity.</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold">🏦</span>
+                  <Building2 className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-3">For Financial Institutions</h4>
                 <p className="text-gray-600">Standardized reporting and automated risk monitoring that simplify compliance for high-volume, resource-stretched banks, fintechs and MFIs.</p>
@@ -176,28 +176,28 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">👁️</span>
+                  <Eye className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Transparency</h4>
                 <p className="text-gray-600">Clear oversight across sectors</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">⚡</span>
+                  <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Efficiency</h4>
                 <p className="text-gray-600">Automation reduces cost and delays</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🔮</span>
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Foresight</h4>
                 <p className="text-gray-600">Predictive analytics enable proactive governance</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🤝</span>
+                  <Handshake className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Trust</h4>
                 <p className="text-gray-600">Stronger compliance builds credibility</p>
