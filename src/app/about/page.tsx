@@ -65,7 +65,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#1a0466] mb-6">
               About HAYLAR Energy
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -124,7 +124,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">A Message from Our CEO</h2>
+            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">A Message from Our CEO</h2>
             <p className="text-xl text-gray-600">Lara Timi-Ajayi, Founder & CEO</p>
           </motion.div>
 
@@ -132,7 +132,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl p-8 md:p-12 text-gray-900 shadow-sm border border-gray-100"
+            className="bg-white rounded-2xl p-8 md:p-12 text-[#1a0466] shadow-sm border border-gray-100"
           >
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl leading-relaxed mb-6">
@@ -210,7 +210,7 @@ export default function AboutPage() {
               >
                 <div className="flex-1 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
                   <div className="text-6xl font-bold text-brand-primary mb-4">{milestone.year}</div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{milestone.title}</h3>
+                  <h3 className="text-2xl font-semibold text-[#1a0466] mb-4">{milestone.title}</h3>
                   <p className="text-lg text-gray-600 leading-relaxed">{milestone.description}</p>
                 </div>
                 <div className="flex-1 flex justify-center">

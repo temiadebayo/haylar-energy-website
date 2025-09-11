@@ -313,7 +313,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Our Services</h2>
             <p className="text-xl text-gray-600">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
           </motion.div>
 
@@ -327,7 +327,7 @@ export default function Home() {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
               >
                 <div className="text-brand-primary mb-6">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-[#1a0466] mb-4">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -344,7 +344,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose HAYLAR?</h2>
+            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Why Choose HAYLAR?</h2>
             <p className="text-xl text-gray-600">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
           </motion.div>
 
@@ -358,7 +358,7 @@ export default function Home() {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
               >
                 <div className="text-brand-primary mb-6">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-[#1a0466] mb-4">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
@@ -375,7 +375,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Compliance?</h2>
+            <h2 className="text-4xl font-bold text-[#1a0466] mb-6">Ready to Transform Your Compliance?</h2>
             <p className="text-xl text-gray-600 mb-8">
               Let HAYLAR help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>

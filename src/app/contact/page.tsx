@@ -43,7 +43,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#1a0466] mb-6">
               Get in Touch
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -112,14 +112,14 @@ export default function ContactPage() {
                   <div className="flex items-start space-x-4">
                     <MapPin className="w-6 h-6 text-brand-primary mt-1" />
                     <div>
-                      <p className="font-medium text-gray-900">Abuja, Nigeria</p>
+                      <p className="font-medium text-[#1a0466]">Abuja, Nigeria</p>
                       <p className="text-gray-600">Strategic location in Nigeria&apos;s capital</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Clock className="w-6 h-6 text-brand-primary mt-1" />
                     <div>
-                      <p className="font-medium text-gray-900">Business Hours</p>
+                      <p className="font-medium text-[#1a0466]">Business Hours</p>
                       <p className="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
                       <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p>
                     </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                   <div className="flex items-start space-x-4">
                     <Users className="w-6 h-6 text-brand-primary mt-1" />
                     <div>
-                      <p className="font-medium text-gray-900">Support Available</p>
+                      <p className="font-medium text-[#1a0466]">Support Available</p>
                       <p className="text-gray-600">24/7 emergency support for critical compliance issues</p>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
+            <h2 className="text-4xl font-bold text-[#1a0466] mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 mb-8">
               Don&apos;t wait to transform your compliance strategy. Contact us today and let&apos;s discuss how we can help you achieve your goals.
             </p>
