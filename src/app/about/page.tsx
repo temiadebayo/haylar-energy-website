@@ -142,7 +142,7 @@ export default function AboutPage() {
             
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-[#2e125b] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-3">For Regulators</h4>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 <p className="text-gray-600">Automation reduces cost and delays</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Foresight</h4>

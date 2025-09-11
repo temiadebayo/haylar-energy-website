@@ -264,7 +264,7 @@ export default function Home() {
                 <h4 className="text-lg font-semibold text-[#1a0466] mb-4 text-center">Serving Key Industries</h4>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-white font-bold text-sm">O&G</span>
                     </div>
                     <p className="text-sm font-medium text-gray-700">Oil & Gas</p>
