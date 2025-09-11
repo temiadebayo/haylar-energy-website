@@ -3,12 +3,12 @@ import { MapPin, Mail, Globe } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-[#1a0466] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <h3 className="text-2xl font-bold text-brand-secondary mb-4">HAYLAR Energy Services Ltd</h3>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <h3 className="text-2xl font-bold text-white mb-4">HAYLAR Energy Services Ltd</h3>
+            <p className="text-white mb-6 max-w-md">
               Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </p>
             <div className="flex space-x-4">
@@ -19,23 +19,23 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-brand-secondary">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-300 hover:text-brand-primary transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-brand-primary transition-colors">About</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-brand-primary transition-colors">Services</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-brand-primary transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-white hover:text-orange-400 transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-white hover:text-orange-400 transition-colors">About</Link></li>
+              <li><Link href="/services" className="text-white hover:text-orange-400 transition-colors">Services</Link></li>
+              <li><Link href="/contact" className="text-white hover:text-orange-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-brand-secondary">Contact</h4>
-            <div className="space-y-2 text-gray-300">
+            <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
+            <div className="space-y-2 text-white">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
                 <span>Abuja, Nigeria</span>
               </div>
-              <Link href="mailto:info@haylarenergy.com" className="flex items-center space-x-2 hover:text-brand-primary transition-colors">
+              <Link href="mailto:info@haylarenergy.com" className="flex items-center space-x-2 hover:text-orange-400 transition-colors">
                 <Mail className="w-4 h-4" />
                 <span>info@haylarenergy.com</span>
               </Link>
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <div className="border-t border-white/20 mt-12 pt-8 text-center text-white">
           <p>&copy; 2025 HAYLAR Energy Services Ltd. All rights reserved.</p>
         </div>
       </div>
