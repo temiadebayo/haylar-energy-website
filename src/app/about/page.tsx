@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Users, Globe, Zap, Award, Target, Rocket, BarChart3, Settings, Building2, Eye, Brain, Handshake } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -229,8 +230,15 @@ export default function AboutPage() {
               className="lg:col-span-1"
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl font-bold text-white">LT</span>
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-brand-primary/20">
+                  <Image
+                    src="/ceo-headshot.jpg"
+                    alt="Lara Timi-Ajayi, Founder & CEO of HAYLAR Energy"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[#2e125b] mb-2">Lara Timi-Ajayi</h3>
                 <p className="text-brand-primary font-medium">Founder & CEO</p>
