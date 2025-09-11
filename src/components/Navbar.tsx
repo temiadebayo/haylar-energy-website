@@ -1,0 +1,110 @@
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
+
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/haylar_logo.png"
+                alt="HAYLAR Energy Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link href="/" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Services
+              </Link>
+              <a href="#why-choose-us" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Why Choose Us
+              </a>
+              <Link href="/contact" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 p-2 rounded-md"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+              <Link 
+                href="/" 
+                className="text-gray-700 hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                href="/about" 
+                className="text-gray-700 hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                href="/services" 
+                className="text-gray-700 hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <a 
+                href="#why-choose-us" 
+                className="text-gray-700 hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Why Choose Us
+              </a>
+              <Link 
+                href="/contact" 
+                className="text-gray-700 hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+}

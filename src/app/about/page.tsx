@@ -7,25 +7,22 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   const companyStats = [
-    { icon: <Users className="w-8 h-8" />, number: "20+", label: "Years Experience" },
-    { icon: <Globe className="w-8 h-8" />, number: "3", label: "Industry Sectors" },
-    { icon: <Zap className="w-8 h-8" />, number: "100+", label: "Projects Completed" },
-    { icon: <Shield className="w-8 h-8" />, number: "50+", label: "Client Partners" }
+    { icon: <Globe className="w-8 h-8" />, number: "3", label: "Industry Sectors" }
   ];
 
   const milestones = [
     {
-      year: "2025",
+      year: "2022",
       title: "Company Founded",
       description: "HAYLAR Energy Services Ltd established in Abuja, Nigeria with a vision to transform regulatory compliance in the energy sector."
     },
     {
-      year: "2025",
+      year: "2023",
       title: "NovaCore Platform Launch",
       description: "Development and launch of our flagship integrated compliance management system."
     },
     {
-      year: "2025",
+      year: "2024",
       title: "Industry Partnerships",
       description: "Strategic partnerships with key players in Oil & Gas, Power, and Finance sectors."
     }
@@ -85,17 +82,17 @@ export default function AboutPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-brand-primary to-brand-secondary">
+      <section className="pt-24 pb-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               About HAYLAR Energy
             </h1>
-            <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
               Leading the transformation of regulatory compliance in Nigeria&apos;s energy sector through innovation, technology, and expertise.
             </p>
           </motion.div>
@@ -113,7 +110,7 @@ export default function AboutPage() {
             >
               <h2 className="text-4xl font-bold text-brand-secondary mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                HAYLAR Energy Services Ltd was founded with a singular mission: transforming compliance from a regulatory necessity into a strategic advantage. Built on a foundation of integrity, innovation, and excellence, we provide cutting-edge compliance solutions that empower businesses to thrive in an evolving energy landscape.
+                Founded in 2022, HAYLAR Energy Services Ltd was established with a singular mission: transforming compliance from a regulatory necessity into a strategic advantage. Built on a foundation of integrity, innovation, and excellence, we provide cutting-edge compliance solutions that empower businesses to thrive in an evolving energy landscape.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 We believe that true success stems from trust, responsibility, and foresight. By integrating governance, technology, and strategic insight, we help organizations not only meet regulatory standards but also enhance operational efficiency, attract investment, and achieve sustainable growth.
@@ -142,8 +139,48 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* CEO Message */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">A Message from Our CEO</h2>
+            <p className="text-xl text-gray-600">Lara Timi-Ajayi, Founder & CEO</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white rounded-2xl p-8 md:p-12 text-gray-900 shadow-sm border border-gray-100"
+          >
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl leading-relaxed mb-6">
+                At HAYLAR Energy, we are driven by a singular mission: transforming compliance from a regulatory necessity into strategic advantage. Built on integrity, innovation and excellence, we develop cutting-edge compliance solutions that empower industries with oversight and foresight to thrive in an evolving energy landscape.
+              </p>
+              <p className="text-lg md:text-xl leading-relaxed mb-6">
+                Our vision is simple, yet ambitious. By integrating governance technology and strategic insight, we aim to transform compliance into a driver of transparency, accountability and growth across Nigeria&apos;s most vital industries.
+              </p>
+              <p className="text-lg md:text-xl leading-relaxed mb-6">
+                NovaCore is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth.
+              </p>
+              <p className="text-lg md:text-xl leading-relaxed">
+                Beyond compliance, HAYLAR champion&apos;s a mindset shift, one where businesses view regulation as a catalyst for innovation and long-term value creation on a global scale. At HAYLAR, we are committed to equipping organizations with the tools, expertise, and forward-thinking solutions they need to lead with confidence.
+              </p>
+              <p className="text-lg md:text-xl leading-relaxed mt-6 font-semibold">
+                Together, we redefine compliance for a smarter, more efficient and sustainable energy future.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Company Stats */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-purple-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -155,14 +192,14 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600">Key metrics that define our success and growth</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex justify-center">
             {companyStats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
+                className="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-all duration-300 border border-gray-100"
               >
                 <div className="text-brand-primary mb-4 flex justify-center">{stat.icon}</div>
                 <div className="text-4xl font-bold text-brand-secondary mb-2">{stat.number}</div>
@@ -195,9 +232,9 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}
               >
-                <div className="flex-1">
+                <div className="flex-1 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
                   <div className="text-6xl font-bold text-brand-primary mb-4">{milestone.year}</div>
-                  <h3 className="text-2xl font-semibold text-brand-secondary mb-4">{milestone.title}</h3>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{milestone.title}</h3>
                   <p className="text-lg text-gray-600 leading-relaxed">{milestone.description}</p>
                 </div>
                 <div className="flex-1 flex justify-center">

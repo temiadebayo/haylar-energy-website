@@ -14,24 +14,24 @@ export default function Home() {
     {
       id: 1,
       title: "Regulatory Compliance Technology",
-      subtitle: "Transforming Compliance into Strategic Advantage",
-      description: "Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.",
+      subtitle: "Energy | Innovation | Technology",
+      description: "Transforming compliance from a regulatory necessity into strategic advantage. Built on integrity, innovation and excellence, we develop cutting-edge compliance solutions that empower industries.",
       bgColor: "from-brand-primary to-orange-700",
       cta: "Explore Our Solutions"
     },
     {
       id: 2,
       title: "NovaCore Platform",
-      subtitle: "Real-Time Compliance Technology",
-      description: "Our flagship platform aggregates operator data submissions to provide real-time, interactive compliance dashboard, enhancing oversight and decision-making.",
+      subtitle: "Insights, Amplified - Real-Time Compliance Technology",
+      description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       bgColor: "from-brand-secondary to-purple-800",
       cta: "Learn More"
     },
     {
       id: 3,
-      title: "Energy Industry Expertise",
-      subtitle: "Oil & Gas | Power | Finance",
-      description: "Adopting an interdisciplinary approach with data-driven, technology-enabled solutions to boost compliance initiatives and operational efficiency.",
+      title: "Future-Forward Optimization",
+      subtitle: "Empowering Organizations with Strategic Advantage",
+      description: "By integrating governance technology and strategic insight, we transform compliance into a driver of transparency, accountability and growth across Nigeria&apos;s most vital industries.",
       bgColor: "from-brand-primary to-orange-800",
       cta: "Get Started"
     }
@@ -40,33 +40,33 @@ export default function Home() {
   const services = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Regulatory Compliance Technology",
-      description: "NovaCore platform with real-time compliance dashboards, automated reporting systems, and predictive analytics for proactive compliance management."
+      title: "NovaCore: Real-Time Compliance Technology",
+      description: "Integrated modular compliance ecosystem that unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system."
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Risk Management & Advisory",
-      description: "Comprehensive risk mitigation strategies, compliance gap identification, and corporate governance frameworks for operational integrity."
+      title: "Regulatory Risk Compliance & Advisory",
+      description: "We identify compliance risks early and design strategies that strengthen integrity, reduce exposure and position operators for long-term resilience."
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "Project Management Consulting",
-      description: "End-to-end project management for upstream and midstream oil and gas developments with 20+ years of industry expertise."
+      title: "Project Management Consulting - Oil & Gas",
+      description: "End-to-end project management support for upstream and midstream oil and gas developments with specialized industry expertise."
     },
     {
       icon: <FileText className="w-8 h-8" />,
-      title: "Executive Thought Leadership",
-      description: "Strategic content development, conference speeches, and executive communications for energy sector leaders."
+      title: "Financial Reg-Tech Solutions",
+      description: "Regulatory technology solutions for financial institutions including automated AML monitoring, regulatory reporting automation, and tiered compliance tools."
     },
     {
       icon: <Building2 className="w-8 h-8" />,
-      title: "Procurement & Supply Chain",
-      description: "Technology-enabled procurement tools with regulatory compliance, real-time tracking, and supply chain optimization."
+      title: "Procurement & Supply Chain Integrity",
+      description: "Technology-enabled procurement tools ensuring sourcing processes are efficient, cost-effective and fully aligned with regulatory standards."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Financial Reg-Tech Solutions",
-      description: "Customized compliance automation and risk management solutions for banks, fintech companies, and financial institutions."
+      title: "Digital Governance & Risk Management",
+      description: "Digital frameworks that help operators mitigate risks, demonstrate accountability, and remain competitive in an increasingly regulated global market."
     }
   ];
 
@@ -96,8 +96,8 @@ export default function Home() {
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Specialized Expertise",
-      description: "Deep regulatory experience from power, oil & gas and finance sectors to develop compliance-driven solutions."
+      title: "Specialized Compliance Expertise",
+      description: "Leveraging deep regulatory experience from power, oil & gas and finance sectors to develop compliance-driven solutions."
     }
   ];
 
@@ -127,7 +127,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-orange-50 to-purple-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,7 +160,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Carousel */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -170,13 +170,12 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="absolute inset-0"
           >
-            <div className={`absolute inset-0 bg-gradient-to-br ${carouselSlides[currentSlide].bgColor}`}>
-              <div className="absolute inset-0 bg-black/20"></div>
+            <div className="absolute inset-0 bg-white">
             </div>
           </motion.div>
         </AnimatePresence>
 
-        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center text-gray-900 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -185,13 +184,13 @@ export default function Home() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
                 {carouselSlides[currentSlide].title}
               </h1>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-light mb-6 text-gray-200">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-light mb-6 text-gray-600">
                 {carouselSlides[currentSlide].subtitle}
               </p>
-              <p className="text-lg sm:text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl mb-8 text-gray-500 max-w-2xl mx-auto">
                 {carouselSlides[currentSlide].description}
               </p>
               <button className="bg-brand-primary hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
@@ -204,13 +203,13 @@ export default function Home() {
         {/* Carousel Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-20"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all duration-300 z-20"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-20"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all duration-300 z-20"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -222,7 +221,7 @@ export default function Home() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+                index === currentSlide ? 'bg-brand-primary scale-125' : 'bg-gray-300 hover:bg-gray-400'
               }`}
             />
           ))}
@@ -230,7 +229,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2 
@@ -256,10 +255,14 @@ export default function Home() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
             >
               <h3 className="text-2xl font-semibold text-brand-secondary mb-4">Who We Are</h3>
                               <p className="text-gray-600 mb-6 leading-relaxed">
-                  HAYLAR Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, power and finance sectors. Adopting an interdisciplinary approach, we provide data-driven, technology-enabled solutions to boost compliance initiatives, ensuring seamless adherence to respective industry standards and regulations.
+                  Founded in 2022, HAYLAR Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, Power and Financial sectors. We believe compliance should not be a burden but a catalyst for trust, growth and business resilience.
+                </p>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Our flagship platform, NovaCore is more than a reporting tool, it is a reimagined compliance ecosystem. By unifying data, streamlining processes and providing foresight through AI analytics, NovaCore enables regulators, operators and institutions to lead with confidence in a complex regulatory landscape.
                 </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -328,7 +331,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -336,7 +339,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Our Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
             <p className="text-xl text-gray-600">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
           </motion.div>
 
@@ -347,10 +350,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100"
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
               >
                 <div className="text-brand-primary mb-6">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-brand-secondary mb-4">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -359,7 +362,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="py-20 bg-gradient-to-r from-orange-50 to-purple-50">
+      <section id="why-choose-us" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -367,7 +370,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Why Choose HAYLAR?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose HAYLAR?</h2>
             <p className="text-xl text-gray-600">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
           </motion.div>
 
@@ -378,10 +381,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
               >
                 <div className="text-brand-primary mb-6">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-brand-secondary mb-4">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
@@ -390,22 +393,23 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-brand-primary to-brand-secondary">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Compliance?</h2>
-            <p className="text-xl text-orange-100 mb-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Compliance?</h2>
+            <p className="text-xl text-gray-600 mb-8">
               Let HAYLAR help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="bg-brand-primary text-white hover:bg-orange-700 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Partner With Us
               </Link>
-              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-brand-secondary font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              <Link href="/about" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
                 Learn More
               </Link>
             </div>
@@ -414,7 +418,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-secondary text-white py-16">
+      <footer id="contact" className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
@@ -451,7 +455,7 @@ export default function Home() {
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-gray-300">
                 <p>Abuja, Nigeria</p>
-                <Link href="mailto:haylarenergysl@gmail.com" className="hover:text-brand-primary transition-colors">haylarenergysl@gmail.com</Link>
+                <Link href="mailto:info@haylarenergy.com" className="hover:text-brand-primary transition-colors">info@haylarenergy.com</Link>
                 <Link href="tel:+234-909-224-9845" className="hover:text-brand-primary transition-colors">+234-909 224 9845</Link>
               </div>
             </div>

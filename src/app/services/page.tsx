@@ -9,85 +9,85 @@ export default function ServicesPage() {
   const mainServices = [
     {
       icon: <BarChart3 className="w-12 h-12" />,
-      title: "Regulatory Compliance Technology",
-      subtitle: "NovaCore Platform",
-      description: "Our flagship platform aggregates operator data submissions to provide real-time, interactive compliance dashboard, enhancing oversight and decision-making.",
+      title: "NovaCore: Real-Time Compliance Technology",
+      subtitle: "For Regulators",
+      description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       features: [
-        "Real-time compliance dashboards",
-        "Automated reporting systems",
-        "Predictive analytics for proactive compliance",
+        "Integration with existing platforms",
+        "Automated compliance reporting",
         "Regulatory data intelligence",
-        "Compliance tracking and monitoring"
+        "Governance & risk management",
+        "Real-time sector-wide insights"
       ],
       bgColor: "from-brand-primary to-orange-600"
     },
     {
       icon: <Shield className="w-12 h-12" />,
-      title: "Risk Management & Advisory",
-      subtitle: "Comprehensive Risk Solutions",
-      description: "Identification of compliance gaps and risk mitigation strategies for improving operational integrity and corporate governance.",
+      title: "Regulatory Risk Compliance & Advisory",
+      subtitle: "For Operators",
+      description: "We identify compliance risks early and design strategies that strengthen integrity, reduce exposure and position operators for long-term resilience.",
       features: [
-        "Compliance gap analysis",
-        "Risk assessment frameworks",
-        "Corporate governance solutions",
-        "Operational risk mitigation",
-        "Strategic risk advisory"
+        "Compliance as a culture",
+        "Seamless reporting & monitoring",
+        "Procurement & supply chain integrity",
+        "Digital governance & risk management",
+        "Incubating innovation"
       ],
       bgColor: "from-brand-secondary to-purple-600"
     },
     {
       icon: <Settings className="w-12 h-12" />,
-      title: "Project Management Consulting",
-      subtitle: "Oil & Gas Expertise",
-      description: "End-to-end project management for upstream and midstream oil and gas developments with 20+ years of industry expertise.",
+      title: "Project Management Consulting - Oil & Gas",
+      subtitle: "End-to-End Support",
+      description: "End-to-end project management support for upstream and midstream oil and gas developments with specialized industry expertise.",
       features: [
-        "Project planning & scheduling",
-        "Procurement oversight",
-        "Contractor coordination",
-        "Cost control & budget management",
-        "Performance & quality assurance"
+        "Asset evaluation and development",
+        "Asset management services",
+        "Asset financing and technical services",
+        "Geology & geophysics services",
+        "Engineering services"
       ],
       bgColor: "from-brand-primary to-orange-600"
     },
     {
       icon: <FileText className="w-12 h-12" />,
-      title: "Executive Thought Leadership",
-      subtitle: "Strategic Communication",
-      description: "Strategic content development, conference speeches, and executive communications for energy sector leaders.",
+      title: "Financial Reg-Tech Solutions",
+      subtitle: "For Financial Institutions",
+      description: "Regulatory technology solutions that simplify compliance, strengthen trust and operational resilience for Nigeria's financial ecosystem.",
       features: [
-        "Thought leadership articles",
-        "Conference speeches & keynotes",
-        "LinkedIn & social media branding",
-        "Whitepapers & policy briefs",
-        "Executive & investor communications"
+        "NovaCore: Unified compliance for finance",
+        "Automated AML & fraud risk monitoring",
+        "Regulatory reporting automation",
+        "Tiered solutions for every institution",
+        "Data-driven insights for risk & growth"
       ],
       bgColor: "from-brand-secondary to-purple-600"
     },
     {
       icon: <Building2 className="w-12 h-12" />,
-      title: "Procurement & Supply Chain",
+      title: "Procurement & Supply Chain Integrity",
       subtitle: "Technology-Enabled Solutions",
-      description: "Technology-enabled procurement tools with regulatory compliance, real-time tracking, and supply chain optimization.",
+      description: "We ensure all procurement processes meet industry regulations, mitigating risks and ensuring seamless operations through technology-enabled tools.",
       features: [
         "Regulatory-compliant procurement",
         "Technology-enabled procurement tools",
         "Supply chain optimization",
         "Real-time tracking & monitoring",
-        "Inventory management systems"
+        "Automated procurement workflows"
       ],
       bgColor: "from-brand-primary to-orange-600"
     },
     {
       icon: <TrendingUp className="w-12 h-12" />,
-      title: "Financial Reg-Tech Solutions",
-      subtitle: "Compliance Automation",
-      description: "Customized compliance automation and risk management solutions for banks, fintech companies, and financial institutions.",
+      title: "Digital Governance & Risk Management",
+      subtitle: "Future-Proofing Operations",
+      description: "Digital frameworks that help operators mitigate risks, demonstrate accountability, and remain competitive in an increasingly regulated global market.",
       features: [
-        "Unified compliance management platform",
-        "Integrated compliance alerts & reporting",
-        "Automated AML & fraud monitoring",
-        "Regulatory reporting automation",
-        "Cost-effective compliance tools"
+        "Future-proofing operations",
+        "Risk mitigation strategies",
+        "Accountability frameworks",
+        "Global market competitiveness",
+        "Digital transformation support"
       ],
       bgColor: "from-brand-secondary to-purple-600"
     }
@@ -170,17 +170,17 @@ export default function ServicesPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-brand-primary to-brand-secondary">
+      <section className="pt-24 pb-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive regulatory compliance and energy solutions designed to transform your business operations and drive sustainable growth.
             </p>
           </motion.div>
@@ -280,7 +280,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 <div className={`bg-gradient-to-r ${service.bgColor} p-8 text-white`}>
                   <div className="mb-4">{service.icon}</div>

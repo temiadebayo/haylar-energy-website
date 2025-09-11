@@ -1,35 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Users, Globe, Zap, MessageSquare, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Users, Globe, Zap, MessageSquare, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import ContactForm from '@/components/ContactForm';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add email service integration here
-  };
 
   const contactInfo = [
     {
@@ -47,7 +24,7 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-8 h-8" />,
       title: "Email Address",
-      details: "haylarenergysl@gmail.com",
+      details: "info@haylarenergy.com",
       description: "Send us detailed inquiries and we'll respond within 24 hours."
     },
     {
@@ -100,17 +77,17 @@ export default function ContactPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-brand-primary to-brand-secondary">
+      <section className="pt-24 pb-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
               Ready to transform your compliance strategy? Let&apos;s discuss how HAYLAR Energy can help you achieve your goals.
             </p>
           </motion.div>
@@ -150,7 +127,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-purple-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
@@ -159,114 +136,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-brand-secondary mb-8">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your company name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service of Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service}>{service}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
-                    placeholder="Tell us about your project or inquiry..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-brand-primary hover:bg-orange-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
-                >
-                  <Send className="w-5 h-5" />
-                  <span>Send Message</span>
-                </button>
-              </form>
+              <ContactForm />
             </motion.div>
 
             {/* Office Information */}
@@ -310,7 +180,7 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />
-                    <span>20+ years of industry experience</span>
+                    <span>Specialized industry expertise</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />
@@ -332,23 +202,23 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-brand-primary to-brand-secondary">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-orange-100 mb-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-600 mb-8">
               Don&apos;t wait to transform your compliance strategy. Contact us today and let&apos;s discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+234-909-224-9845" className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+              <a href="tel:+234-909-224-9845" className="bg-brand-primary text-white hover:bg-orange-700 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span>Call Us Now</span>
               </a>
-              <a href="mailto:haylarenergysl@gmail.com" className="border-2 border-white text-white hover:bg-white hover:text-brand-secondary font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+              <a href="mailto:info@haylarenergy.com" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5" />
                 <span>Send Email</span>
               </a>
