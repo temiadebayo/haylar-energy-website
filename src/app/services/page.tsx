@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { BarChart3, Shield, Settings, FileText, Building2, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { BarChart3, Shield, Settings, FileText, Building2, TrendingUp, CheckCircle, ArrowRight, Target, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
