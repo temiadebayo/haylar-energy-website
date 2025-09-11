@@ -72,11 +72,11 @@ export default function Home() {
   ];
 
   const values = [
-    { icon: <Zap className="w-6 h-6" />, title: "Innovation", description: "Cutting-edge technology and forward-thinking solutions" },
-    { icon: <Shield className="w-6 h-6" />, title: "Integrity", description: "Built on foundation of trust, responsibility and excellence" },
-    { icon: <Target className="w-6 h-6" />, title: "Excellence", description: "Highest quality standards in all operations and services" },
     { icon: <CheckCircle className="w-6 h-6" />, title: "Compliance", description: "Seamless adherence to industry standards and regulations" },
-    { icon: <TrendingUp className="w-6 h-6" />, title: "Efficiency", description: "Technology-driven solutions for operational optimization" }
+    { icon: <TrendingUp className="w-6 h-6" />, title: "Efficiency", description: "Technology-driven solutions for operational optimization" },
+    { icon: <Target className="w-6 h-6" />, title: "Excellence", description: "Highest quality standards in all operations and services" },
+    { icon: <Zap className="w-6 h-6" />, title: "Innovation", description: "Cutting-edge technology and forward-thinking solutions" },
+    { icon: <Shield className="w-6 h-6" />, title: "Integrity", description: "Built on foundation of trust, responsibility and excellence" }
   ];
 
   const whyChooseUs = [
@@ -357,7 +357,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-primary/20"
               >
-                <div className="text-brand-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center">
                     {service.icon}
                   </div>
@@ -395,7 +395,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-secondary/20"
               >
-                <div className="text-brand-secondary mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center">
                     {item.icon}
                   </div>

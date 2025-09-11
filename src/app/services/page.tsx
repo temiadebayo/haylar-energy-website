@@ -191,7 +191,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 {novacoreFeatures.map((feature) => (
                   <div key={feature.title} className="flex items-start space-x-4 group">
-                    <div className="text-brand-primary mt-1 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-white mt-1 group-hover:scale-110 transition-transform duration-300">
                       <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-orange-600 rounded-lg flex items-center justify-center">
                         {feature.icon}
                       </div>
@@ -293,7 +293,7 @@ export default function ServicesPage() {
                     <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-brand-primary to-transparent transform translate-x-4"></div>
                   )}
                 </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 text-white">
                   {process.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-[#1a0466] mb-3 group-hover:text-brand-primary transition-colors">{process.title}</h3>
