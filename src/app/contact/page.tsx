@@ -43,7 +43,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#1a0466] mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
               Get in Touch
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -62,7 +62,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Contact Information</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Contact Information</h2>
             <p className="text-xl text-gray-600">Multiple ways to reach us and get the support you need</p>
           </motion.div>
 
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 text-center"
               >
                 <div className="text-brand-primary mb-6 flex justify-center">{info.icon}</div>
-                <h3 className="text-xl font-semibold text-brand-secondary mb-3">{info.title}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-3">{info.title}</h3>
                 <p className="text-lg font-medium text-brand-primary mb-3">{info.details}</p>
                 <p className="text-gray-600 text-sm">{info.description}</p>
               </motion.div>
@@ -104,17 +104,17 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-4xl font-bold text-brand-secondary mb-8">Office Information</h2>
+              <h2 className="text-4xl font-bold text-[#2e125b] mb-8">Office Information</h2>
               
               <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <h3 className="text-2xl font-semibold text-brand-secondary mb-6">Abuja Office</h3>
+                <h3 className="text-2xl font-semibold text-[#2e125b] mb-6">Abuja Office</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4 group">
                     <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-medium text-[#1a0466] group-hover:text-brand-primary transition-colors">Abuja, Nigeria</p>
+                      <p className="font-medium text-[#2e125b] group-hover:text-brand-primary transition-colors">Abuja, Nigeria</p>
                       <p className="text-gray-600">Strategic location in Nigeria&apos;s capital</p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-medium text-[#1a0466] group-hover:text-brand-secondary transition-colors">Business Hours</p>
+                      <p className="font-medium text-[#2e125b] group-hover:text-[#2e125b] transition-colors">Business Hours</p>
                       <p className="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
                       <p className="text-gray-600">No Saturday work</p>
                     </div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-medium text-[#1a0466] group-hover:text-brand-primary transition-colors">Support Available</p>
+                      <p className="font-medium text-[#2e125b] group-hover:text-brand-primary transition-colors">Support Available</p>
                       <p className="text-gray-600">24/7 emergency support for critical compliance issues</p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-6">Ready to Get Started?</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 mb-8">
               Don&apos;t wait to transform your compliance strategy. Contact us today and let&apos;s discuss how we can help you achieve your goals.
             </p>

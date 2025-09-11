@@ -151,7 +151,7 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#1a0466] mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
               Our Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -170,7 +170,7 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-brand-secondary mb-4"><strong>NovaCore</strong> Platform</h2>
+              <h2 className="text-4xl font-bold text-[#2e125b] mb-4"><strong>NovaCore</strong> Platform</h2>
               <p className="text-xl text-gray-600 mb-8">Our flagship integrated compliance management system</p>
             </motion.div>
           </div>
@@ -181,7 +181,7 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-3xl font-bold text-brand-secondary mb-6">Revolutionizing Compliance Management</h3>
+              <h3 className="text-3xl font-bold text-[#2e125b] mb-6">Revolutionizing Compliance Management</h3>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 <strong>NovaCore</strong> is our cutting-edge platform that aggregates operator data submissions to provide a real-time, interactive compliance dashboard. It enhances oversight and decision-making through advanced technology and intelligent automation.
               </p>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-brand-secondary mb-2 group-hover:text-brand-primary transition-colors">{feature.title}</h4>
+                      <h4 className="font-semibold text-[#2e125b] mb-2 group-hover:text-brand-primary transition-colors">{feature.title}</h4>
                       <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
@@ -247,7 +247,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Our Process</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Process</h2>
             <p className="text-xl text-gray-600">How we transform your compliance strategy</p>
           </motion.div>
 
@@ -296,7 +296,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 text-white">
                   {process.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-[#1a0466] mb-3 group-hover:text-brand-primary transition-colors">{process.title}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-3 group-hover:text-brand-primary transition-colors">{process.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{process.description}</p>
               </motion.div>
             ))}
@@ -313,7 +313,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Comprehensive Service Portfolio</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Comprehensive Service Portfolio</h2>
             <p className="text-xl text-gray-600">Tailored solutions for every aspect of regulatory compliance and energy management</p>
           </motion.div>
 
@@ -357,7 +357,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Industry Expertise</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Industry Expertise</h2>
             <p className="text-xl text-gray-600">Serving key sectors with specialized knowledge and tailored solutions</p>
           </motion.div>
 
@@ -371,7 +371,7 @@ export default function ServicesPage() {
                 className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100"
               >
                 <div className="text-brand-primary mb-6">{sector.icon}</div>
-                <h3 className="text-2xl font-bold text-brand-secondary mb-4">{sector.name}</h3>
+                <h3 className="text-2xl font-bold text-[#2e125b] mb-4">{sector.name}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{sector.description}</p>
                 <div className="space-y-2">
                   {sector.services.map((service, serviceIndex) => (
@@ -400,10 +400,10 @@ export default function ServicesPage() {
               Let <strong>HAYLAR</strong> Energy help you navigate regulatory compliance with confidence and drive operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="bg-white text-[#2e125b] hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Get Started Today
               </Link>
-              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-brand-secondary font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
                 Learn More About Us
               </Link>
             </div>

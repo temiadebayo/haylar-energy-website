@@ -65,7 +65,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#1a0466] mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
               About <strong>HAYLAR</strong> Energy
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -84,7 +84,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-6">Who We Are</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-6">Who We Are</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               <strong>HAYLAR</strong> Energy is a Nigerian compliance technology company dedicated to transforming compliance from a burden into a catalyst for trust, growth and resilience. We bridge the gap between regulation and innovation, equipping regulators and operators in the Oil &amp; Gas, Power and Finance sectors with tools that deliver clarity, accountability and foresight for growth and advancement.
             </p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#1a0466] mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-[#2e125b] mb-4">Our Vision</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 To be the leading compliance technology partner in Nigeria and Africa, delivering future ready compliance solutions that drive economic advancement in sustainable energy and financial transformation.
               </p>
@@ -116,7 +116,7 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center mb-6">
                 <Rocket className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#1a0466] mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-[#2e125b] mb-4">Our Mission</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 To empower organizations with future-forward optimization by continuously pushing the boundaries of efficiency and transforming compliance into a strategic advantage.
               </p>
@@ -134,7 +134,7 @@ export default function AboutPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-brand-primary to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[#1a0466] mb-4">Our Flagship Platform: <strong>NovaCore</strong></h3>
+              <h3 className="text-3xl font-bold text-[#2e125b] mb-4">Our Flagship Platform: <strong>NovaCore</strong></h3>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 A modular compliance ecosystem that integrates diverse compliance modules for regulators, operators, and financial institutions into one unified system.
               </p>
@@ -145,21 +145,21 @@ export default function AboutPage() {
                 <div className="w-12 h-12 bg-[#2e125b] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-3">For Regulators</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-3">For Regulators</h4>
                 <p className="text-gray-600">Real-time, sector-wide insights that simplify oversight, standardize reporting and strengthen enforcement.</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Settings className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-3">For Operators</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-3">For Operators</h4>
                 <p className="text-gray-600">Seamless reporting and monitoring integrated into daily workflows, reducing compliance strain while building cultures of integrity.</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-3">For Financial Institutions</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-3">For Financial Institutions</h4>
                 <p className="text-gray-600">Standardized reporting and automated risk monitoring that simplify compliance for high-volume, resource-stretched banks, fintechs and MFIs.</p>
               </div>
             </div>
@@ -172,34 +172,34 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h3 className="text-3xl font-bold text-[#1a0466] mb-8">Why It Matters</h3>
+            <h3 className="text-3xl font-bold text-[#2e125b] mb-8">Why It Matters</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Transparency</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Transparency</h4>
                 <p className="text-gray-600">Clear oversight across sectors</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Efficiency</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Efficiency</h4>
                 <p className="text-gray-600">Automation reduces cost and delays</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Foresight</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Foresight</h4>
                 <p className="text-gray-600">Predictive analytics enable proactive governance</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Handshake className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-2">Trust</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Trust</h4>
                 <p className="text-gray-600">Stronger compliance builds credibility</p>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">A Message from Our CEO</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">A Message from Our CEO</h2>
             <p className="text-xl text-gray-600">Leadership insights driving our mission forward</p>
           </motion.div>
 
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 <div className="w-32 h-32 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl font-bold text-white">LT</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#1a0466] mb-2">Lara Timi-Ajayi</h3>
+                <h3 className="text-xl font-bold text-[#2e125b] mb-2">Lara Timi-Ajayi</h3>
                 <p className="text-brand-primary font-medium">Founder & CEO</p>
                 <p className="text-sm text-gray-600 mt-2"><strong>HAYLAR</strong> Energy Services Ltd</p>
               </div>
@@ -286,7 +286,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Company at a Glance</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Company at a Glance</h2>
             <p className="text-xl text-gray-600">Key metrics that define our success and growth</p>
           </motion.div>
 
@@ -304,7 +304,7 @@ export default function AboutPage() {
                     {stat.icon}
                   </div>
                 </div>
-                <div className="text-5xl font-bold text-[#1a0466] mb-3 group-hover:text-brand-primary transition-colors">{stat.number}</div>
+                <div className="text-5xl font-bold text-[#2e125b] mb-3 group-hover:text-brand-primary transition-colors">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-orange-600 rounded-full mx-auto"></div>
@@ -324,7 +324,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Our Journey</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Journey</h2>
             <p className="text-xl text-gray-600">Key milestones in our company&apos;s development</p>
           </motion.div>
 
@@ -348,7 +348,7 @@ export default function AboutPage() {
                       </div>
                       <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-orange-600 rounded-full"></div>
                     </div>
-                    <h3 className="text-2xl font-semibold text-[#1a0466] mb-4 group-hover:text-brand-primary transition-colors">{milestone.title}</h3>
+                    <h3 className="text-2xl font-semibold text-[#2e125b] mb-4 group-hover:text-brand-primary transition-colors">{milestone.title}</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">{milestone.description}</p>
                   </div>
                   
@@ -379,7 +379,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Our Leadership Team</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Leadership Team</h2>
             <p className="text-xl text-gray-600">Meet the experts driving innovation and excellence</p>
           </motion.div>
 
@@ -395,7 +395,7 @@ export default function AboutPage() {
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-[#1a0466] mb-2 group-hover:text-brand-primary transition-colors">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-2 group-hover:text-brand-primary transition-colors">{member.name}</h3>
                 <p className="text-brand-primary font-medium mb-4">{member.position}</p>
                 <p className="text-gray-600 leading-relaxed">{member.description}</p>
                 <div className="mt-6 pt-4 border-t border-gray-100">
@@ -420,10 +420,10 @@ export default function AboutPage() {
               Discover how <strong>HAYLAR</strong> Energy can transform your compliance strategy and drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-white text-brand-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/services" className="bg-white text-[#2e125b] hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Explore Our Services
               </Link>
-              <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-brand-secondary font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
                 Get in Touch
               </Link>
             </div>

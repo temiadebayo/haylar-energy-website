@@ -216,7 +216,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl font-bold text-brand-secondary mb-4"
+              className="text-4xl font-bold text-[#2e125b] mb-4"
             >
               About <strong>HAYLAR</strong> Energy Services Ltd
             </motion.h2>
@@ -237,7 +237,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
             >
-              <h3 className="text-2xl font-semibold text-brand-secondary mb-4">Who We Are</h3>
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Who We Are</h3>
                               <p className="text-gray-600 mb-6 leading-relaxed">
                   Founded in 2022, <strong>HAYLAR</strong> Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, Power and Financial sectors. We believe compliance should not be a burden but a catalyst for trust, growth and business resilience.
                 </p>
@@ -261,7 +261,7 @@ export default function Home() {
               
               {/* Industry Sectors Infographic */}
               <div className="mt-8 p-6 bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl">
-                <h4 className="text-lg font-semibold text-[#1a0466] mb-4 text-center">Serving Key Industries</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-4 text-center">Serving Key Industries</h4>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center group">
                     <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
@@ -292,11 +292,11 @@ export default function Home() {
               className="space-y-6"
             >
               <div className="bg-gradient-to-r from-orange-50 to-purple-50 p-6 rounded-lg border border-orange-100">
-                <h4 className="text-lg font-semibold text-brand-secondary mb-2">Vision</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Vision</h4>
                 <p className="text-gray-600">&ldquo;To be the leading Regulatory Compliance technology and procurement solutions provider in Nigeria and Africa, setting new industry standards for regulatory oversight, efficiency and business integrity&rdquo;</p>
               </div>
               <div className="bg-gradient-to-r from-purple-50 to-orange-50 p-6 rounded-lg border border-purple-100">
-                <h4 className="text-lg font-semibold text-brand-secondary mb-2">Mission</h4>
+                <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Mission</h4>
                 <p className="text-gray-600">&ldquo;To empower organizations with future-forward optimization by continuously pushing the boundaries of efficiency&rdquo;</p>
               </div>
             </motion.div>
@@ -313,7 +313,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-brand-secondary mb-4">Our Core Values</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-600">The principles that guide everything we do</p>
           </motion.div>
 
@@ -327,7 +327,7 @@ export default function Home() {
                 className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="text-brand-primary mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-brand-secondary mb-2">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </motion.div>
             ))}
@@ -344,7 +344,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Our Services</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Services</h2>
             <p className="text-xl text-gray-600">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
           </motion.div>
 
@@ -362,7 +362,7 @@ export default function Home() {
                     {service.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#1a0466] mb-4 group-hover:text-brand-primary transition-colors">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-4 group-hover:text-brand-primary transition-colors">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   <div className="w-8 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
@@ -382,7 +382,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-4">Why Choose <strong>HAYLAR</strong>?</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Why Choose <strong>HAYLAR</strong>?</h2>
             <p className="text-xl text-gray-600">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
           </motion.div>
 
@@ -400,7 +400,7 @@ export default function Home() {
                     {item.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#1a0466] mb-4 group-hover:text-brand-secondary transition-colors">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-4 group-hover:text-[#2e125b] transition-colors">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   <div className="w-8 h-1 bg-gradient-to-r from-brand-secondary to-purple-600 rounded-full"></div>
@@ -420,7 +420,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100"
           >
-            <h2 className="text-4xl font-bold text-[#1a0466] mb-6">Ready to Transform Your Compliance?</h2>
+            <h2 className="text-4xl font-bold text-[#2e125b] mb-6">Ready to Transform Your Compliance?</h2>
             <p className="text-xl text-gray-600 mb-8">
               Let <strong>HAYLAR</strong> help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
