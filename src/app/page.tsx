@@ -164,16 +164,16 @@ export default function Home() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 text-white drop-shadow-lg">
                 {carouselSlides[currentSlide].title}
               </h1>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-light mb-6 text-white drop-shadow-md">
+              <p className="text-lg sm:text-xl lg:text-2xl font-normal mb-6 text-white drop-shadow-md">
                 {carouselSlides[currentSlide].subtitle}
               </p>
-              <p className="text-lg sm:text-xl mb-8 text-white drop-shadow-md max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg mb-8 text-white drop-shadow-md max-w-2xl mx-auto">
                 {carouselSlides[currentSlide].description}
               </p>
-              <Link href="/services" className="inline-block bg-brand-primary hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/services" className="inline-block bg-brand-primary hover:bg-orange-700 text-white font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
                 {carouselSlides[currentSlide].cta}
               </Link>
             </motion.div>
@@ -216,7 +216,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl font-bold text-[#2e125b] mb-4"
+              className="text-2xl font-semibold text-[#2e125b] mb-4"
             >
               About <strong>HAYLAR</strong> Energy Services Ltd
             </motion.h2>
@@ -313,8 +313,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-600">The principles that guide everything we do</p>
+            <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Core Values</h2>
+            <p className="text-lg text-gray-600">The principles that guide everything we do</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -344,8 +344,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
+            <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Services</h2>
+            <p className="text-lg text-gray-600">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -382,8 +382,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Why Choose <strong>HAYLAR</strong>?</h2>
-            <p className="text-xl text-gray-600">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
+            <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Why Choose <strong>HAYLAR</strong>?</h2>
+            <p className="text-lg text-gray-600">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -420,15 +420,15 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-6">Ready to Transform Your Compliance?</h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <h2 className="text-2xl font-semibold text-[#2e125b] mb-6">Ready to Transform Your Compliance?</h2>
+            <p className="text-lg text-gray-600 mb-8">
               Let <strong>HAYLAR</strong> help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-brand-primary text-white hover:bg-orange-700 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="bg-brand-primary text-white hover:bg-orange-700 font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Partner With Us
               </Link>
-              <Link href="/about" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              <Link href="/about" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105">
                 Learn More
               </Link>
             </div>
