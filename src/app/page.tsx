@@ -52,7 +52,7 @@ export default function Home() {
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Project Management Consulting - Oil & Gas",
-      description: "End-to-end project management support for upstream and midstream oil and gas developments with specialized industry expertise."
+      description: "End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise."
     },
     {
       icon: <FileText className="w-8 h-8" />,

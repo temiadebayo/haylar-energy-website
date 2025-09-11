@@ -8,7 +8,9 @@ import Footer from '@/components/Footer';
 
 export default function AboutPage() {
   const companyStats = [
-    { icon: <Globe className="w-8 h-8" />, number: "3", label: "Industry Sectors" }
+    { icon: <Globe className="w-8 h-8" />, number: "3", label: "Industry Sectors" },
+    { icon: <Users className="w-8 h-8" />, number: "10+", label: "Years Experience" },
+    { icon: <Zap className="w-8 h-8" />, number: "50+", label: "Projects Completed" }
   ];
 
   const milestones = [
@@ -193,7 +195,7 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600">Key metrics that define our success and growth</p>
           </motion.div>
 
-          <div className="flex justify-center">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {companyStats.map((stat, index) => (
               <motion.div
                 key={stat.label}

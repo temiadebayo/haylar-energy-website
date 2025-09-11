@@ -181,7 +181,7 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />
-                    <span>Specialized industry expertise</span>
+                    <span>10+ years of industry expertise</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />

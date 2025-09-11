@@ -40,7 +40,7 @@ export default function ServicesPage() {
       icon: <Settings className="w-12 h-12" />,
       title: "Project Management Consulting - Oil & Gas",
       subtitle: "End-to-End Support",
-      description: "End-to-end project management support for upstream and midstream oil and gas developments with specialized industry expertise.",
+      description: "End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise.",
       features: [
         "Asset evaluation and development",
         "Asset management services",
