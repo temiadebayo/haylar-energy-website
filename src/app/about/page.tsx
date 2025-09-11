@@ -252,11 +252,18 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-all duration-300 border border-gray-100"
+                className="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-primary/20"
               >
-                <div className="text-brand-primary mb-4 flex justify-center">{stat.icon}</div>
-                <div className="text-4xl font-bold text-brand-secondary mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-brand-primary mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                </div>
+                <div className="text-5xl font-bold text-[#1a0466] mb-3 group-hover:text-brand-primary transition-colors">{stat.number}</div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-orange-600 rounded-full mx-auto"></div>
+                </div>
               </motion.div>
             ))}
           </div>

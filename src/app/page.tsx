@@ -145,6 +145,12 @@ export default function Home() {
           >
             <div className={`absolute inset-0 bg-gradient-to-br ${carouselSlides[currentSlide].bgColor}`}>
               <div className="absolute inset-0 bg-black/20"></div>
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-10 left-10 w-32 h-32 bg-white/20 rounded-full blur-xl"></div>
+                <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/20 rounded-full blur-lg"></div>
+                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/20 rounded-full blur-md"></div>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -324,11 +330,18 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-primary/20"
               >
-                <div className="text-brand-primary mb-6">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-[#1a0466] mb-4">{service.title}</h3>
+                <div className="text-brand-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center">
+                    {service.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-[#1a0466] mb-4 group-hover:text-brand-primary transition-colors">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -355,11 +368,18 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-secondary/20"
               >
-                <div className="text-brand-primary mb-6">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-[#1a0466] mb-4">{item.title}</h3>
+                <div className="text-brand-secondary mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center">
+                    {item.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-[#1a0466] mb-4 group-hover:text-brand-secondary transition-colors">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-1 bg-gradient-to-r from-brand-secondary to-purple-600 rounded-full"></div>
+                </div>
               </motion.div>
             ))}
           </div>

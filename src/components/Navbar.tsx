@@ -42,9 +42,9 @@ export default function Navbar() {
               <Link href="/services" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Services
               </Link>
-              <a href="#why-choose-us" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link href="/#why-choose-us" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Why Choose Us
-              </a>
+              </Link>
               <Link href="/contact" className="text-gray-700 hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
               </Link>
@@ -87,13 +87,13 @@ export default function Navbar() {
               >
                 Services
               </Link>
-              <a 
-                href="#why-choose-us" 
+              <Link 
+                href="/#why-choose-us" 
                 className="text-gray-700 hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Why Choose Us
-              </a>
+              </Link>
               <Link 
                 href="/contact" 
                 className="text-gray-700 hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
