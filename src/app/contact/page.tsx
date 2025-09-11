@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Users, Globe, Zap, MessageSquare, CheckCircle } from 'lucide-react';
+import { MapPin, Mail, Clock, Users, Globe, Zap, MessageSquare, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
@@ -18,12 +18,6 @@ export default function ContactPage() {
       description: "Strategic location in Nigeria's capital for easy access to government agencies and regulatory bodies."
     },
     {
-      icon: <Phone className="w-8 h-8" />,
-      title: "Phone Number",
-      details: "+234-909 224 9845",
-      description: "Call us directly for immediate assistance with your compliance and energy needs."
-    },
-    {
       icon: <Mail className="w-8 h-8" />,
       title: "Email Address",
       details: "info@haylarenergy.com",
@@ -32,7 +26,7 @@ export default function ContactPage() {
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Business Hours",
-      details: "Mon - Fri: 8:00 AM - 6:00 PM",
+      details: "Mon - Fri: 8:00 AM - 5:00 PM",
       description: "Available during standard business hours, with emergency support when needed."
     }
   ];
