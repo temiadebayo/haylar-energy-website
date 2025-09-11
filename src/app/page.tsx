@@ -173,9 +173,9 @@ export default function Home() {
               <p className="text-lg sm:text-xl mb-8 text-white drop-shadow-md max-w-2xl mx-auto">
                 {carouselSlides[currentSlide].description}
               </p>
-              <button className="bg-brand-primary hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/services" className="inline-block bg-brand-primary hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                 {carouselSlides[currentSlide].cta}
-              </button>
+              </Link>
             </motion.div>
           </AnimatePresence>
         </div>
