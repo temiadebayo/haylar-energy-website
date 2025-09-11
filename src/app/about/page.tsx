@@ -20,14 +20,14 @@ export default function AboutPage() {
       description: "HAYLAR Energy Services Ltd established in Abuja, Nigeria with a vision to transform regulatory compliance in the energy sector."
     },
     {
-      year: "2025",
-      title: "NovaCore Platform Launch",
-      description: "Development and launch of our flagship integrated compliance management system."
-    },
-    {
       year: "2024",
       title: "Industry Partnerships",
       description: "Strategic partnerships with key players in Oil & Gas, Power, and Finance sectors."
+    },
+    {
+      year: "2025",
+      title: "NovaCore Platform Launch",
+      description: "Development and launch of our flagship integrated compliance management system."
     }
   ];
 
