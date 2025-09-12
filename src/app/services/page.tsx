@@ -139,7 +139,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-orange-50 to-purple-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navbar />
 
@@ -154,7 +154,7 @@ export default function ServicesPage() {
             <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
               Comprehensive regulatory compliance and energy solutions designed to transform your business operations and drive sustainable growth.
             </p>
           </motion.div>
@@ -171,7 +171,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-[#2e125b] mb-4"><strong>NovaCore</strong> Platform</h2>
-              <p className="text-xl text-gray-600 mb-8">Our flagship integrated compliance management system</p>
+              <p className="text-xl text-black mb-8">Our flagship integrated compliance management system</p>
             </motion.div>
           </div>
 
@@ -182,23 +182,23 @@ export default function ServicesPage() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-3xl font-bold text-[#2e125b] mb-6">Revolutionizing Compliance Management</h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-black mb-6 leading-relaxed">
                 <strong>NovaCore</strong> is our cutting-edge platform that aggregates operator data submissions to provide a real-time, interactive compliance dashboard. It enhances oversight and decision-making through advanced technology and intelligent automation.
               </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-black mb-8 leading-relaxed">
                 Built specifically for the Nigerian energy sector, <strong>NovaCore</strong> ensures seamless adherence to regulatory standards while providing strategic insights that drive operational excellence.
               </p>
               <div className="space-y-4">
                 {novacoreFeatures.map((feature) => (
                   <div key={feature.title} className="flex items-start space-x-4 group">
                     <div className="text-white mt-1 group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-orange-600 rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-[#2e125b] rounded-lg flex items-center justify-center">
                         {feature.icon}
                       </div>
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-[#2e125b] mb-2 group-hover:text-brand-primary transition-colors">{feature.title}</h4>
-                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                      <p className="text-black leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 ))}
@@ -209,7 +209,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-br from-brand-primary to-brand-secondary p-8 rounded-2xl text-white"
+              className="bg-[#2e125b] p-8 rounded-2xl text-white"
             >
               <div className="text-center">
                 <BarChart3 className="w-24 h-24 mx-auto mb-6 text-white" />
@@ -248,7 +248,7 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600">How we transform your compliance strategy</p>
+            <p className="text-xl text-black">How we transform your compliance strategy</p>
           </motion.div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -286,18 +286,18 @@ export default function ServicesPage() {
                 className="text-center group"
               >
                 <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-brand-primary to-orange-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl font-bold text-white">{process.step}</span>
                   </div>
                   {index < 3 && (
                     <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-brand-primary to-transparent transform translate-x-4"></div>
                   )}
                 </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 text-white">
+                <div className="w-16 h-16 bg-[#2e125b] rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 text-white">
                   {process.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-3 group-hover:text-brand-primary transition-colors">{process.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{process.description}</p>
+                <p className="text-black leading-relaxed">{process.description}</p>
               </motion.div>
             ))}
           </div>
@@ -305,7 +305,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Main Services */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-purple-50">
+      <section className="py-20 bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -314,7 +314,7 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Comprehensive Service Portfolio</h2>
-            <p className="text-xl text-gray-600">Tailored solutions for every aspect of regulatory compliance and energy management</p>
+            <p className="text-xl text-black">Tailored solutions for every aspect of regulatory compliance and energy management</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -332,12 +332,12 @@ export default function ServicesPage() {
                   <p className="text-lg opacity-90">{service.subtitle}</p>
                 </div>
                 <div className="p-8">
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                  <p className="text-black mb-6 leading-relaxed">{service.description}</p>
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-black">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -358,7 +358,7 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Industry Expertise</h2>
-            <p className="text-xl text-gray-600">Serving key sectors with specialized knowledge and tailored solutions</p>
+            <p className="text-xl text-black">Serving key sectors with specialized knowledge and tailored solutions</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -368,16 +368,16 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100"
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100"
               >
                 <div className="text-brand-primary mb-6">{sector.icon}</div>
                 <h3 className="text-2xl font-bold text-[#2e125b] mb-4">{sector.name}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{sector.description}</p>
+                <p className="text-black mb-6 leading-relaxed">{sector.description}</p>
                 <div className="space-y-2">
                   {sector.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="flex items-center space-x-2">
                       <ArrowRight className="w-4 h-4 text-brand-primary" />
-                      <span className="text-gray-700">{service}</span>
+                      <span className="text-black">{service}</span>
                     </div>
                   ))}
                 </div>

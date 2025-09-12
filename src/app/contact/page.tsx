@@ -46,7 +46,7 @@ export default function ContactPage() {
             <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
               Ready to transform your compliance strategy? Let&apos;s discuss how <strong>HAYLAR</strong> Energy can help you achieve your goals.
             </p>
           </motion.div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Contact Information</h2>
-            <p className="text-xl text-gray-600">Multiple ways to reach us and get the support you need</p>
+            <p className="text-xl text-black">Multiple ways to reach us and get the support you need</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <div className="text-brand-primary mb-6 flex justify-center">{info.icon}</div>
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-3">{info.title}</h3>
                 <p className="text-lg font-medium text-brand-primary mb-3">{info.details}</p>
-                <p className="text-gray-600 text-sm">{info.description}</p>
+                <p className="text-black text-sm">{info.description}</p>
               </motion.div>
             ))}
           </div>
@@ -110,12 +110,12 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-semibold text-[#2e125b] mb-6">Abuja Office</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-[#2e125b] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-medium text-[#2e125b] group-hover:text-brand-primary transition-colors">Abuja, Nigeria</p>
-                      <p className="text-gray-600">Strategic location in Nigeria&apos;s capital</p>
+                      <p className="text-black">Strategic location in Nigeria&apos;s capital</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4 group">
@@ -124,17 +124,17 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-medium text-[#2e125b] group-hover:text-[#2e125b] transition-colors">Business Hours</p>
-                      <p className="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                      <p className="text-gray-600">No Saturday work</p>
+                      <p className="text-black">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                      <p className="text-black">No Saturday work</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-[#2e125b] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-medium text-[#2e125b] group-hover:text-brand-primary transition-colors">Support Available</p>
-                      <p className="text-gray-600">24/7 emergency support for critical compliance issues</p>
+                      <p className="text-black">24/7 emergency support for critical compliance issues</p>
                     </div>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-[#2e125b] mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-black mb-8">
               Don&apos;t wait to transform your compliance strategy. Contact us today and let&apos;s discuss how we can help you achieve your goals.
             </p>
             <div className="flex justify-center">

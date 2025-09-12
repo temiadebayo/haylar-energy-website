@@ -12,7 +12,7 @@ export default function Footer() {
               Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors cursor-pointer">
+              <div className="w-10 h-10 bg-[#2e125b] rounded-full flex items-center justify-center hover:bg-[#1a0466] transition-colors cursor-pointer">
                 <Globe className="w-5 h-5" />
               </div>
             </div>

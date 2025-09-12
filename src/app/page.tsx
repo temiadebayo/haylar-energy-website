@@ -143,13 +143,13 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="absolute inset-0"
           >
-            <div className={`absolute inset-0 bg-gradient-to-br ${carouselSlides[currentSlide].bgColor}`}>
-              <div className="absolute inset-0 bg-black/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#2e125b] to-[#1a0466]">
+              <div className="absolute inset-0 bg-black/10"></div>
               {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-10 left-10 w-32 h-32 bg-white/20 rounded-full blur-xl"></div>
-                <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/20 rounded-full blur-lg"></div>
-                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/20 rounded-full blur-md"></div>
+              <div className="absolute inset-0 opacity-5">
+                <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+                <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/10 rounded-full blur-lg"></div>
+                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-md"></div>
               </div>
             </div>
           </motion.div>
@@ -173,7 +173,7 @@ export default function Home() {
               <p className="text-base sm:text-lg mb-8 text-white drop-shadow-md max-w-2xl mx-auto">
                 {carouselSlides[currentSlide].description}
               </p>
-              <Link href="/services" className="inline-block bg-brand-primary hover:bg-orange-700 text-white font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/services" className="inline-block bg-white text-[#2e125b] hover:bg-gray-50 font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
                 {carouselSlides[currentSlide].cta}
               </Link>
             </motion.div>
@@ -209,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2 
@@ -224,7 +224,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-xl text-black max-w-3xl mx-auto"
             >
               A leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </motion.p>
@@ -238,29 +238,29 @@ export default function Home() {
               className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
             >
               <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Who We Are</h3>
-                              <p className="text-gray-600 mb-6 leading-relaxed">
+                              <p className="text-black mb-6 leading-relaxed">
                   Founded in 2022, <strong>HAYLAR</strong> Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, Power and Financial sectors. We believe compliance should not be a burden but a catalyst for trust, growth and business resilience.
                 </p>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-black mb-6 leading-relaxed">
                   Our flagship platform, <strong>NovaCore</strong> is more than a reporting tool, it is a reimagined compliance ecosystem. By unifying data, streamlining processes and providing foresight through AI analytics, <strong>NovaCore</strong> enables regulators, operators and institutions to lead with confidence in a complex regulatory landscape.
                 </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-2 h-2 bg-brand-primary rounded-full mt-2"></div>
-                  <p className="text-gray-600">Regulatory compliance technology solutions</p>
+                  <div className="flex-shrink-0 w-2 h-2 bg-[#2e125b] rounded-full mt-2"></div>
+                  <p className="text-black">Regulatory compliance technology solutions</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-2 h-2 bg-brand-primary rounded-full mt-2"></div>
-                  <p className="text-gray-600">Risk management and procurement services</p>
+                  <div className="flex-shrink-0 w-2 h-2 bg-[#2e125b] rounded-full mt-2"></div>
+                  <p className="text-black">Risk management and procurement services</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-2 h-2 bg-brand-primary rounded-full mt-2"></div>
-                  <p className="text-gray-600"><strong>NovaCore</strong> integrated compliance management system</p>
+                  <div className="flex-shrink-0 w-2 h-2 bg-[#2e125b] rounded-full mt-2"></div>
+                  <p className="text-black"><strong>NovaCore</strong> integrated compliance management system</p>
                 </div>
               </div>
               
               {/* Industry Sectors Infographic */}
-              <div className="mt-8 p-6 bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl">
+              <div className="mt-8 p-6 bg-white rounded-xl shadow-md border border-gray-100">
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-4 text-center">Serving Key Industries</h4>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center group">
@@ -305,7 +305,7 @@ export default function Home() {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-purple-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -314,7 +314,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Core Values</h2>
-            <p className="text-lg text-gray-600">The principles that guide everything we do</p>
+            <p className="text-lg text-black">The principles that guide everything we do</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -326,9 +326,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                <div className="text-brand-primary mb-4">{value.icon}</div>
+                <div className="text-[#2e125b] mb-4">{value.icon}</div>
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-2">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <p className="text-black">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -336,7 +336,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -345,7 +345,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Services</h2>
-            <p className="text-lg text-gray-600">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
+            <p className="text-lg text-black">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -357,15 +357,15 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-primary/20"
               >
-                <div className="text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-orange-600 rounded-xl flex items-center justify-center">
+                <div className="text-[#2e125b] mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-white border-2 border-[#2e125b] rounded-xl flex items-center justify-center shadow-md">
                     {service.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#2e125b] mb-4 group-hover:text-brand-primary transition-colors">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-4 group-hover:text-[#2e125b] transition-colors">{service.title}</h3>
+                <p className="text-black leading-relaxed">{service.description}</p>
                 <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="w-8 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
+                  <div className="w-8 h-1 bg-[#2e125b] rounded-full"></div>
                 </div>
               </motion.div>
             ))}
@@ -383,7 +383,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Why Choose <strong>HAYLAR</strong>?</h2>
-            <p className="text-lg text-gray-600">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
+            <p className="text-lg text-black">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -395,15 +395,15 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-secondary/20"
               >
-                <div className="text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center">
+                <div className="text-[#2e125b] mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-white border-2 border-[#2e125b] rounded-xl flex items-center justify-center shadow-md">
                     {item.icon}
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-4 group-hover:text-[#2e125b] transition-colors">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <p className="text-black leading-relaxed">{item.description}</p>
                 <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="w-8 h-1 bg-gradient-to-r from-brand-secondary to-purple-600 rounded-full"></div>
+                  <div className="w-8 h-1 bg-[#2e125b] rounded-full"></div>
                 </div>
               </motion.div>
             ))}
@@ -421,14 +421,14 @@ export default function Home() {
             className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100"
           >
             <h2 className="text-2xl font-semibold text-[#2e125b] mb-6">Ready to Transform Your Compliance?</h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-black mb-8">
               Let <strong>HAYLAR</strong> help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-brand-primary text-white hover:bg-orange-700 font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Partner With Us
               </Link>
-              <Link href="/about" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105">
+              <Link href="/about" className="border-2 border-[#2e125b] text-[#2e125b] hover:bg-[#2e125b] hover:text-white font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105">
                 Learn More
               </Link>
             </div>
