@@ -31,7 +31,7 @@ export default function ContactPage() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-orange-50 to-purple-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navbar />
 
@@ -43,7 +43,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
+            <h1 className="text-5xl md:text-6xl font-semibold text-[#2e125b] mb-6">
               Get in Touch
             </h1>
             <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
@@ -62,7 +62,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Contact Information</h2>
+            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Contact Information</h2>
             <p className="text-xl text-black">Multiple ways to reach us and get the support you need</p>
           </motion.div>
 
@@ -73,11 +73,11 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 text-center"
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
               >
-                <div className="text-brand-primary mb-6 flex justify-center">{info.icon}</div>
+                <div className="text-[#2e125b] mb-6 flex justify-center">{info.icon}</div>
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-3">{info.title}</h3>
-                <p className="text-lg font-medium text-brand-primary mb-3">{info.details}</p>
+                <p className="text-lg font-medium text-[#2e125b] mb-3">{info.details}</p>
                 <p className="text-black text-sm">{info.description}</p>
               </motion.div>
             ))}
@@ -104,7 +104,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-4xl font-bold text-[#2e125b] mb-8">Office Information</h2>
+              <h2 className="text-4xl font-semibold text-[#2e125b] mb-8">Office Information</h2>
               
               <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
                 <h3 className="text-2xl font-semibold text-[#2e125b] mb-6">Abuja Office</h3>
@@ -114,12 +114,12 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-medium text-[#2e125b] group-hover:text-brand-primary transition-colors">Abuja, Nigeria</p>
+                      <p className="font-medium text-[#2e125b] group-hover:text-[#2e125b] transition-colors">Abuja, Nigeria</p>
                       <p className="text-black">Strategic location in Nigeria&apos;s capital</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-gradient-to-br from-brand-secondary to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-[#2e125b] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -133,15 +133,15 @@ export default function ContactPage() {
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-medium text-[#2e125b] group-hover:text-brand-primary transition-colors">Support Available</p>
+                      <p className="font-medium text-[#2e125b] group-hover:text-[#2e125b] transition-colors">Support Available</p>
                       <p className="text-black">24/7 emergency support for critical compliance issues</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-brand-primary to-brand-secondary p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Why Choose <strong>HAYLAR</strong>?</h3>
+              <div className="bg-[#2e125b] p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-semibold mb-6">Why Choose <strong>HAYLAR</strong>?</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5" />
@@ -174,12 +174,12 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-6">Ready to Get Started?</h2>
+            <h2 className="text-4xl font-semibold text-[#2e125b] mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-black mb-8">
               Don&apos;t wait to transform your compliance strategy. Contact us today and let&apos;s discuss how we can help you achieve your goals.
             </p>
             <div className="flex justify-center">
-              <a href="mailto:info@haylarenergy.com" className="bg-brand-primary text-white hover:bg-orange-700 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+              <a href="mailto:info@haylarenergy.com" className="bg-[#2e125b] text-white hover:bg-[#1a0466] font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5" />
                 <span>Send Email</span>
               </a>

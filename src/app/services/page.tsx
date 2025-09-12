@@ -20,7 +20,7 @@ export default function ServicesPage() {
         "Governance & risk management",
         "Real-time sector-wide insights"
       ],
-      bgColor: "from-brand-primary to-orange-600"
+      bgColor: "from-[#2e125b] to-[#1a0466]"
     },
     {
       icon: <Shield className="w-12 h-12" />,
@@ -34,7 +34,7 @@ export default function ServicesPage() {
         "Digital governance & risk management",
         "Incubating innovation"
       ],
-      bgColor: "from-brand-secondary to-purple-600"
+      bgColor: "from-[#2e125b] to-[#1a0466]"
     },
     {
       icon: <Settings className="w-12 h-12" />,
@@ -48,7 +48,7 @@ export default function ServicesPage() {
         "Geology & geophysics services",
         "Engineering services"
       ],
-      bgColor: "from-brand-primary to-orange-600"
+      bgColor: "from-[#2e125b] to-[#1a0466]"
     },
     {
       icon: <FileText className="w-12 h-12" />,
@@ -62,7 +62,7 @@ export default function ServicesPage() {
         "Tiered solutions for every institution",
         "Data-driven insights for risk & growth"
       ],
-      bgColor: "from-brand-secondary to-purple-600"
+      bgColor: "from-[#2e125b] to-[#1a0466]"
     },
     {
       icon: <Building2 className="w-12 h-12" />,
@@ -76,7 +76,7 @@ export default function ServicesPage() {
         "Real-time tracking & monitoring",
         "Automated procurement workflows"
       ],
-      bgColor: "from-brand-primary to-orange-600"
+      bgColor: "from-[#2e125b] to-[#1a0466]"
     },
     {
       icon: <TrendingUp className="w-12 h-12" />,
@@ -90,7 +90,7 @@ export default function ServicesPage() {
         "Global market competitiveness",
         "Digital transformation support"
       ],
-      bgColor: "from-brand-secondary to-purple-600"
+      bgColor: "from-[#2e125b] to-[#1a0466]"
     }
   ];
 
@@ -151,7 +151,7 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
+            <h1 className="text-5xl md:text-6xl font-semibold text-[#2e125b] mb-6">
               Our Services
             </h1>
             <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
@@ -170,7 +170,7 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-[#2e125b] mb-4"><strong>NovaCore</strong> Platform</h2>
+              <h2 className="text-4xl font-semibold text-[#2e125b] mb-4"><strong>NovaCore</strong> Platform</h2>
               <p className="text-xl text-black mb-8">Our flagship integrated compliance management system</p>
             </motion.div>
           </div>
@@ -181,7 +181,7 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-3xl font-bold text-[#2e125b] mb-6">Revolutionizing Compliance Management</h3>
+              <h3 className="text-3xl font-semibold text-[#2e125b] mb-6">Revolutionizing Compliance Management</h3>
               <p className="text-lg text-black mb-6 leading-relaxed">
                 <strong>NovaCore</strong> is our cutting-edge platform that aggregates operator data submissions to provide a real-time, interactive compliance dashboard. It enhances oversight and decision-making through advanced technology and intelligent automation.
               </p>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-[#2e125b] mb-2 group-hover:text-brand-primary transition-colors">{feature.title}</h4>
+                      <h4 className="font-semibold text-[#2e125b] mb-2 group-hover:text-[#2e125b] transition-colors">{feature.title}</h4>
                       <p className="text-black leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
@@ -213,7 +213,7 @@ export default function ServicesPage() {
             >
               <div className="text-center">
                 <BarChart3 className="w-24 h-24 mx-auto mb-6 text-white" />
-                <h4 className="text-2xl font-bold mb-4">Platform Benefits</h4>
+                <h4 className="text-2xl font-semibold mb-4">Platform Benefits</h4>
                 <ul className="space-y-3 text-left">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="w-5 h-5" />
@@ -247,7 +247,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Process</h2>
+            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Our Process</h2>
             <p className="text-xl text-black">How we transform your compliance strategy</p>
           </motion.div>
 
@@ -287,16 +287,16 @@ export default function ServicesPage() {
               >
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-bold text-white">{process.step}</span>
+                    <span className="text-2xl font-semibold text-white">{process.step}</span>
                   </div>
                   {index < 3 && (
-                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-brand-primary to-transparent transform translate-x-4"></div>
+                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-[#2e125b] transform translate-x-4"></div>
                   )}
                 </div>
                 <div className="w-16 h-16 bg-[#2e125b] rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 text-white">
                   {process.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-[#2e125b] mb-3 group-hover:text-brand-primary transition-colors">{process.title}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-3 group-hover:text-[#2e125b] transition-colors">{process.title}</h3>
                 <p className="text-black leading-relaxed">{process.description}</p>
               </motion.div>
             ))}
@@ -313,7 +313,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Comprehensive Service Portfolio</h2>
+            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Comprehensive Service Portfolio</h2>
             <p className="text-xl text-black">Tailored solutions for every aspect of regulatory compliance and energy management</p>
           </motion.div>
 
@@ -328,7 +328,7 @@ export default function ServicesPage() {
               >
                 <div className={`bg-gradient-to-r ${service.bgColor} p-8 text-white`}>
                   <div className="mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                  <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-lg opacity-90">{service.subtitle}</p>
                 </div>
                 <div className="p-8">
@@ -336,7 +336,7 @@ export default function ServicesPage() {
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-[#2e125b] flex-shrink-0" />
                         <span className="text-black">{feature}</span>
                       </div>
                     ))}
@@ -357,7 +357,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Industry Expertise</h2>
+            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Industry Expertise</h2>
             <p className="text-xl text-black">Serving key sectors with specialized knowledge and tailored solutions</p>
           </motion.div>
 
@@ -370,13 +370,13 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100"
               >
-                <div className="text-brand-primary mb-6">{sector.icon}</div>
-                <h3 className="text-2xl font-bold text-[#2e125b] mb-4">{sector.name}</h3>
+                <div className="text-[#2e125b] mb-6">{sector.icon}</div>
+                <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">{sector.name}</h3>
                 <p className="text-black mb-6 leading-relaxed">{sector.description}</p>
                 <div className="space-y-2">
                   {sector.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="flex items-center space-x-2">
-                      <ArrowRight className="w-4 h-4 text-brand-primary" />
+                      <ArrowRight className="w-4 h-4 text-[#2e125b]" />
                       <span className="text-black">{service}</span>
                     </div>
                   ))}
@@ -388,14 +388,14 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-brand-primary to-brand-secondary">
+      <section className="py-20 bg-[#2e125b]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>
+            <h2 className="text-4xl font-semibold text-white mb-6">Ready to Transform Your Operations?</h2>
             <p className="text-xl text-orange-100 mb-8">
               Let <strong>HAYLAR</strong> Energy help you navigate regulatory compliance with confidence and drive operational excellence.
             </p>
