@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Settings, FileText, Building2, TrendingUp, CheckCircle, ArrowRight, Target, Zap } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -188,6 +189,19 @@ export default function ServicesPage() {
               <p className="text-lg text-black mb-8 leading-relaxed">
                 Built specifically for the Nigerian energy sector, <strong>NovaCore</strong> ensures seamless adherence to regulatory standards while providing strategic insights that drive operational excellence.
               </p>
+              
+              {/* Platform Image */}
+              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg mb-6">
+                <Image
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="NovaCore Platform Interface"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/40 to-transparent flex items-end p-4">
+                  <span className="text-white text-sm font-medium">Real-time Analytics Dashboard</span>
+                </div>
+              </div>
               <div className="space-y-4">
                 {novacoreFeatures.map((feature) => (
                   <div key={feature.title} className="flex items-start space-x-4 group">

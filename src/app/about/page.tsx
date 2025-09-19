@@ -140,6 +140,27 @@ export default function AboutPage() {
                 A modular compliance ecosystem that integrates diverse compliance modules for regulators, operators, and financial institutions into one unified system.
               </p>
             </div>
+
+            {/* Platform Visualization */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative h-64 rounded-lg overflow-hidden shadow-lg mb-8"
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="NovaCore Platform Dashboard and Analytics"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/60 to-transparent flex items-end p-6">
+                <div className="text-white">
+                  <h4 className="text-xl font-semibold mb-2">Real-time Compliance Dashboard</h4>
+                  <p className="text-sm opacity-90">Advanced analytics and monitoring capabilities</p>
+                </div>
+              </div>
+            </motion.div>
             
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 group">

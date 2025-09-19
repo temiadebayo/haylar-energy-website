@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target, DollarSign } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -82,35 +83,56 @@ export default function Home() {
       {/* Hero Section - WoodMac Style */}
       <section id="home" className="relative bg-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6 leading-tight"
-            >
-              Intelligence connected
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl lg:text-2xl text-black mb-8 font-light leading-relaxed"
-            >
-              Energy data and analytics solutions for an interconnected world — enhanced by AI and human intelligence
-            </motion.p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6 leading-tight"
+              >
+                Intelligence connected
+              </motion.h1>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-xl lg:text-2xl text-black mb-8 font-light leading-relaxed"
+              >
+                Energy data and analytics solutions for an interconnected world — enhanced by AI and human intelligence
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              >
+                <Link href="/services" className="inline-block bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
+                  Discover our products
+                </Link>
+                <Link href="/about" className="inline-block border-2 border-[#2e125b] text-[#2e125b] hover:bg-[#2e125b] hover:text-white font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
+                  Learn more
+                </Link>
+              </motion.div>
+            </div>
+            
+            {/* Hero Image */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative"
             >
-              <Link href="/services" className="inline-block bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
-                Discover our products
-              </Link>
-              <Link href="/about" className="inline-block border-2 border-[#2e125b] text-[#2e125b] hover:bg-[#2e125b] hover:text-white font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
-                Learn more
-              </Link>
+              <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
+        <Image
+                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="Energy sector data analytics and compliance technology"
+                  fill
+                  className="object-cover"
+          priority
+        />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/20 to-transparent"></div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -414,6 +436,50 @@ export default function Home() {
           >
             <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6">Explore our portfolio</h2>
             <p className="text-lg text-black max-w-3xl mx-auto">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
+          </motion.div>
+
+          {/* Industry Images Grid */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid md:grid-cols-3 gap-8 mb-16"
+          >
+            <div className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
+              <Image
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Oil & Gas Industry Operations"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/80 to-transparent flex items-end p-6">
+                <h3 className="text-white text-xl font-semibold">Oil & Gas</h3>
+              </div>
+            </div>
+            
+            <div className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
+              <Image
+                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Power Sector and Renewable Energy"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/80 to-transparent flex items-end p-6">
+                <h3 className="text-white text-xl font-semibold">Power Sector</h3>
+              </div>
+            </div>
+            
+            <div className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
+            <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Financial Technology and Compliance"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/80 to-transparent flex items-end p-6">
+                <h3 className="text-white text-xl font-semibold">Finance</h3>
+              </div>
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
