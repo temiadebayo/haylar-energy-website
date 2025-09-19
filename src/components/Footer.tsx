@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4"><strong>HAYLAR</strong> Energy Services Ltd</h3>
+            <h3 className="text-2xl font-light text-white mb-4"><strong>HAYLAR</strong> Energy Services Ltd</h3>
             <p className="text-white mb-6 max-w-md">
               Leading provider of regulatory compliance technology, risk management and procurement services for Nigeria&apos;s Oil &amp; Gas, Power and Finance sectors.
             </p>
@@ -21,10 +21,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-white hover:text-orange-400 transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-white hover:text-orange-400 transition-colors">About</Link></li>
-              <li><Link href="/services" className="text-white hover:text-orange-400 transition-colors">Services</Link></li>
-              <li><Link href="/contact" className="text-white hover:text-orange-400 transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-white hover:text-white/80 transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-white hover:text-white/80 transition-colors">About</Link></li>
+              <li><Link href="/services" className="text-white hover:text-white/80 transition-colors">Services</Link></li>
+              <li><Link href="/contact" className="text-white hover:text-white/80 transition-colors">Contact</Link></li>
             </ul>
           </div>
           
@@ -35,7 +35,7 @@ export default function Footer() {
                 <MapPin className="w-4 h-4" />
                 <span>Abuja, Nigeria</span>
               </div>
-              <Link href="mailto:info@haylarenergy.com" className="flex items-center space-x-2 hover:text-orange-400 transition-colors">
+              <Link href="mailto:info@haylarenergy.com" className="flex items-center space-x-2 hover:text-white/80 transition-colors">
                 <Mail className="w-4 h-4" />
                 <span>info@haylarenergy.com</span>
               </Link>

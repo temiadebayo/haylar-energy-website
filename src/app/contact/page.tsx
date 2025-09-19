@@ -35,26 +35,26 @@ export default function ContactPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gray-50">
+      {/* Hero Section - WoodMac Style */}
+      <section className="pt-24 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-semibold text-[#2e125b] mb-6">
+            <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-black max-w-4xl mx-auto font-light leading-relaxed">
               Ready to transform your compliance strategy? Let&apos;s discuss how <strong>HAYLAR</strong> Energy can help you achieve your goals.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-20 bg-white">
+      {/* Contact Information - WoodMac Style */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -62,8 +62,8 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Contact Information</h2>
-            <p className="text-xl text-black">Multiple ways to reach us and get the support you need</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Contact Information</h2>
+            <p className="text-lg text-black">Multiple ways to reach us and get the support you need</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -73,7 +73,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
+                className="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 text-center"
               >
                 <div className="text-[#2e125b] mb-6 flex justify-center">{info.icon}</div>
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-3">{info.title}</h3>
@@ -85,7 +85,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form & Map */}
+      {/* Contact Form & Map - WoodMac Style */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
@@ -104,9 +104,9 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-4xl font-semibold text-[#2e125b] mb-8">Office Information</h2>
+              <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-8">Office Information</h2>
               
-              <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
+              <div className="bg-white p-8 rounded-lg shadow-sm mb-8 border border-gray-100">
                 <h3 className="text-2xl font-semibold text-[#2e125b] mb-6">Abuja Office</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4 group">
@@ -140,7 +140,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-[#2e125b] p-8 rounded-xl text-white">
+              <div className="bg-[#2e125b] p-8 rounded-lg text-white">
                 <h3 className="text-2xl font-semibold mb-6">Why Choose <strong>HAYLAR</strong>?</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -166,7 +166,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - WoodMac Style */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -174,12 +174,12 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-semibold text-[#2e125b] mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-black mb-8">
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6">Ready to Get Started?</h2>
+            <p className="text-lg text-black mb-8">
               Don&apos;t wait to transform your compliance strategy. Contact us today and let&apos;s discuss how we can help you achieve your goals.
             </p>
             <div className="flex justify-center">
-              <a href="mailto:info@haylarenergy.com" className="bg-[#2e125b] text-white hover:bg-[#1a0466] font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+              <a href="mailto:info@haylarenergy.com" className="bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5" />
                 <span>Send Email</span>
               </a>

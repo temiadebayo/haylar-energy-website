@@ -33,19 +33,19 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/" className="text-black hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link href="/" className="text-black hover:text-[#2e125b] px-3 py-2 rounded-sm text-sm font-medium transition-colors">
                 Home
               </Link>
-              <Link href="/about" className="text-black hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link href="/about" className="text-black hover:text-[#2e125b] px-3 py-2 rounded-sm text-sm font-medium transition-colors">
                 About
               </Link>
-              <Link href="/services" className="text-black hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link href="/services" className="text-black hover:text-[#2e125b] px-3 py-2 rounded-sm text-sm font-medium transition-colors">
                 Services
               </Link>
-              <Link href="/#why-choose-us" className="text-black hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link href="/#why-choose-us" className="text-black hover:text-[#2e125b] px-3 py-2 rounded-sm text-sm font-medium transition-colors">
                 Why Choose Us
               </Link>
-              <Link href="/contact" className="text-black hover:text-brand-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link href="/contact" className="text-black hover:text-[#2e125b] px-3 py-2 rounded-sm text-sm font-medium transition-colors">
                 Contact
               </Link>
             </div>
@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-black hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 p-2 rounded-md"
+              className="text-black hover:text-[#2e125b] focus:outline-none focus:ring-2 focus:ring-[#2e125b] focus:ring-offset-2 p-2 rounded-sm"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -68,35 +68,35 @@ export default function Navbar() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               <Link 
                 href="/" 
-                className="text-black hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-black hover:text-[#2e125b] block px-3 py-2 rounded-sm text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
-                className="text-black hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-black hover:text-[#2e125b] block px-3 py-2 rounded-sm text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 href="/services" 
-                className="text-black hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-black hover:text-[#2e125b] block px-3 py-2 rounded-sm text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
               <Link 
                 href="/#why-choose-us" 
-                className="text-black hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-black hover:text-[#2e125b] block px-3 py-2 rounded-sm text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Why Choose Us
               </Link>
               <Link 
                 href="/contact" 
-                className="text-black hover:text-brand-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-black hover:text-[#2e125b] block px-3 py-2 rounded-sm text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

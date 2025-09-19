@@ -143,26 +143,26 @@ export default function ServicesPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gray-50">
+      {/* Hero Section - WoodMac Style */}
+      <section className="pt-24 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-semibold text-[#2e125b] mb-6">
+            <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-black max-w-4xl mx-auto font-light leading-relaxed">
               Comprehensive regulatory compliance and energy solutions designed to transform your business operations and drive sustainable growth.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* NovaCore Platform Highlight */}
-      <section className="py-20 bg-white">
+      {/* NovaCore Platform Highlight - WoodMac Style */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.div
@@ -170,8 +170,8 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-semibold text-[#2e125b] mb-4"><strong>NovaCore</strong> Platform</h2>
-              <p className="text-xl text-black mb-8">Our flagship integrated compliance management system</p>
+              <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4"><strong>NovaCore</strong> Platform</h2>
+              <p className="text-lg text-black mb-8">Our flagship integrated compliance management system</p>
             </motion.div>
           </div>
 
@@ -238,7 +238,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Process Flow */}
+      {/* Process Flow - WoodMac Style */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -247,8 +247,8 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Our Process</h2>
-            <p className="text-xl text-black">How we transform your compliance strategy</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Our Process</h2>
+            <p className="text-lg text-black">How we transform your compliance strategy</p>
           </motion.div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -304,8 +304,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Main Services */}
-      <section className="py-20 bg-white shadow-lg">
+      {/* Main Services - WoodMac Style */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -313,8 +313,8 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Comprehensive Service Portfolio</h2>
-            <p className="text-xl text-black">Tailored solutions for every aspect of regulatory compliance and energy management</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Comprehensive Service Portfolio</h2>
+            <p className="text-lg text-black">Tailored solutions for every aspect of regulatory compliance and energy management</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -324,7 +324,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100"
+                className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 <div className={`bg-gradient-to-r ${service.bgColor} p-8 text-white`}>
                   <div className="mb-4">{service.icon}</div>
@@ -348,7 +348,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Industry Sectors */}
+      {/* Industry Sectors - WoodMac Style */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -357,8 +357,8 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-semibold text-[#2e125b] mb-4">Industry Expertise</h2>
-            <p className="text-xl text-black">Serving key sectors with specialized knowledge and tailored solutions</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Industry Expertise</h2>
+            <p className="text-lg text-black">Serving key sectors with specialized knowledge and tailored solutions</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -368,7 +368,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100"
+                className="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
               >
                 <div className="text-[#2e125b] mb-6">{sector.icon}</div>
                 <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">{sector.name}</h3>
@@ -387,7 +387,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - WoodMac Style */}
       <section className="py-20 bg-[#2e125b]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -395,15 +395,15 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-semibold text-white mb-6">Ready to Transform Your Operations?</h2>
-            <p className="text-xl text-orange-100 mb-8">
+            <h2 className="text-3xl lg:text-4xl font-light text-white mb-6">Ready to Transform Your Operations?</h2>
+            <p className="text-xl text-white/90 mb-8">
               Let <strong>HAYLAR</strong> Energy help you navigate regulatory compliance with confidence and drive operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-[#2e125b] hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="bg-white text-[#2e125b] hover:bg-gray-50 font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
                 Get Started Today
               </Link>
-              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
                 Learn More About Us
               </Link>
             </div>

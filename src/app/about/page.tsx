@@ -58,26 +58,26 @@ export default function AboutPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gray-50">
+      {/* Hero Section - WoodMac Style */}
+      <section className="pt-24 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#2e125b] mb-6">
+            <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6">
               About <strong>HAYLAR</strong> Energy
             </h1>
-            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-black max-w-4xl mx-auto font-light leading-relaxed">
               Leading the transformation of regulatory compliance in Nigeria&apos;s energy sector through innovation, technology, and expertise.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Company Overview */}
-      <section className="py-20 bg-white">
+      {/* Company Overview - WoodMac Style */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,25 +85,25 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-6">Who We Are</h2>
-            <p className="text-xl text-black max-w-4xl mx-auto leading-relaxed">
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6">Who We Are</h2>
+            <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
               <strong>HAYLAR</strong> Energy is a Nigerian compliance technology company dedicated to transforming compliance from a burden into a catalyst for trust, growth and resilience. We bridge the gap between regulation and innovation, equipping regulators and operators in the Oil &amp; Gas, Power and Finance sectors with tools that deliver clarity, accountability and foresight for growth and advancement.
             </p>
           </motion.div>
 
-          {/* Vision & Mission Cards */}
+          {/* Vision & Mission Cards - WoodMac Style */}
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-[#2e125b] rounded-xl flex items-center justify-center mb-6 shadow-md">
+              <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mb-6 shadow-md">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#2e125b] mb-4">Our Vision</h3>
-              <p className="text-lg text-black leading-relaxed">
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Vision</h3>
+              <p className="text-black leading-relaxed">
                 To be the leading compliance technology partner in Nigeria and Africa, delivering future ready compliance solutions that drive economic advancement in sustainable energy and financial transformation.
               </p>
             </motion.div>
@@ -112,52 +112,52 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-[#2e125b] rounded-xl flex items-center justify-center mb-6 shadow-md">
+              <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mb-6 shadow-md">
                 <Rocket className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#2e125b] mb-4">Our Mission</h3>
-              <p className="text-lg text-black leading-relaxed">
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Mission</h3>
+              <p className="text-black leading-relaxed">
                 To empower organizations with future-forward optimization by continuously pushing the boundaries of efficiency and transforming compliance into a strategic advantage.
               </p>
             </motion.div>
           </div>
 
-          {/* NovaCore Platform Highlight */}
+          {/* NovaCore Platform Highlight - WoodMac Style */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white shadow-lg p-8 rounded-2xl border border-gray-200 mb-16"
+            className="bg-white shadow-sm p-8 rounded-lg border border-gray-100 mb-16"
           >
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-[#2e125b] rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[#2e125b] mb-4">Our Flagship Platform: <strong>NovaCore</strong></h3>
-              <p className="text-xl text-black max-w-3xl mx-auto">
+              <h3 className="text-3xl font-light text-[#2e125b] mb-4">Our Flagship Platform: <strong>NovaCore</strong></h3>
+              <p className="text-lg text-black max-w-3xl mx-auto">
                 A modular compliance ecosystem that integrates diverse compliance modules for regulators, operators, and financial institutions into one unified system.
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
-                <div className="w-12 h-12 bg-[#2e125b] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 group">
+                <div className="w-12 h-12 bg-[#2e125b] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-3">For Regulators</h4>
                 <p className="text-black">Real-time, sector-wide insights that simplify oversight, standardize reporting and strengthen enforcement.</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
-                <div className="w-12 h-12 bg-[#2e125b] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 group">
+                <div className="w-12 h-12 bg-[#2e125b] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Settings className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-3">For Operators</h4>
                 <p className="text-black">Seamless reporting and monitoring integrated into daily workflows, reducing compliance strain while building cultures of integrity.</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
-                <div className="w-12 h-12 bg-[#2e125b] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 group">
+                <div className="w-12 h-12 bg-[#2e125b] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-3">For Financial Institutions</h4>
@@ -166,37 +166,37 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
-          {/* Why It Matters */}
+          {/* Why It Matters - WoodMac Style */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h3 className="text-3xl font-bold text-[#2e125b] mb-8">Why It Matters</h3>
+            <h3 className="text-3xl font-light text-[#2e125b] mb-8">Why It Matters</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
+              <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Transparency</h4>
                 <p className="text-black">Clear oversight across sectors</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
+              <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Efficiency</h4>
                 <p className="text-black">Automation reduces cost and delays</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
+              <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Foresight</h4>
                 <p className="text-black">Predictive analytics enable proactive governance</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
+              <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Handshake className="w-8 h-8 text-white" />
                 </div>
@@ -208,8 +208,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CEO Message */}
-      <section className="py-20 bg-white shadow-lg">
+      {/* CEO Message - WoodMac Style */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -217,8 +217,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">A Message from Our CEO</h2>
-            <p className="text-xl text-black">Leadership insights driving our mission forward</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">A Message from Our CEO</h2>
+            <p className="text-lg text-black">Leadership insights driving our mission forward</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8 items-start">
@@ -241,7 +241,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-[#2e125b] mb-2">Lara Timi-Ajayi</h3>
-                <p className="text-brand-primary font-medium">Founder & CEO</p>
+                <p className="text-[#2e125b] font-medium">Founder & CEO</p>
                 <p className="text-sm text-black mt-2"><strong>HAYLAR</strong> Energy Services Ltd</p>
               </div>
             </motion.div>
@@ -263,7 +263,7 @@ export default function AboutPage() {
                     Our vision is simple, yet ambitious. By integrating governance technology and strategic insight, we aim to transform compliance into a driver of transparency, accountability and growth across Nigeria&apos;s most vital industries.
                   </p>
                   
-                  <div className="bg-white shadow-md p-6 rounded-xl border-l-4 border-brand-primary">
+                  <div className="bg-gray-50 shadow-sm p-6 rounded-lg border-l-4 border-[#2e125b]">
                     <p className="text-lg leading-relaxed text-black italic">
                       &ldquo;<strong>NovaCore</strong> is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth.&rdquo;
                     </p>
@@ -285,8 +285,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Stats */}
-      <section className="py-20 bg-white">
+      {/* Company Stats - WoodMac Style */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -294,8 +294,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Company at a Glance</h2>
-            <p className="text-xl text-black">Key metrics that define our success and growth</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Company at a Glance</h2>
+            <p className="text-lg text-black">Key metrics that define our success and growth</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -323,7 +323,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Milestones */}
+      {/* Company Milestones - WoodMac Style */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -332,8 +332,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Journey</h2>
-            <p className="text-xl text-black">Key milestones in our company&apos;s development</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Our Journey</h2>
+            <p className="text-lg text-black">Key milestones in our company&apos;s development</p>
           </motion.div>
 
           <div className="relative">
@@ -378,8 +378,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-white">
+      {/* Team Section - WoodMac Style */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -387,8 +387,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2e125b] mb-4">Our Leadership Team</h2>
-            <p className="text-xl text-black">Meet the experts driving innovation and excellence</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Our Leadership Team</h2>
+            <p className="text-lg text-black">Meet the experts driving innovation and excellence</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -415,7 +415,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - WoodMac Style */}
       <section className="py-20 bg-[#2e125b]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -423,15 +423,15 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Learn More?</h2>
-            <p className="text-xl text-orange-100 mb-8">
+            <h2 className="text-3xl lg:text-4xl font-light text-white mb-6">Ready to Learn More?</h2>
+            <p className="text-xl text-white/90 mb-8">
               Discover how <strong>HAYLAR</strong> Energy can transform your compliance strategy and drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-white text-[#2e125b] hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/services" className="bg-white text-[#2e125b] hover:bg-gray-50 font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
                 Explore Our Services
               </Link>
-              <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
                 Get in Touch
               </Link>
             </div>
