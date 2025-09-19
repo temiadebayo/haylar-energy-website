@@ -1,42 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target, DollarSign } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const carouselSlides = [
-    {
-      id: 1,
-      title: "Regulatory Compliance Technology",
-      subtitle: "Energy | Innovation | Technology",
-      description: "Transforming compliance from a regulatory necessity into strategic advantage. Built on integrity, innovation and excellence, we develop cutting-edge compliance solutions that empower industries.",
-      bgColor: "from-brand-primary to-orange-700",
-      cta: "Explore Our Solutions"
-    },
-    {
-      id: 2,
-      title: "NovaCore Platform",
-      subtitle: "Insights, Amplified - Real-Time Compliance Technology",
-      description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
-      bgColor: "from-brand-secondary to-purple-800",
-      cta: "Learn More"
-    },
-    {
-      id: 3,
-      title: "Future-Forward Optimization",
-      subtitle: "Empowering Organizations with Strategic Advantage",
-      description: "By integrating governance technology and strategic insight, we transform compliance into a driver of transparency, accountability and growth across Nigeria's most vital industries.",
-      bgColor: "from-brand-primary to-orange-800",
-      cta: "Get Started"
-    }
-  ];
 
   const services = [
     {
@@ -102,109 +73,117 @@ export default function Home() {
     }
   ];
 
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, carouselSlides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
 
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Carousel */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#2e125b] to-[#1a0466]">
-              <div className="absolute inset-0 bg-black/10"></div>
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-                <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/10 rounded-full blur-lg"></div>
-                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-md"></div>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
+      {/* Hero Section - WoodMac Style */}
+      <section id="home" className="relative bg-white py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6 leading-tight"
             >
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 text-white drop-shadow-lg">
-                {carouselSlides[currentSlide].title}
-              </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl font-normal mb-6 text-white drop-shadow-md">
-                {carouselSlides[currentSlide].subtitle}
-              </p>
-              <p className="text-base sm:text-lg mb-8 text-white drop-shadow-md max-w-2xl mx-auto">
-                {carouselSlides[currentSlide].description}
-              </p>
-              <Link href="/services" className="inline-block bg-white text-[#2e125b] hover:bg-gray-50 font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
-                {carouselSlides[currentSlide].cta}
+              Intelligence connected
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl lg:text-2xl text-black mb-8 font-light leading-relaxed"
+            >
+              Energy data and analytics solutions for an interconnected world — enhanced by AI and human intelligence
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link href="/services" className="inline-block bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
+                Discover our products
+              </Link>
+              <Link href="/about" className="inline-block border-2 border-[#2e125b] text-[#2e125b] hover:bg-[#2e125b] hover:text-white font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
+                Learn more
               </Link>
             </motion.div>
-          </AnimatePresence>
+          </div>
         </div>
+      </section>
 
-        {/* Carousel Controls */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-20"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-20"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
+      {/* Get an interconnected view - WoodMac Style */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6"
+            >
+              Get an interconnected view
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg text-black max-w-3xl mx-auto"
+            >
+              Break away from fragmented data to thrive in a complex world that demands an interconnected view of the entire energy and natural resources supply chain.
+            </motion.p>
+          </div>
 
-        {/* Carousel Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-          {carouselSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-              }`}
-            />
-          ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
+            >
+              <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Think beyond the silos</h3>
+              <p className="text-black leading-relaxed">
+                Break away from fragmented data to thrive in a complex world that demands an interconnected view of the entire energy and natural resources supply chain.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
+            >
+              <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <BarChart3 className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Uncover deep relationships</h3>
+              <p className="text-black leading-relaxed">
+                Explore connections between assets, technologies and industries, and the interplay across supply chains, government policies and global economies.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
+            >
+              <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">See with absolute clarity</h3>
+              <p className="text-black leading-relaxed">
+                Understand connections between commodities and make confident investment decisions in a complex energy landscape.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -304,39 +283,128 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Values Section */}
-      <section className="py-20 bg-gray-50">
+      {/* The future of energy data and insights - WoodMac Style */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Core Values</h2>
-            <p className="text-lg text-black">The principles that guide everything we do</p>
-          </motion.div>
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6"
+            >
+              The future of energy data and insights
+            </motion.h2>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <div className="text-[#2e125b] mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-[#2e125b] mb-2">{value.title}</h3>
-                <p className="text-black">{value.description}</p>
-              </motion.div>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Trusted data</h3>
+              <h4 className="text-lg font-medium text-[#2e125b] mb-4">Access the data others wish they had</h4>
+              <p className="text-black leading-relaxed mb-6">
+                Get the industry&apos;s deepest, broadest and most accurate data. Covering the whole energy transition supply chain.
+              </p>
+              <ul className="text-left space-y-2 text-black">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  NovaCore Platform
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Regulatory Analytics
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Compliance Monitoring
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Risk Assessment Tools
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Supply Chain Analytics
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Market experts</h3>
+              <h4 className="text-lg font-medium text-[#2e125b] mb-4">Understand the stories behind the data</h4>
+              <p className="text-black leading-relaxed mb-6">
+                Add 50+ market experts, data scientists and thought leaders to your team – with direct access to senior analysts to guide your decisions.
+              </p>
+              <ul className="text-left space-y-2 text-black">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Oil & Gas Expertise
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Power & Renewables
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Financial Services
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Regulatory Advisory
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Settings className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Proprietary methodology</h3>
+              <h4 className="text-lg font-medium text-[#2e125b] mb-4">Value with pinpoint accuracy</h4>
+              <p className="text-black leading-relaxed mb-6">
+                Get the cross-commodity insights and valuation models you need to set your course in an increasingly complex world.
+              </p>
+              <ul className="text-left space-y-2 text-black">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  NovaCore Analytics
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Compliance Scoring
+          </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
+                  Risk Modeling
+          </li>
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      {/* Services Section - WoodMac Style */}
+      <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -344,8 +412,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Our Services</h2>
-            <p className="text-lg text-black">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6">Explore our portfolio</h2>
+            <p className="text-lg text-black max-w-3xl mx-auto">Comprehensive regulatory compliance and energy solutions for a sustainable future</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -355,26 +423,37 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-primary/20"
+                className="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group"
               >
-                <div className="text-[#2e125b] mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-white border-2 border-[#2e125b] rounded-xl flex items-center justify-center shadow-md">
+                <div className="text-[#2e125b] mb-6">
+                  <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#2e125b] mb-4 group-hover:text-[#2e125b] transition-colors">{service.title}</h3>
-                <p className="text-black leading-relaxed">{service.description}</p>
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="w-8 h-1 bg-[#2e125b] rounded-full"></div>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-4">{service.title}</h3>
+                <p className="text-black leading-relaxed mb-6">{service.description}</p>
+                <div className="pt-4 border-t border-gray-100">
+                  <span className="text-[#2e125b] font-medium text-sm">Learn more →</span>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-center mt-12"
+          >
+            <Link href="/services" className="inline-block bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
+              Explore All Services
+            </Link>
+          </motion.div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="py-20 bg-gray-50">
+      {/* Why Choose Us Section - WoodMac Style */}
+      <section id="why-choose-us" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -382,8 +461,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-2xl font-semibold text-[#2e125b] mb-4">Why Choose <strong>HAYLAR</strong>?</h2>
-            <p className="text-lg text-black">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
+            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6">Why Choose <strong>HAYLAR</strong>?</h2>
+            <p className="text-lg text-black max-w-3xl mx-auto">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -393,17 +472,17 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-secondary/20"
+                className="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group"
               >
-                <div className="text-[#2e125b] mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-white border-2 border-[#2e125b] rounded-xl flex items-center justify-center shadow-md">
+                <div className="text-[#2e125b] mb-6">
+                  <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#2e125b] mb-4 group-hover:text-[#2e125b] transition-colors">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-4">{item.title}</h3>
                 <p className="text-black leading-relaxed">{item.description}</p>
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="w-8 h-1 bg-[#2e125b] rounded-full"></div>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <span className="text-[#2e125b] font-medium text-sm">Learn more →</span>
                 </div>
               </motion.div>
             ))}
@@ -411,24 +490,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      {/* CTA Section - WoodMac Style */}
+      <section className="py-20 bg-[#2e125b]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100"
+            className="text-white"
           >
-            <h2 className="text-2xl font-semibold text-[#2e125b] mb-6">Ready to Transform Your Compliance?</h2>
-            <p className="text-lg text-black mb-8">
+            <h2 className="text-3xl lg:text-4xl font-light mb-6">Ready to Transform Your Compliance?</h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Let <strong>HAYLAR</strong> help you navigate the future regulatory compliance with confidence. Partner with us to drive compliance transformation in Nigeria&apos;s Oil &amp; Gas and Finance sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="bg-white text-[#2e125b] hover:bg-gray-50 font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
                 Partner With Us
               </Link>
-              <Link href="/about" className="border-2 border-[#2e125b] text-[#2e125b] hover:bg-[#2e125b] hover:text-white font-medium py-3 px-8 rounded-full text-base transition-all duration-300 transform hover:scale-105">
+              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
                 Learn More
               </Link>
             </div>
