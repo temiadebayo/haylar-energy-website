@@ -51,7 +51,7 @@ export default function Home() {
 
   const services = [
     {
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8" />,
       title: "NovaCore: Real-Time Compliance Technology",
       description: "Integrated modular compliance ecosystem that unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system."
     },
@@ -61,22 +61,22 @@ export default function Home() {
       description: "We identify compliance risks early and design strategies that strengthen integrity, reduce exposure and position operators for long-term resilience."
     },
     {
-      icon: <Settings className="w-8 h-8" />,
+      icon: <Target className="w-8 h-8" />,
       title: "Project Management Consulting - Oil & Gas",
       description: "End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise."
     },
     {
-      icon: <FileText className="w-8 h-8" />,
+      icon: <DollarSign className="w-8 h-8" />,
       title: "Financial Reg-Tech Solutions",
       description: "Regulatory technology solutions for financial institutions including automated AML monitoring, regulatory reporting automation, and tiered compliance tools."
     },
     {
-      icon: <Building2 className="w-8 h-8" />,
+      icon: <TrendingUp className="w-8 h-8" />,
       title: "Procurement & Supply Chain Integrity",
       description: "Technology-enabled procurement tools ensuring sourcing processes are efficient, cost-effective and fully aligned with regulatory standards."
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <Building2 className="w-8 h-8" />,
       title: "Digital Governance & Risk Management",
       description: "Digital frameworks that help operators mitigate risks, demonstrate accountability, and remain competitive in an increasingly regulated global market."
     }
@@ -165,7 +165,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg"
               >
-                <Image
+        <Image
                   src={carouselSlides[currentSlide].image}
                   alt={carouselSlides[currentSlide].alt}
                   fill
@@ -244,7 +244,7 @@ export default function Home() {
               className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
             >
               <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-[#2e125b] mb-4">NovaCore Technology</h3>
               <p className="text-black leading-relaxed">
@@ -274,7 +274,7 @@ export default function Home() {
               className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
             >
               <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Settings className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Project Management</h3>
               <p className="text-black leading-relaxed">
