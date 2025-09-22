@@ -61,11 +61,6 @@ export default function Home() {
       description: "We identify compliance risks early and design strategies that strengthen integrity, reduce exposure and position operators for long-term resilience."
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Project Management Consulting - Oil & Gas",
-      description: "End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise."
-    },
-    {
       icon: <DollarSign className="w-8 h-8" />,
       title: "Financial Reg-Tech Solutions",
       description: "Regulatory technology solutions for financial institutions including automated AML monitoring, regulatory reporting automation, and tiered compliance tools."
