@@ -38,20 +38,6 @@ export default function ServicesPage() {
       bgColor: "from-[#2e125b] to-[#1a0466]"
     },
     {
-      icon: <Settings className="w-12 h-12" />,
-      title: "Project Management Consulting - Oil & Gas",
-      subtitle: "End-to-End Support",
-      description: "End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise.",
-      features: [
-        "Asset evaluation and development",
-        "Asset management services",
-        "Asset financing and technical services",
-        "Geology & geophysics services",
-        "Engineering services"
-      ],
-      bgColor: "from-[#2e125b] to-[#1a0466]"
-    },
-    {
       icon: <FileText className="w-12 h-12" />,
       title: "Financial Reg-Tech Solutions",
       subtitle: "For Financial Institutions",
@@ -252,71 +238,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Process Flow - WoodMac Style */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Our Process</h2>
-            <p className="text-lg text-black">How we transform your compliance strategy</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Assessment",
-                description: "We analyze your current compliance landscape and identify gaps",
-                icon: <BarChart3 className="w-8 h-8" />
-              },
-              {
-                step: "02", 
-                title: "Strategy",
-                description: "Develop a customized compliance roadmap aligned with regulations",
-                icon: <Settings className="w-8 h-8" />
-              },
-              {
-                step: "03",
-                title: "Implementation", 
-                description: "Deploy NovaCore and integrate with your existing systems",
-                icon: <Shield className="w-8 h-8" />
-              },
-              {
-                step: "04",
-                title: "Optimization",
-                description: "Continuous monitoring and improvement of compliance processes",
-                icon: <TrendingUp className="w-8 h-8" />
-              }
-            ].map((process, index) => (
-              <motion.div
-                key={process.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-semibold text-white">{process.step}</span>
-                  </div>
-                  {index < 3 && (
-                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-[#2e125b] transform translate-x-4"></div>
-                  )}
-                </div>
-                <div className="w-16 h-16 bg-[#2e125b] rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 text-white">
-                  {process.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-[#2e125b] mb-3 group-hover:text-[#2e125b] transition-colors">{process.title}</h3>
-                <p className="text-black leading-relaxed">{process.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Main Services - WoodMac Style */}
       <section className="py-20 bg-gray-50">
