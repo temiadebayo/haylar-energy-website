@@ -1,36 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, Globe, Zap, Award, Target, Rocket, BarChart3, Settings, Building2, Eye, Brain, Handshake } from 'lucide-react';
+import { Target, Rocket, BarChart3, Settings, Building2, Eye, Brain, Handshake, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 export default function AboutPage() {
-  const companyStats = [
-    { icon: <Globe className="w-8 h-8" />, number: "3", label: "Industry Sectors" },
-    { icon: <Users className="w-8 h-8" />, number: "10+", label: "Years Experience" },
-    { icon: <Zap className="w-8 h-8" />, number: "50+", label: "Projects Completed" }
-  ];
-
-  const milestones = [
-    {
-      year: "2022",
-      title: "Company Founded",
-      description: "HAYLAR Energy Services Ltd established in Abuja, Nigeria with a vision to transform regulatory compliance in the energy sector."
-    },
-    {
-      year: "2024",
-      title: "Industry Partnerships",
-      description: "Strategic partnerships with key players in Oil & Gas, Power, and Finance sectors."
-    },
-    {
-      year: "2025",
-      title: "NovaCore Platform Launch",
-      description: "Development and launch of our flagship integrated compliance management system."
-    }
-  ];
 
   const teamMembers = [
     {
@@ -306,98 +283,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Stats - WoodMac Style */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Company at a Glance</h2>
-            <p className="text-lg text-black">Key metrics that define our success and growth</p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {companyStats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-brand-primary/20"
-              >
-                <div className="text-white mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center">
-                    {stat.icon}
-                  </div>
-                </div>
-                <div className="text-5xl font-bold text-[#2e125b] mb-3 group-hover:text-brand-primary transition-colors">{stat.number}</div>
-                <div className="text-black font-medium">{stat.label}</div>
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="w-12 h-1 bg-[#2e125b] rounded-full mx-auto"></div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Company Milestones - WoodMac Style */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Our Journey</h2>
-            <p className="text-lg text-black">Key milestones in our company&apos;s development</p>
-          </motion.div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#2e125b] transform -translate-x-1/2"></div>
-            
-            <div className="space-y-16">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                >
-                  <div className="flex-1 bg-white p-8 rounded-xl shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-2xl font-bold text-white">{milestone.year}</span>
-                      </div>
-                      <div className="w-12 h-1 bg-[#2e125b] rounded-full"></div>
-                    </div>
-                    <h3 className="text-2xl font-semibold text-[#2e125b] mb-4 group-hover:text-brand-primary transition-colors">{milestone.title}</h3>
-                    <p className="text-lg text-black leading-relaxed">{milestone.description}</p>
-                  </div>
-                  
-                  {/* Timeline dot */}
-                  <div className="hidden md:flex flex-col items-center">
-                    <div className="w-8 h-8 bg-[#2e125b] rounded-full flex items-center justify-center z-10 border-4 border-white shadow-lg">
-                      <Award className="w-4 h-4 text-white" />
-                    </div>
-                    {index < milestones.length - 1 && (
-                      <div className="w-1 h-16 bg-[#2e125b] mt-4"></div>
-                    )}
-                  </div>
-                  
-                  <div className="flex-1 hidden md:block"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Team Section - WoodMac Style */}
       <section className="py-20 bg-gray-50">
