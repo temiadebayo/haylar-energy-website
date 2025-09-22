@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Clock, CheckCircle, Users } from 'lucide-react';
+import { Mail, Clock, CheckCircle } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -9,12 +9,6 @@ import Navbar from '@/components/Navbar';
 export default function ContactPage() {
 
   const contactInfo = [
-    {
-      icon: <MapPin className="w-8 h-8" />,
-      title: "Office Location",
-      details: "Abuja, Nigeria",
-      description: "Strategic location in Nigeria's capital for easy access to government agencies and regulatory bodies."
-    },
     {
       icon: <Mail className="w-8 h-8" />,
       title: "Email Address",
@@ -66,7 +60,7 @@ export default function ContactPage() {
             <p className="text-lg text-black">Multiple ways to reach us and get the support you need</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={info.title}
@@ -106,39 +100,6 @@ export default function ContactPage() {
             >
               <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-8">Office Information</h2>
               
-              <div className="bg-white p-8 rounded-lg shadow-sm mb-8 border border-gray-100">
-                <h3 className="text-2xl font-semibold text-[#2e125b] mb-6">Abuja Office</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-[#2e125b] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-[#2e125b] group-hover:text-[#2e125b] transition-colors">Abuja, Nigeria</p>
-                      <p className="text-black">Strategic location in Nigeria&apos;s capital</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-[#2e125b] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-[#2e125b] group-hover:text-[#2e125b] transition-colors">Business Hours</p>
-                      <p className="text-black">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                      <p className="text-black">No Saturday work</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4 group">
-                    <div className="w-12 h-12 bg-[#2e125b] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-[#2e125b] group-hover:text-[#2e125b] transition-colors">Support Available</p>
-                      <p className="text-black">24/7 emergency support for critical compliance issues</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <div className="bg-[#2e125b] p-8 rounded-lg text-white">
                 <h3 className="text-2xl font-semibold mb-6">Why Choose <strong>HAYLAR</strong>?</h3>
