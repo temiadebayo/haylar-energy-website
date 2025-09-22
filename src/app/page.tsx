@@ -13,20 +13,20 @@ export default function Home() {
 
   const carouselSlides = [
     {
-      title: "Intelligence connected",
-      subtitle: "Energy data and analytics solutions for an interconnected world — enhanced by AI and human intelligence",
+      title: "NovaCore: Real-Time Compliance Technology",
+      subtitle: "Integrated modular compliance ecosystem that unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Energy sector data analytics and compliance technology"
+      alt: "NovaCore compliance technology platform"
     },
     {
-      title: "Regulatory Excellence",
-      subtitle: "Advanced compliance technology that ensures seamless adherence to evolving industry standards and regulations",
+      title: "Regulatory Risk Compliance & Advisory",
+      subtitle: "We identify compliance risks early and design strategies that strengthen integrity, reduce exposure and position operators for long-term resilience.",
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       alt: "Oil & Gas Industry Operations and Compliance"
     },
     {
-      title: "Digital Transformation",
-      subtitle: "Technology-driven solutions that optimize operations and drive efficiency across energy and financial sectors",
+      title: "Project Management Consulting - Oil & Gas",
+      subtitle: "End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       alt: "Financial Technology and Digital Compliance"
     }
@@ -147,10 +147,10 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8"
               >
                 <Link href="/services" className="inline-block bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
-                  Discover our products
+                  Our Services
                 </Link>
                 <Link href="/about" className="inline-block border-2 border-[#2e125b] text-[#2e125b] hover:bg-[#2e125b] hover:text-white font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
-                  Learn more
+                  About Us
                 </Link>
               </motion.div>
             </div>
@@ -214,7 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Get an interconnected view - WoodMac Style */}
+      {/* Our Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -224,7 +224,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6"
             >
-              Get an interconnected view
+              Our Services
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -232,7 +232,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-black max-w-3xl mx-auto"
             >
-              Break away from fragmented data to thrive in a complex world that demands an interconnected view of the entire energy and natural resources supply chain.
+              Comprehensive compliance and technology solutions designed to help organizations navigate complex regulatory environments with confidence and efficiency.
             </motion.p>
           </div>
 
@@ -244,11 +244,11 @@ export default function Home() {
               className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
             >
               <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Think beyond the silos</h3>
+              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">NovaCore Technology</h3>
               <p className="text-black leading-relaxed">
-                Break away from fragmented data to thrive in a complex world that demands an interconnected view of the entire energy and natural resources supply chain.
+                Real-time compliance technology that unifies diverse compliance modules for regulators, operators and industry stakeholders.
               </p>
             </motion.div>
 
@@ -259,11 +259,11 @@ export default function Home() {
               className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
             >
               <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Uncover deep relationships</h3>
+              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Regulatory Compliance</h3>
               <p className="text-black leading-relaxed">
-                Explore connections between assets, technologies and industries, and the interplay across supply chains, government policies and global economies.
+                We identify compliance risks early and design strategies that strengthen integrity and reduce exposure for long-term resilience.
               </p>
             </motion.div>
 
@@ -274,11 +274,11 @@ export default function Home() {
               className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
             >
               <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
+                <Settings className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">See with absolute clarity</h3>
+              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Project Management</h3>
               <p className="text-black leading-relaxed">
-                Understand connections between commodities and make confident investment decisions in a complex energy landscape.
+                End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise.
               </p>
             </motion.div>
           </div>
@@ -405,10 +405,10 @@ export default function Home() {
               <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Trusted data</h3>
-              <h4 className="text-lg font-medium text-[#2e125b] mb-4">Access the data others wish they had</h4>
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">NovaCore Platform</h3>
+              <h4 className="text-lg font-medium text-[#2e125b] mb-4">Real-time compliance technology</h4>
               <p className="text-black leading-relaxed mb-6">
-                Get the industry&apos;s deepest, broadest and most accurate data. Covering the whole energy transition supply chain.
+                Integrated modular compliance ecosystem that unifies diverse compliance modules for regulators, operators and industry stakeholders.
               </p>
               <ul className="text-left space-y-2 text-black">
                 <li className="flex items-center">
@@ -443,27 +443,27 @@ export default function Home() {
               <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Market experts</h3>
-              <h4 className="text-lg font-medium text-[#2e125b] mb-4">Understand the stories behind the data</h4>
+              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Regulatory Expertise</h3>
+              <h4 className="text-lg font-medium text-[#2e125b] mb-4">Deep industry knowledge and compliance experience</h4>
               <p className="text-black leading-relaxed mb-6">
-                Add 50+ market experts, data scientists and thought leaders to your team – with direct access to senior analysts to guide your decisions.
+                Our team brings 10+ years of industry expertise in Oil & Gas, Power, and Finance sectors with specialized compliance knowledge.
               </p>
               <ul className="text-left space-y-2 text-black">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
-                  Oil & Gas Expertise
+                  Oil & Gas Project Management
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
-                  Power & Renewables
+                  Power Sector Compliance
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
-                  Financial Services
+                  Financial Reg-Tech Solutions
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-[#2e125b] rounded-full mr-3"></div>
-                  Regulatory Advisory
+                  Procurement & Supply Chain
                 </li>
               </ul>
             </motion.div>
