@@ -1,13 +1,52 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target, DollarSign } from 'lucide-react';
+import { Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target, DollarSign, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const carouselSlides = [
+    {
+      title: "Intelligence connected",
+      subtitle: "Energy data and analytics solutions for an interconnected world — enhanced by AI and human intelligence",
+      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Energy sector data analytics and compliance technology"
+    },
+    {
+      title: "Regulatory Excellence",
+      subtitle: "Advanced compliance technology that ensures seamless adherence to evolving industry standards and regulations",
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Oil & Gas Industry Operations and Compliance"
+    },
+    {
+      title: "Digital Transformation",
+      subtitle: "Technology-driven solutions that optimize operations and drive efficiency across energy and financial sectors",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Financial Technology and Digital Compliance"
+    }
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [carouselSlides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length);
+  };
 
 
   const services = [
@@ -80,32 +119,32 @@ export default function Home() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section - WoodMac Style */}
-      <section id="home" className="relative bg-white py-20 lg:py-32">
+      {/* Hero Carousel Section */}
+      <section id="home" className="relative bg-white py-20 lg:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <motion.h1 
+              <motion.div
+                key={currentSlide}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6 leading-tight"
+                className="space-y-6"
               >
-                Intelligence connected
-              </motion.h1>
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-xl lg:text-2xl text-black mb-8 font-light leading-relaxed"
-              >
-                Energy data and analytics solutions for an interconnected world — enhanced by AI and human intelligence
-              </motion.p>
+                <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] leading-tight">
+                  {carouselSlides[currentSlide].title}
+                </h1>
+                <p className="text-xl lg:text-2xl text-black font-light leading-relaxed">
+                  {carouselSlides[currentSlide].subtitle}
+                </p>
+              </motion.div>
+              
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8"
               >
                 <Link href="/services" className="inline-block bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
                   Discover our products
@@ -116,24 +155,61 @@ export default function Home() {
               </motion.div>
             </div>
             
-            {/* Hero Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative"
-            >
-              <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
-        <Image
-                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Energy sector data analytics and compliance technology"
+            {/* Carousel Image */}
+            <div className="relative">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.8 }}
+                className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src={carouselSlides[currentSlide].image}
+                  alt={carouselSlides[currentSlide].alt}
                   fill
                   className="object-cover"
-          priority
-        />
+                  priority={currentSlide === 0}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/20 to-transparent"></div>
+              </motion.div>
+              
+              {/* Carousel Controls */}
+              <div className="flex items-center justify-center mt-6 space-x-4">
+                <button
+                  onClick={prevSlide}
+                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors duration-200"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className="w-6 h-6 text-[#2e125b]" />
+                </button>
+                
+                {/* Slide Indicators */}
+                <div className="flex space-x-2">
+                  {carouselSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentSlide 
+                          ? 'bg-[#2e125b] w-8' 
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+                
+                <button
+                  onClick={nextSlide}
+                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors duration-200"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className="w-6 h-6 text-[#2e125b]" />
+                </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
