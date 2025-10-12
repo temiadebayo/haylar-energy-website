@@ -84,7 +84,7 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
-      <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+      <h3 className="text-2xl font-bold text-gray-900 mb-6" id="contact-form-heading">Send us a Message</h3>
       
       {submitStatus.type && (
         <div className={`mb-6 p-4 rounded-lg flex items-center space-x-3 ${
@@ -101,7 +101,8 @@ export default function ContactForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6" role="form" aria-labelledby="contact-form-heading" aria-describedby="form-description">
+        <p id="form-description" className="sr-only">Contact form with required fields marked with asterisk</p>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -114,7 +115,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2e125b] focus:border-transparent transition-colors"
               placeholder="Your full name"
             />
           </div>
@@ -129,7 +130,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2e125b] focus:border-transparent transition-colors"
               placeholder="your.email@example.com"
             />
           </div>
@@ -146,7 +147,7 @@ export default function ContactForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2e125b] focus:border-transparent transition-colors"
               placeholder="Your company name"
             />
           </div>
@@ -160,7 +161,7 @@ export default function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2e125b] focus:border-transparent transition-colors"
               placeholder="+234 xxx xxx xxxx"
             />
           </div>
@@ -205,7 +206,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-brand-primary hover:bg-orange-700 disabled:bg-gray-400 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          className="w-full bg-[#2e125b] hover:bg-[#1a0466] disabled:bg-gray-400 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {isSubmitting ? (
             <>

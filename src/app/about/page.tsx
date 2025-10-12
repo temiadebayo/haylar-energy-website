@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import PageHeader from '@/components/PageHeader';
 
 export default function AboutPage() {
 
@@ -35,23 +36,15 @@ export default function AboutPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section - WoodMac Style */}
-      <section className="pt-24 pb-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6">
-              About <strong>HAYLAR</strong> Energy
-            </h1>
-            <p className="text-xl lg:text-2xl text-black max-w-4xl mx-auto font-light leading-relaxed">
-              Leading the transformation of regulatory compliance in Nigeria&apos;s energy sector through innovation, technology, and expertise.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Page Header */}
+      <PageHeader 
+        title="About HAYLAR Energy"
+        breadcrumbs={[
+          { label: "HAYLAR Energy", href: "/" },
+          { label: "About", href: "/about" }
+        ]}
+        description="Leading the transformation of regulatory compliance in Nigeria's energy sector through innovation, technology and expertise."
+      />
 
       {/* Company Overview - WoodMac Style */}
       <section className="py-20 bg-gray-50">
@@ -113,9 +106,17 @@ export default function AboutPage() {
                 <Zap className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-3xl font-light text-[#2e125b] mb-4">Our Flagship Platform: <strong>NovaCore</strong></h3>
-              <p className="text-lg text-black max-w-3xl mx-auto">
+              <p className="text-lg text-black max-w-3xl mx-auto mb-6">
                 A modular compliance ecosystem that integrates diverse compliance modules for regulators, operators, and financial institutions into one unified system.
               </p>
+              <a 
+                href="https://www.novacoreafrica.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-3 px-6 rounded-sm transition-all duration-300 shadow-lg"
+              >
+                Explore NovaCore →
+              </a>
             </div>
 
             {/* Platform Visualization */}
@@ -228,19 +229,12 @@ export default function AboutPage() {
               className="lg:col-span-1"
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-brand-primary/20">
-                  <Image
-                    src="/ceo-headshot.jpg"
-                    alt="Lara Timi-Ajayi, Founder & CEO of HAYLAR Energy"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                    priority
-                  />
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-[#2e125b]/20 bg-gradient-to-br from-[#2e125b] to-[#1a0466] flex items-center justify-center">
+                  <span className="text-4xl font-bold text-white">LT</span>
                 </div>
                 <h3 className="text-xl font-bold text-[#2e125b] mb-2">Lara Timi-Ajayi</h3>
                 <p className="text-[#2e125b] font-medium">Founder & CEO</p>
-                <p className="text-sm text-black mt-2"><strong>HAYLAR</strong> Energy Services Ltd</p>
+                <p className="text-sm text-black mt-2"><strong>HAYLAR</strong> Energy</p>
               </div>
             </motion.div>
 
@@ -262,9 +256,17 @@ export default function AboutPage() {
                   </p>
                   
                   <div className="bg-gray-50 shadow-sm p-6 rounded-lg border-l-4 border-[#2e125b]">
-                    <p className="text-lg leading-relaxed text-black italic">
+                    <p className="text-lg leading-relaxed text-black italic mb-4">
                       &ldquo;<strong>NovaCore</strong> is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth.&rdquo;
                     </p>
+                    <a 
+                      href="https://www.novacoreafrica.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#2e125b] hover:text-[#1a0466] font-semibold transition-colors"
+                    >
+                      Visit NovaCore Platform →
+                    </a>
                   </div>
                   
                   <p className="text-lg leading-relaxed text-black">
@@ -305,13 +307,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:border-brand-primary/20 border border-gray-100"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:border-[#2e125b]/20 border border-gray-100"
               >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-[#2e125b] to-[#1a0466] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-[#2e125b] mb-2 group-hover:text-brand-primary transition-colors">{member.name}</h3>
-                <p className="text-brand-primary font-medium mb-4">{member.position}</p>
+                <h3 className="text-xl font-semibold text-[#2e125b] mb-2 group-hover:text-[#1a0466] transition-colors">{member.name}</h3>
+                <p className="text-[#2e125b] font-medium mb-4">{member.position}</p>
                 <p className="text-black leading-relaxed">{member.description}</p>
                 <div className="mt-6 pt-4 border-t border-gray-100">
                   <div className="w-12 h-1 bg-[#2e125b] rounded-full mx-auto"></div>

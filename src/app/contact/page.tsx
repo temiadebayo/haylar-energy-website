@@ -5,6 +5,7 @@ import { Mail, Clock, CheckCircle } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import PageHeader from '@/components/PageHeader';
 
 export default function ContactPage() {
 
@@ -29,23 +30,15 @@ export default function ContactPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section - WoodMac Style */}
-      <section className="pt-24 pb-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6">
-              Get in Touch
-            </h1>
-            <p className="text-xl lg:text-2xl text-black max-w-4xl mx-auto font-light leading-relaxed">
-              Ready to transform your compliance strategy? Let&apos;s discuss how <strong>HAYLAR</strong> Energy can help you achieve your goals.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Page Header */}
+      <PageHeader 
+        title="Get in Touch"
+        breadcrumbs={[
+          { label: "HAYLAR Energy", href: "/" },
+          { label: "Contact", href: "/contact" }
+        ]}
+        description="Ready to transform your compliance strategy? Let's discuss how HAYLAR Energy can help you achieve your goals."
+      />
 
       {/* Contact Information - WoodMac Style */}
       <section className="py-20 bg-gray-50">

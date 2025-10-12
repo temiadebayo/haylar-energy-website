@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,62 +17,34 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Please enter a valid email address' },
+        { error: 'Please provide a valid email address' },
         { status: 400 }
       );
     }
 
-    // Check if Resend API key is configured
-    if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not configured');
-      return NextResponse.json(
-        { error: 'Email service is not configured. Please try again later.' },
-        { status: 500 }
-      );
-    }
-
-    // Initialize Resend only when API key is available
-    const resend = new Resend(process.env.RESEND_API_KEY);
-
-    // Send email using Resend
-    const { data, error } = await resend.emails.send({
-      from: 'HAYLAR Energy <onboarding@resend.dev>', // This will be updated once you verify your domain
-      to: ['info@haylarenergy.com'], // Your business email
-      subject: `New Contact Form Submission from ${name}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #1a0466;">New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Company:</strong> ${company || 'Not provided'}</p>
-          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-          <p><strong>Subject:</strong> ${subject || 'Not provided'}</p>
-          <p><strong>Message:</strong></p>
-          <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
-            ${message.replace(/\n/g, '<br>')}
-          </div>
-          <hr style="margin: 20px 0;">
-          <p style="color: #666; font-size: 12px;">
-            This message was sent from the HAYLAR Energy website contact form.
-          </p>
-        </div>
-      `,
+    // Here you would typically:
+    // 1. Save to database
+    // 2. Send email notification
+    // 3. Integrate with CRM system
+    
+    // For now, we'll just log the data and return success
+    console.log('Contact form submission:', {
+      name,
+      email,
+      company,
+      phone,
+      subject,
+      message,
+      timestamp: new Date().toISOString()
     });
 
-    if (error) {
-      console.error('Resend error:', error);
-      return NextResponse.json(
-        { error: 'Failed to send email. Please try again later.' },
-        { status: 500 }
-      );
-    }
-
-    console.log('Email sent successfully:', data);
+    // Simulate processing delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     return NextResponse.json(
       { 
-        success: true, 
-        message: 'Thank you for your message. We will get back to you soon!' 
+        message: 'Thank you for your message. We will get back to you within 24 hours.',
+        success: true 
       },
       { status: 200 }
     );

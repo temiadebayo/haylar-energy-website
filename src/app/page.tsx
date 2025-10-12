@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Shield, Settings, BarChart3, FileText, Building2, TrendingUp, CheckCircle, Award, Target, DollarSign, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Zap, Shield, TrendingUp, CheckCircle, Award, Target, DollarSign, ChevronLeft, ChevronRight, Building2 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -26,6 +26,14 @@ export default function Home() {
     }
   ];
 
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
+  }, [carouselSlides.length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length);
+  }, [carouselSlides.length]);
+
   // Auto-advance carousel
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,13 +42,19 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [carouselSlides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
-  };
+  // Keyboard navigation for carousel
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (event.key === 'ArrowRight') {
+        nextSlide();
+      }
+    };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length);
-  };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [nextSlide, prevSlide]);
 
 
   const services = [
@@ -71,13 +85,6 @@ export default function Home() {
     }
   ];
 
-  const values = [
-    { icon: <CheckCircle className="w-6 h-6" />, title: "Compliance", description: "Seamless adherence to industry standards and regulations" },
-    { icon: <TrendingUp className="w-6 h-6" />, title: "Efficiency", description: "Technology-driven solutions for operational optimization" },
-    { icon: <Target className="w-6 h-6" />, title: "Excellence", description: "Highest quality standards in all operations and services" },
-    { icon: <Zap className="w-6 h-6" />, title: "Innovation", description: "Cutting-edge technology and forward-thinking solutions" },
-    { icon: <Shield className="w-6 h-6" />, title: "Integrity", description: "Built on foundation of trust, responsibility and excellence" }
-  ];
 
   const whyChooseUs = [
     {
@@ -105,11 +112,21 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Skip Navigation */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#2e125b] text-white px-4 py-2 rounded z-50 focus:outline-none focus:ring-2 focus:ring-white"
+      >
+        Skip to main content
+      </a>
+      
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Carousel Section */}
-      <section id="home" className="relative bg-white py-20 lg:py-32 overflow-hidden">
+      {/* Main Content */}
+      <main id="main-content" role="main">
+        {/* Hero Carousel Section */}
+        <section id="home" className="relative bg-white py-20 lg:py-32 overflow-hidden" aria-label="Hero section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
@@ -120,6 +137,9 @@ export default function Home() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
+                role="region"
+                aria-live="polite"
+                aria-label={`Slide ${currentSlide + 1} of ${carouselSlides.length}`}
               >
                 <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] leading-tight">
                   {carouselSlides[currentSlide].title}
@@ -165,35 +185,40 @@ export default function Home() {
               </motion.div>
               
               {/* Carousel Controls */}
-              <div className="flex items-center justify-center mt-6 space-x-4">
+              <div className="flex items-center justify-center mt-6 space-x-4" role="group" aria-label="Carousel controls">
                 <button
                   onClick={prevSlide}
-                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors duration-200"
+                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#2e125b] focus:ring-offset-2 transition-colors duration-200"
                   aria-label="Previous slide"
+                  disabled={currentSlide === 0}
                 >
                   <ChevronLeft className="w-6 h-6 text-[#2e125b]" />
-                </button>
+                </button>n
                 
                 {/* Slide Indicators */}
-                <div className="flex space-x-2">
+                <div className="flex space-x-2" role="tablist" aria-label="Slide indicators">
                   {carouselSlides.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#2e125b] focus:ring-offset-2 ${
                         index === currentSlide 
                           ? 'bg-[#2e125b] w-8' 
                           : 'bg-gray-300 hover:bg-gray-400'
                       }`}
+                      role="tab"
+                      aria-selected={index === currentSlide}
                       aria-label={`Go to slide ${index + 1}`}
+                      tabIndex={index === currentSlide ? 0 : -1}
                     />
                   ))}
                 </div>
                 
                 <button
                   onClick={nextSlide}
-                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors duration-200"
+                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#2e125b] focus:ring-offset-2 transition-colors duration-200"
                   aria-label="Next slide"
+                  disabled={currentSlide === carouselSlides.length - 1}
                 >
                   <ChevronRight className="w-6 h-6 text-[#2e125b]" />
                 </button>
@@ -204,10 +229,11 @@ export default function Home() {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2 
+              id="services-heading"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -236,9 +262,17 @@ export default function Home() {
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-[#2e125b] mb-4">NovaCore Technology</h3>
-              <p className="text-black leading-relaxed">
+              <p className="text-black leading-relaxed mb-4">
                 Real-time compliance technology that unifies diverse compliance modules for regulators, operators and industry stakeholders.
               </p>
+              <a 
+                href="https://www.novacoreafrica.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-[#2e125b] hover:text-[#1a0466] font-medium text-sm transition-colors"
+              >
+                Visit NovaCore →
+              </a>
             </motion.div>
 
             <motion.div
@@ -265,9 +299,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Project Management</h3>
+              <h3 className="text-xl font-semibold text-[#2e125b] mb-4">Risk Management</h3>
               <p className="text-black leading-relaxed">
-                End-to-end project management support for upstream and midstream oil and gas developments with 10+ years of industry expertise.
+                Comprehensive risk assessment and mitigation strategies that help organizations identify, evaluate and manage compliance risks proactively.
               </p>
             </motion.div>
           </div>
@@ -284,7 +318,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-2xl font-semibold text-[#2e125b] mb-4"
             >
-              About <strong>HAYLAR</strong> Energy Services Ltd
+              About <strong>HAYLAR</strong> Energy
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -310,6 +344,14 @@ export default function Home() {
                 <p className="text-black mb-6 leading-relaxed">
                   Our flagship platform, <strong>NovaCore</strong> is more than a reporting tool, it is a reimagined compliance ecosystem. By unifying data, streamlining processes and providing foresight through AI analytics, <strong>NovaCore</strong> enables regulators, operators and institutions to lead with confidence in a complex regulatory landscape.
                 </p>
+                <a 
+                  href="https://www.novacoreafrica.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-[#2e125b] hover:text-[#1a0466] font-semibold transition-colors mb-6"
+                >
+                  Explore NovaCore Platform →
+                </a>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-2 h-2 bg-[#2e125b] rounded-full mt-2"></div>
@@ -445,7 +487,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-4">{service.title}</h3>
                 <p className="text-black leading-relaxed mb-6">{service.description}</p>
                 <div className="pt-4 border-t border-gray-100">
-                  <span className="text-[#2e125b] font-medium text-sm">Learn more →</span>
+                  <Link href="/services" className="text-[#2e125b] font-medium text-sm hover:text-[#1a0466] transition-colors">Learn more →</Link>
                 </div>
               </motion.div>
             ))}
@@ -494,7 +536,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-[#2e125b] mb-4">{item.title}</h3>
                 <p className="text-black leading-relaxed">{item.description}</p>
                 <div className="mt-6 pt-4 border-t border-gray-100">
-                  <span className="text-[#2e125b] font-medium text-sm">Learn more →</span>
+                  <Link href="/about" className="text-[#2e125b] font-medium text-sm hover:text-[#1a0466] transition-colors">Learn more →</Link>
                 </div>
               </motion.div>
             ))}
@@ -526,6 +568,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      </main>
 
       {/* Footer */}
       <Footer />

@@ -60,6 +60,9 @@ const config: Config = {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
+      screens: {
+        'sr-only': '0px',
+      },
     },
   },
   plugins: [],

@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { BarChart3, Shield, Settings, FileText, Building2, TrendingUp, CheckCircle, ArrowRight, Target, Zap } from 'lucide-react';
+import { BarChart3, Shield, FileText, Building2, TrendingUp, CheckCircle, ArrowRight, Target, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import PageHeader from '@/components/PageHeader';
 
 export default function ServicesPage() {
   const mainServices = [
@@ -130,23 +131,15 @@ export default function ServicesPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section - WoodMac Style */}
-      <section className="pt-24 pb-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl lg:text-2xl text-black max-w-4xl mx-auto font-light leading-relaxed">
-              Comprehensive regulatory compliance and energy solutions designed to transform your business operations and drive sustainable growth.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Page Header */}
+      <PageHeader 
+        title="Our Services"
+        breadcrumbs={[
+          { label: "HAYLAR Energy", href: "/" },
+          { label: "Services", href: "/services" }
+        ]}
+        description="Comprehensive regulatory compliance and energy solutions designed to transform your business operations and drive sustainable growth."
+      />
 
       {/* NovaCore Platform Highlight - WoodMac Style */}
       <section className="py-20 bg-gray-50">
@@ -172,9 +165,17 @@ export default function ServicesPage() {
               <p className="text-lg text-black mb-6 leading-relaxed">
                 <strong>NovaCore</strong> is our cutting-edge platform that aggregates operator data submissions to provide a real-time, interactive compliance dashboard. It enhances oversight and decision-making through advanced technology and intelligent automation.
               </p>
-              <p className="text-lg text-black mb-8 leading-relaxed">
+              <p className="text-lg text-black mb-6 leading-relaxed">
                 Built specifically for the Nigerian energy sector, <strong>NovaCore</strong> ensures seamless adherence to regulatory standards while providing strategic insights that drive operational excellence.
               </p>
+              <a 
+                href="https://www.novacoreafrica.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-3 px-6 rounded-sm transition-all duration-300 shadow-lg mb-8"
+              >
+                Visit NovaCore Platform →
+              </a>
               
               {/* Platform Image */}
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg mb-6">
@@ -213,7 +214,7 @@ export default function ServicesPage() {
             >
               <div className="text-center">
                 <BarChart3 className="w-24 h-24 mx-auto mb-6 text-white" />
-                <h4 className="text-2xl font-semibold mb-4">Platform Benefits</h4>
+                <h4 className="text-2xl font-semibold mb-4">NovaCore Platform Benefits</h4>
                 <ul className="space-y-3 text-left">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="w-5 h-5" />
@@ -232,6 +233,14 @@ export default function ServicesPage() {
                     <span>Regulatory intelligence</span>
                   </li>
                 </ul>
+                <a 
+                  href="https://www.novacoreafrica.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-full bg-white text-[#2e125b] hover:bg-gray-50 font-medium py-3 px-6 rounded-sm transition-all duration-300 shadow-lg mt-6"
+                >
+                  Learn More About NovaCore →
+                </a>
               </div>
             </motion.div>
           </div>
