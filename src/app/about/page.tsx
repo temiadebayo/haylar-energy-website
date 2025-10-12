@@ -14,7 +14,7 @@ export default function AboutPage() {
     {
       name: "Lara Timi-Ajayi",
       position: "Founder & CEO",
-      description: "Visionary leader with extensive experience in regulatory compliance and energy sector innovation.",
+      description: "Visionary leader with extensive experience in regulatory compliance, data analysis and energy sector innovation.",
       image: "/api/placeholder/200/200/brand-primary/ffffff?text=LT"
     },
     {
@@ -105,7 +105,12 @@ export default function AboutPage() {
               <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-light text-[#2e125b] mb-4">Our Flagship Platform: <strong>NovaCore</strong></h3>
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mr-4">
+                  <div className="text-white font-bold text-xl">N</div>
+                </div>
+                <h3 className="text-3xl font-light text-[#2e125b]">Our Flagship Platform: <strong>NovaCore</strong></h3>
+              </div>
               <p className="text-lg text-black max-w-3xl mx-auto mb-6">
                 A modular compliance ecosystem that integrates diverse compliance modules for regulators, operators, and financial institutions into one unified system.
               </p>
@@ -256,6 +261,12 @@ export default function AboutPage() {
                   </p>
                   
                   <div className="bg-gray-50 shadow-sm p-6 rounded-lg border-l-4 border-[#2e125b]">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-[#2e125b] rounded-full flex items-center justify-center mr-3">
+                        <div className="text-white font-bold text-sm">N</div>
+                      </div>
+                      <h4 className="text-lg font-semibold text-[#2e125b]">NovaCore Platform</h4>
+                    </div>
                     <p className="text-lg leading-relaxed text-black italic mb-4">
                       &ldquo;<strong>NovaCore</strong> is at the heart of that mission - a platform that empowers regulators, operators and financial institutions to align seamlessly and integrate across oversight frameworks, unlocking efficiency, fostering investment and accelerating sustainable growth.&rdquo;
                     </p>

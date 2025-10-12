@@ -232,15 +232,22 @@ export default function Home() {
       <section className="py-20 bg-gray-50" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <motion.h2 
-              id="services-heading"
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6"
+              className="flex items-center justify-center mb-6"
             >
-              Our Services
-            </motion.h2>
+              <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mr-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h2 
+                id="services-heading"
+                className="text-3xl lg:text-4xl font-light text-[#2e125b]"
+              >
+                Our Services
+              </h2>
+            </motion.div>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -259,7 +266,7 @@ export default function Home() {
               className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center"
             >
               <div className="w-16 h-16 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
+                <div className="text-white font-bold text-lg">N</div>
               </div>
               <h3 className="text-xl font-semibold text-[#2e125b] mb-4">NovaCore Technology</h3>
               <p className="text-black leading-relaxed mb-4">
@@ -337,7 +344,12 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
             >
-              <h3 className="text-2xl font-semibold text-[#2e125b] mb-4">Who We Are</h3>
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#2e125b] rounded-full flex items-center justify-center mr-3">
+                  <div className="text-white font-bold text-sm">N</div>
+                </div>
+                <h3 className="text-2xl font-semibold text-[#2e125b]">Who We Are</h3>
+              </div>
                               <p className="text-black mb-6 leading-relaxed">
                   Founded in 2022, <strong>HAYLAR</strong> Energy is a leading provider of regulatory compliance technology, risk management and procurement services for the Nigerian Oil &amp; Gas, Power and Financial sectors. We believe compliance should not be a burden but a catalyst for trust, growth and business resilience.
                 </p>
@@ -346,8 +358,8 @@ export default function Home() {
                 </p>
                 <a 
                   href="https://www.novacoreafrica.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                   className="inline-flex items-center text-[#2e125b] hover:text-[#1a0466] font-semibold transition-colors mb-6"
                 >
                   Explore NovaCore Platform →
