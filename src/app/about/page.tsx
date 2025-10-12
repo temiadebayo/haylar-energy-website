@@ -242,7 +242,6 @@ export default function AboutPage() {
             </div>
             
             <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">A Message from Our CEO</h2>
-            <p className="text-lg text-black">Leadership insights driving our mission forward</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8 items-start">

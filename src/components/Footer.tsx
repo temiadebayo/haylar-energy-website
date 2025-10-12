@@ -25,6 +25,16 @@ export default function Footer() {
               <li><Link href="/about" className="text-white hover:text-white/80 transition-colors">About</Link></li>
               <li><Link href="/services" className="text-white hover:text-white/80 transition-colors">Services</Link></li>
               <li><Link href="/contact" className="text-white hover:text-white/80 transition-colors">Contact</Link></li>
+              <li>
+                <a 
+                  href="https://www.novacoreafrica.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-white/80 transition-colors"
+                >
+                  NovaCore Platform
+                </a>
+              </li>
             </ul>
           </div>
           
