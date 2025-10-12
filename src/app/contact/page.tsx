@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Clock, CheckCircle } from 'lucide-react';
+import { Mail, Clock } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -50,7 +50,7 @@ export default function ContactPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Contact Information</h2>
-            <p className="text-lg text-black">Multiple ways to reach us and get the support you need</p>
+            <p className="text-lg text-black">Ready to transform your compliance strategy? Let&apos;s discuss how HAYLAR Energy can help you achieve your goals.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -85,37 +85,7 @@ export default function ContactPage() {
               <ContactForm />
             </motion.div>
 
-            {/* Office Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-8">Office Information</h2>
-              
-
-              <div className="bg-[#2e125b] p-8 rounded-lg text-white">
-                <h3 className="text-2xl font-semibold mb-6">Why Choose <strong>HAYLAR</strong>?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>10+ years of industry expertise</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Cutting-edge <strong>NovaCore</strong> technology</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Expert regulatory compliance team</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Proven track record of success</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            
           </div>
         </div>
       </section>

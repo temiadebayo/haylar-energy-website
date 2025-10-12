@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { BarChart3, Shield, FileText, Building2, TrendingUp, CheckCircle, ArrowRight, Target, Zap } from 'lucide-react';
+import { BarChart3, Shield, FileText, Building2, TrendingUp, CheckCircle, ArrowRight, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
@@ -57,28 +57,6 @@ export default function ServicesPage() {
     }
   ];
 
-  const novacoreFeatures = [
-    {
-      title: "Real-Time Dashboard",
-      description: "Interactive compliance dashboard with live data updates and comprehensive oversight capabilities.",
-      icon: <BarChart3 className="w-8 h-8" />
-    },
-    {
-      title: "Automated Reporting",
-      description: "Streamlined reporting systems that ensure timely and accurate regulatory submissions.",
-      icon: <FileText className="w-8 h-8" />
-    },
-    {
-      title: "Predictive Analytics",
-      description: "AI-powered insights to predict compliance risks and enable proactive decision-making.",
-      icon: <TrendingUp className="w-8 h-8" />
-    },
-    {
-      title: "Regulatory Intelligence",
-      description: "Data-driven insights to track industry trends and inform policy adjustments.",
-      icon: <Target className="w-8 h-8" />
-    }
-  ];
 
   const industrySectors = [
     {

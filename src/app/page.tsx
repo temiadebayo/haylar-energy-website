@@ -23,6 +23,12 @@ export default function Home() {
       subtitle: "We identify compliance risks early and design strategies that strengthen integrity, reduce exposure and position operators for long-term resilience.",
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       alt: "Oil & Gas Industry Operations and Compliance"
+    },
+    {
+      title: "Financial Regulatory Technology Solutions",
+      subtitle: "Advanced reg-tech solutions that simplify compliance, strengthen trust and operational resilience for Nigeria's financial ecosystem.",
+      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Financial technology and banking compliance systems"
     }
   ];
 
@@ -193,7 +199,7 @@ export default function Home() {
                   disabled={currentSlide === 0}
                 >
                   <ChevronLeft className="w-6 h-6 text-[#2e125b]" />
-                </button>n
+                </button>
                 
                 {/* Slide Indicators */}
                 <div className="flex space-x-2" role="tablist" aria-label="Slide indicators">
@@ -547,7 +553,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-6">Why Choose <strong>HAYLAR</strong>?</h2>
-            <p className="text-lg text-black max-w-3xl mx-auto">Through strategic advisory, cutting-edge technology, and optimized solutions</p>
+            <p className="text-lg text-black max-w-3xl mx-auto">We deliver value through strategic advisory, cutting-edge technology and optimized solutions.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
