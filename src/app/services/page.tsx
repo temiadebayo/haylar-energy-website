@@ -16,11 +16,6 @@ export default function ServicesPage() {
       subtitle: "For Regulators",
       description: "Our integrated modular compliance ecosystem unifies diverse compliance modules for regulators, operators and industry stakeholders into a single unified system.",
       features: [
-        "Integration with existing platforms",
-        "Automated compliance reporting",
-        "Regulatory data intelligence",
-        "Governance & risk management",
-        "Real-time sector-wide insights"
       ],
       bgColor: "from-[#2e125b] to-[#1a0466]"
     },
@@ -30,11 +25,6 @@ export default function ServicesPage() {
       subtitle: "For Operators",
       description: "We identify compliance risks early and design strategies that strengthen integrity, reduce exposure and position operators for long-term resilience.",
       features: [
-        "Compliance as a culture",
-        "Seamless reporting & monitoring",
-        "Procurement & supply chain integrity",
-        "Digital governance & risk management",
-        "Incubating innovation"
       ],
       bgColor: "from-[#2e125b] to-[#1a0466]"
     },
@@ -44,11 +34,6 @@ export default function ServicesPage() {
       subtitle: "For Financial Institutions",
       description: "Regulatory technology solutions that simplify compliance, strengthen trust and operational resilience for Nigeria's financial ecosystem.",
       features: [
-        "<strong>NovaCore</strong>: Unified compliance for finance",
-        "Automated AML & fraud risk monitoring",
-        "Regulatory reporting automation",
-        "Tiered solutions for every institution",
-        "Data-driven insights for risk & growth"
       ],
       bgColor: "from-[#2e125b] to-[#1a0466]"
     },
@@ -58,11 +43,6 @@ export default function ServicesPage() {
       subtitle: "Technology-Enabled Solutions",
       description: "We ensure all procurement processes meet industry regulations, mitigating risks and ensuring seamless operations through technology-enabled tools.",
       features: [
-        "Regulatory-compliant procurement",
-        "Technology-enabled procurement tools",
-        "Supply chain optimization",
-        "Real-time tracking & monitoring",
-        "Automated procurement workflows"
       ],
       bgColor: "from-[#2e125b] to-[#1a0466]"
     },
@@ -72,11 +52,6 @@ export default function ServicesPage() {
       subtitle: "Future-Proofing Operations",
       description: "Digital frameworks that help operators mitigate risks, demonstrate accountability, and remain competitive in an increasingly regulated global market.",
       features: [
-        "Future-proofing operations",
-        "Risk mitigation strategies",
-        "Accountability frameworks",
-        "Global market competitiveness",
-        "Digital transformation support"
       ],
       bgColor: "from-[#2e125b] to-[#1a0466]"
     }
@@ -161,6 +136,16 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
+              {/* NovaCore Platform Image */}
+              <div className="relative h-64 rounded-lg overflow-hidden shadow-lg mb-6">
+                <Image
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="NovaCore compliance management dashboard and analytics"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              
               <h3 className="text-3xl font-semibold text-[#2e125b] mb-6">Revolutionizing Compliance Management</h3>
               <p className="text-lg text-black mb-6 leading-relaxed">
                 <strong>NovaCore</strong> is our cutting-edge platform that aggregates operator data submissions to provide a real-time, interactive compliance dashboard. It enhances oversight and decision-making through advanced technology and intelligent automation.
@@ -189,21 +174,7 @@ export default function ServicesPage() {
                   <span className="text-white text-sm font-medium">Real-time Analytics Dashboard</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                {novacoreFeatures.map((feature) => (
-                  <div key={feature.title} className="flex items-start space-x-4 group">
-                    <div className="text-white mt-1 group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-10 h-10 bg-[#2e125b] rounded-lg flex items-center justify-center">
-                        {feature.icon}
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-[#2e125b] mb-2 group-hover:text-[#2e125b] transition-colors">{feature.title}</h4>
-                      <p className="text-black leading-relaxed">{feature.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              
             </motion.div>
 
             <motion.div
@@ -301,6 +272,16 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
+            {/* Industry Image */}
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg mb-8 mx-auto max-w-4xl">
+              <Image
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Energy sector infrastructure and industrial facilities"
+                fill
+                className="object-cover"
+              />
+            </div>
+            
             <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">Industry Expertise</h2>
             <p className="text-lg text-black">Serving key sectors with specialized knowledge and tailored solutions</p>
           </motion.div>

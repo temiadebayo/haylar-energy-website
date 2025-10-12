@@ -102,6 +102,16 @@ export default function AboutPage() {
             className="bg-white shadow-sm p-8 rounded-lg border border-gray-100 mb-16"
           >
             <div className="text-center mb-8">
+              {/* NovaCore Platform Image */}
+              <div className="relative h-64 rounded-lg overflow-hidden shadow-lg mb-8 mx-auto max-w-4xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="NovaCore platform dashboard and compliance management interface"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              
               <div className="w-20 h-20 bg-[#2e125b] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
               </div>
@@ -221,6 +231,16 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
+            {/* Leadership Image */}
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg mb-8 mx-auto max-w-4xl">
+              <Image
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Professional business leadership and corporate excellence"
+                fill
+                className="object-cover"
+              />
+            </div>
+            
             <h2 className="text-3xl lg:text-4xl font-light text-[#2e125b] mb-4">A Message from Our CEO</h2>
             <p className="text-lg text-black">Leadership insights driving our mission forward</p>
           </motion.div>

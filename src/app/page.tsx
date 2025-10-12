@@ -274,8 +274,8 @@ export default function Home() {
               </p>
               <a 
                 href="https://www.novacoreafrica.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                 className="inline-flex items-center text-[#2e125b] hover:text-[#1a0466] font-medium text-sm transition-colors"
               >
                 Visit NovaCore →
@@ -344,6 +344,16 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
             >
+              {/* Company Image */}
+              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg mb-6">
+            <Image
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="Modern office building representing HAYLAR Energy headquarters"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-[#2e125b] rounded-full flex items-center justify-center mr-3">
                   <div className="text-white font-bold text-sm">N</div>
@@ -411,6 +421,15 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-6"
             >
+              {/* Technology Image */}
+              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg mb-6">
+                <Image
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="Modern technology dashboard and analytics interface"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="bg-gradient-to-r from-orange-50 to-purple-50 p-6 rounded-lg border border-orange-100">
                 <h4 className="text-lg font-semibold text-[#2e125b] mb-2">Vision</h4>
                 <p className="text-gray-600">&ldquo;To be the leading Regulatory Compliance technology and procurement solutions provider in Nigeria and Africa, setting new industry standards for regulatory oversight, efficiency and business integrity&rdquo;</p>
@@ -446,7 +465,7 @@ export default function Home() {
             className="grid md:grid-cols-3 gap-8 mb-16"
           >
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
-              <Image
+          <Image
                 src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Oil & Gas Industry Operations"
                 fill
@@ -458,7 +477,7 @@ export default function Home() {
             </div>
             
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
-              <Image
+          <Image
                 src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Power Sector and Renewable Energy"
                 fill
@@ -470,7 +489,7 @@ export default function Home() {
             </div>
             
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
-            <Image
+          <Image
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Financial Technology and Compliance"
                 fill
