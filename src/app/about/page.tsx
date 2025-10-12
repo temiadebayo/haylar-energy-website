@@ -254,8 +254,14 @@ export default function AboutPage() {
               className="lg:col-span-1"
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-[#2e125b]/20 bg-gradient-to-br from-[#2e125b] to-[#1a0466] flex items-center justify-center">
-                  <span className="text-4xl font-bold text-white">LT</span>
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-[#2e125b]/20">
+                  <Image
+                    src="/ceo-headshot.jpg"
+                    alt="Lara Timi-Ajayi, Founder & CEO of HAYLAR Energy"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[#2e125b] mb-2">Lara Timi-Ajayi</h3>
                 <p className="text-[#2e125b] font-medium">Founder & CEO</p>
