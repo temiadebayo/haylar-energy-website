@@ -132,107 +132,105 @@ export default function Home() {
       {/* Main Content */}
       <main id="main-content" role="main">
         {/* Hero Carousel Section */}
-        <section id="home" className="relative bg-white py-20 lg:py-32 overflow-hidden" aria-label="Hero section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
-                role="region"
-                aria-live="polite"
-                aria-label={`Slide ${currentSlide + 1} of ${carouselSlides.length}`}
-              >
-                <h1 className="text-4xl lg:text-6xl font-light text-[#2e125b] leading-tight">
-                  {carouselSlides[currentSlide].title}
-                </h1>
-                <p className="text-xl lg:text-2xl text-black font-light leading-relaxed">
-                  {carouselSlides[currentSlide].subtitle}
-                </p>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8"
-              >
-                <Link href="/services" className="inline-block bg-[#2e125b] text-white hover:bg-[#1a0466] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
-                  Our Services
-                </Link>
-                <Link href="/about" className="inline-block border-2 border-[#2e125b] text-[#2e125b] hover:bg-[#2e125b] hover:text-white font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
-                  About Us
-                </Link>
-              </motion.div>
-            </div>
-            
-            {/* Carousel Image */}
-            <div className="relative">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.8 }}
-                className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg"
-              >
-        <Image
-                  src={carouselSlides[currentSlide].image}
-                  alt={carouselSlides[currentSlide].alt}
-                  fill
-                  className="object-cover"
-                  priority={currentSlide === 0}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2e125b]/20 to-transparent"></div>
-              </motion.div>
-              
-              {/* Carousel Controls */}
-              <div className="flex items-center justify-center mt-6 space-x-4" role="group" aria-label="Carousel controls">
-                <button
-                  onClick={prevSlide}
-                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#2e125b] focus:ring-offset-2 transition-colors duration-200"
-                  aria-label="Previous slide"
-                  disabled={currentSlide === 0}
+        <section id="home" className="relative h-screen overflow-hidden" aria-label="Hero section">
+          {/* Background Images */}
+          {carouselSlides.map((slide, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentSlide ? 1 : 0 }}
+              transition={{ duration: 0.8 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={slide.image}
+                alt={slide.alt}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#2e125b]/80 via-[#2e125b]/60 to-[#2e125b]/40"></div>
+            </motion.div>
+          ))}
+          
+          {/* Content Overlay */}
+          <div className="relative h-full flex items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div className="max-w-3xl">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6 }}
+                  className="space-y-6"
+                  role="region"
+                  aria-live="polite"
+                  aria-label={`Slide ${currentSlide + 1} of ${carouselSlides.length}`}
                 >
-                  <ChevronLeft className="w-6 h-6 text-[#2e125b]" />
-                </button>
+                  <h1 className="text-4xl lg:text-6xl font-light text-white leading-tight">
+                    {carouselSlides[currentSlide].title}
+                  </h1>
+                  <p className="text-xl lg:text-2xl text-white/90 font-light leading-relaxed">
+                    {carouselSlides[currentSlide].subtitle}
+                  </p>
+                </motion.div>
                 
-                {/* Slide Indicators */}
-                <div className="flex space-x-2" role="tablist" aria-label="Slide indicators">
-                  {carouselSlides.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#2e125b] focus:ring-offset-2 ${
-                        index === currentSlide 
-                          ? 'bg-[#2e125b] w-8' 
-                          : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                      role="tab"
-                      aria-selected={index === currentSlide}
-                      aria-label={`Go to slide ${index + 1}`}
-                      tabIndex={index === currentSlide ? 0 : -1}
-                    />
-                  ))}
-                </div>
-                
-                <button
-                  onClick={nextSlide}
-                  className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#2e125b] focus:ring-offset-2 transition-colors duration-200"
-                  aria-label="Next slide"
-                  disabled={currentSlide === carouselSlides.length - 1}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="flex flex-col sm:flex-row gap-4 mt-8"
                 >
-                  <ChevronRight className="w-6 h-6 text-[#2e125b]" />
-                </button>
+                  <Link href="/services" className="inline-block bg-white text-[#2e125b] hover:bg-gray-50 font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300 shadow-lg">
+                    Our Services
+                  </Link>
+                  <Link href="/about" className="inline-block border-2 border-white text-white hover:bg-white hover:text-[#2e125b] font-medium py-4 px-8 rounded-sm text-lg transition-all duration-300">
+                    About Us
+                  </Link>
+                </motion.div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          
+          {/* Carousel Controls */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4" role="group" aria-label="Carousel controls">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-lg hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#2e125b] transition-colors duration-200"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6 text-[#2e125b]" />
+            </button>
+            
+            {/* Slide Indicators */}
+            <div className="flex space-x-2" role="tablist" aria-label="Slide indicators">
+              {carouselSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#2e125b] ${
+                    index === currentSlide 
+                      ? 'bg-white w-8' 
+                      : 'bg-white/50 hover:bg-white/70 w-3'
+                  }`}
+                  role="tab"
+                  aria-selected={index === currentSlide}
+                  aria-label={`Go to slide ${index + 1}`}
+                  tabIndex={index === currentSlide ? 0 : -1}
+                />
+              ))}
+            </div>
+            
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-lg hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#2e125b] transition-colors duration-200"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-6 h-6 text-[#2e125b]" />
+            </button>
+          </div>
+        </section>
 
       {/* Our Services Section */}
       <section className="py-20 bg-gray-50" aria-labelledby="services-heading">
